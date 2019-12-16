@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://xczizz.github.io/</link>
+    <link>https://idsze.cn/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Dec 2019 21:46:03 +0800</lastBuildDate>
     
-	<atom:link href="https://xczizz.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idsze.cn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>codingPages中申请ssl报错</title>
-      <link>https://xczizz.github.io/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</link>
+      <link>https://idsze.cn/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</link>
       <pubDate>Thu, 12 Dec 2019 21:46:03 +0800</pubDate>
       
-      <guid>https://xczizz.github.io/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</guid>
+      <guid>https://idsze.cn/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</guid>
       <description>&lt;p&gt;错误码：&lt;code&gt;urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &amp;quot;&amp;lt;!DOCTYPE html&amp;gt;\n&amp;lt;html&amp;gt;\n &amp;lt;head&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Content-type\&amp;quot; content=\&amp;quot;text/html; charset=utf-8\&amp;quot;&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Co&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://xczizz.github.io/2019/12/about/</link>
+      <link>https://idsze.cn/2019/12/about/</link>
       <pubDate>Sun, 01 Dec 2019 19:25:48 +0800</pubDate>
       
-      <guid>https://xczizz.github.io/2019/12/about/</guid>
+      <guid>https://idsze.cn/2019/12/about/</guid>
       <description>about 页面啥都没有</description>
     </item>
     
     <item>
       <title>powerShell中执行多个命令</title>
-      <link>https://xczizz.github.io/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</link>
+      <link>https://idsze.cn/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 25 Nov 2019 00:39:44 +0800</pubDate>
       
-      <guid>https://xczizz.github.io/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://idsze.cn/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</guid>
       <description>使用&amp;amp;&amp;amp;的时候报错，查了下使用;可以输入多个命令。
 也有说使用-and 或者 -or的还没做测试，测试没有成功</description>
     </item>
