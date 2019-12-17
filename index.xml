@@ -6,10 +6,20 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Dec 2019 21:46:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 15:13:34 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://idsze.cn/about/</link>
+      <pubDate>Tue, 17 Dec 2019 15:13:34 +0800</pubDate>
+      
+      <guid>https://idsze.cn/about/</guid>
+      <description>重新开始写笔记吧，以前使用过hexo，后来觉得不能后台处理且不够个性化(现在倒觉得曾经是多虑了)就改成自搭服务器使用 yii2 来写着玩，谁料这么个小破服务器因为端口太开放，数据库在上个月被黑了😭，最后一次备份是在17年11月，这特么跟没做有啥区别，也没开启 binlog，得了，啥也没有了，虽然之前的内容也都是一些技术笔记，没啥特别重要的价值，但也心痛了好一阵子。总觉得自己是个小个人博客应该不会被光顾，没意义，可捣坏的人也是这么想的，印象深刻，以后数据库可得定时备份，端口能不对外开放就不开放，常用端口不得已开放可以改端口号。
+这次使用hugo写吧，顺带学习一下传说中的nextc语言😁。</description>
+    </item>
     
     <item>
       <title>codingPages中申请ssl报错</title>
@@ -18,15 +28,6 @@
       
       <guid>https://idsze.cn/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</guid>
       <description>&lt;p&gt;错误码：&lt;code&gt;urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &amp;quot;&amp;lt;!DOCTYPE html&amp;gt;\n&amp;lt;html&amp;gt;\n &amp;lt;head&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Content-type\&amp;quot; content=\&amp;quot;text/html; charset=utf-8\&amp;quot;&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Co&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://idsze.cn/2019/12/about/</link>
-      <pubDate>Sun, 01 Dec 2019 19:25:48 +0800</pubDate>
-      
-      <guid>https://idsze.cn/2019/12/about/</guid>
-      <description>about 页面啥都没有</description>
     </item>
     
     <item>
