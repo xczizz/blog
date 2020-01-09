@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://idsze.cn/categories/</loc>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</loc>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://idsze.cn/</loc>
-    <lastmod>2020-01-09T15:12:32+08:00</lastmod>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/post/</loc>
-    <lastmod>2020-01-09T15:12:32+08:00</lastmod>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
   </url>
   
   <url>
@@ -33,16 +48,17 @@
   </url>
   
   <url>
+    <loc>https://idsze.cn/categories/ssl/</loc>
+    <lastmod>2019-12-12T21:46:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://idsze.cn/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-11-25T00:39:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/archives/</loc>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/categories/</loc>
   </url>
   
   <url>
