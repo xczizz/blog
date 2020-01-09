@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://idsze.cn/</loc>
     <lastmod>2020-01-09T18:19:48+08:00</lastmod>
   </url>
@@ -28,12 +23,17 @@
   </url>
   
   <url>
-    <loc>https://idsze.cn/2020/01/%E6%9B%B4%E6%94%B9nodejs%E7%9A%84%E5%85%A8%E5%B1%80%E5%8C%85%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/</loc>
+    <loc>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</loc>
+    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</loc>
     <lastmod>2020-01-09T15:12:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idsze.cn/2020/01/git-subtree-push-%E6%8A%A5%E9%94%99-assertion-failed/</loc>
+    <loc>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</loc>
     <lastmod>2020-01-09T15:10:44+08:00</lastmod>
   </url>
   
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://idsze.cn/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/</loc>
+    <loc>https://idsze.cn/2019/12/coding-pages-ssl-error/</loc>
     <lastmod>2019-12-12T21:46:03+08:00</lastmod>
   </url>
   
@@ -53,7 +53,7 @@
   </url>
   
   <url>
-    <loc>https://idsze.cn/2019/11/powershell%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</loc>
     <lastmod>2019-11-25T00:39:44+08:00</lastmod>
   </url>
   
