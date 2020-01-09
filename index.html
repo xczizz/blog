@@ -216,6 +216,117 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://idsze.cn/2020/01/%E6%9B%B4%E6%94%B9nodejs%E7%9A%84%E5%85%A8%E5%B1%80%E5%8C%85%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">
+          更改nodejs的全局包的默认安装位置
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-09T15:12:32&#43;08:00">
+        
+  
+  
+  
+  
+    2020-01-09
+  
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        默认情况下，位置应该在C:/users/xx/AppData/Roaming/node下，现在更改到D盘。
+查看位置：npm config ls
+更改位置：npm config set prefix &quot;D:\node_global_modules&quot;
+顺便看到npm缓存位置也在C盘，那就一块改到D盘：npm config set cache &quot;D:\nodejs\node_cache
+但是这么改完还是不能用的，需要在添加环境变量，在用户的Path里增加一个D:\nodejs\node_global_modules，然后在系统变量里面新建一个叫NODE_PATH的变量，值为D:\node\node_global\node_modules，这个值是全局模块的文件夹路径，以后安装的全局模块就在这里。
+      
+      <p>
+        <a href="https://idsze.cn/2020/01/%E6%9B%B4%E6%94%B9nodejs%E7%9A%84%E5%85%A8%E5%B1%80%E5%8C%85%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/" class="postShorten-excerpt_link link">阅读全文</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://idsze.cn/2020/01/git-subtree-push-%E6%8A%A5%E9%94%99-assertion-failed/">
+          Git Subtree Push 报错 Assertion Failed
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-09T15:10:44&#43;08:00">
+        
+  
+  
+  
+  
+    2020-01-09
+  
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        今天使用git subtree push xxx的时候竟然爆了一个错误：Assertion failed xxx 和 No new revisions were found ，查了半天愣是没找到任何解决方式。
+代码也没问题，使用方式也正确，之前在 win7 上也没问题，于是换成win7上相同的环境再试一下，下载了一个gitBush ，woc竟然莫名其妙的push成功，真的是终端问题？？ powershell和gitbush两个终端上的git push结构不一样？？
+      
+      <p>
+        <a href="https://idsze.cn/2020/01/git-subtree-push-%E6%8A%A5%E9%94%99-assertion-failed/" class="postShorten-excerpt_link link">阅读全文</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://idsze.cn/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/">
           codingPages中申请ssl报错
         </a>
@@ -311,7 +422,7 @@
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 xczizz All Rights Reserved
+    &copy; 2020 xczizz All Rights Reserved
   </span>
   <p class="copyrights">
     <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
