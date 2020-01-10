@@ -4,22 +4,42 @@
   
   <url>
     <loc>https://idsze.cn/categories/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/markdown/</loc>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/post/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/</loc>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/vscode/</loc>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</loc>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
   </url>
   
   <url>
@@ -53,16 +73,32 @@
   </url>
   
   <url>
+    <loc>https://idsze.cn/categories/apache/</loc>
+    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/categories/mysql/</loc>
+    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/categories/php/</loc>
+    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2019/12/php-environment-setup-under-windows/</loc>
+    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</loc>
     <lastmod>2019-11-25T00:39:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/archives/</loc>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/</loc>
   </url>
   
 </urlset>

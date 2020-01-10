@@ -7,19 +7,95 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Mao Doze">
-<meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="keywords" content="php环境, apache设置">
+<meta name="description" content="Apache
+
+直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
+
+这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
 
 
-<meta property="og:description" content="">
+简单记几个命令：
+
+安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+">
+
+
+<meta property="og:description" content="Apache
+
+直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
+
+这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
+
+
+简单记几个命令：
+
+安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Php Environment Setup Under Windows">
-<meta name="twitter:title" content="Php Environment Setup Under Windows">
-<meta property="og:url" content="https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
-<meta property="twitter:url" content="https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+<meta property="og:title" content="windows下的php环境安装">
+<meta name="twitter:title" content="windows下的php环境安装">
+<meta property="og:url" content="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
+<meta property="twitter:url" content="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
 <meta property="og:site_name" content="My New Hugo Site">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="Apache
+
+直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
+
+这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
+
+
+简单记几个命令：
+
+安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+">
+<meta name="twitter:description" content="Apache
+
+直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
+
+这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
+
+
+简单记几个命令：
+
+安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -29,6 +105,14 @@
     <meta property="article:modified_time" content="2019-12-01T19:28:38">
   
   
+  
+    
+      <meta property="article:section" content="php">
+    
+      <meta property="article:section" content="apache">
+    
+      <meta property="article:section" content="mysql">
+    
   
   
 
@@ -49,14 +133,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=640">
 
 
-    <title>Php Environment Setup Under Windows</title>
+    <title>windows下的php环境安装</title>
 
     <link rel="icon" href="/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+    <link rel="canonical" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -68,7 +152,7 @@
     
     
       
-        <link rel="stylesheet"  href="https://xczizz.github.io/css/custom.css">
+        <link rel="stylesheet"  href="https://idsze.cn/css/custom.css">
       
     
 
@@ -157,7 +241,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/#about">
+      <a class="sidebar-button-link " href="/about">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -210,7 +294,7 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Php Environment Setup Under Windows
+      windows下的php环境安装
     </h1>
   
   
@@ -228,13 +312,138 @@
       </time>
     
     
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="/categories/php">php</a>, 
+    
+      <a class="category-link" href="/categories/apache">apache</a>, 
+    
+      <a class="category-link" href="/categories/mysql">mysql</a>
+    
+  
+
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <h2 id="apache">Apache</h2>
+
+<p>直接在<a href="http://httpd.apache.org/download.cgi">官网下载</a>。解压之后有个<code>readme_first.html</code>就有使用说明。先更改<code>ServerRoot</code>为绝对路径（注意路径写正斜杠），就可以跑起来。</p>
+
+<pre><code>这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
+</code></pre>
+
+<p>简单记几个命令：</p>
+
+<pre><code>安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+</code></pre>
+
+<p>可以在 windwos 服务中设为开机自启。</p>
+
+<p>安装是时候似乎出现一个错误<code>Errors reported here must be corrected before the service can be started.</code>，这不是错误，而是提示，如果此处有错误必须先解决 😂
+<img src="https://i.loli.net/2020/01/10/vrenXfuo5bGk7OD.png" alt="apache.png" /></p>
+
+<h3 id="配置-apache-支持-php">配置 Apache 支持 PHP</h3>
+
+<ol>
+<li><p>配置 php 模块</p>
+
+<pre><code># php7 support
+LoadModule php7_module &quot;C:/php/php740/php7apache2_4.dll&quot;
+AddType application/x-httpd-php .php .html .htm
+# configure the path to php.ini
+PHPIniDir &quot;C:/php/php740&quot;
+</code></pre></li>
+
+<li><p>配置 web 根目录，可以重新设置一个 webRoot</p>
+
+<pre><code># customize web root
+Define WEBROOT &quot;D:/PhpWorkspace/www&quot;
+DocumentRoot &quot;${WEBROOT}&quot;
+&lt;Directory &quot;${WEBROOT}&quot;&gt; 
+</code></pre></li>
+</ol>
+
+<h2 id="mysql">Mysql</h2>
+
+<p>下载链接：<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip">https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip</a>
+这个版本没有配置文件，需手动增加一个：<code>my.ini</code>，先上最简单的配置：</p>
+
+<pre><code>[client]
+#password = 
+port = 3306
+#socket = /tmp/mysql.sock
+default-character-set = utf8mb4
+
+[mysqld]
+#bind-address = 0.0.0.0
+port  = 3306
+#socket  = /tmp/mysql.sock
+# 允许最大连接数
+max_connections = 200
+# 允许连接失败的次数。
+max_connect_errors=10
+# 服务端使用的字符集默认为utf8mb4
+character-set-server=utf8mb4
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+#开启查询缓存
+explicit_defaults_for_timestamp = true
+#设置加密方式为原生加密方式吗，解决无法登陆 phpmyadmin 的问题
+default_authentication_plugin=mysql_native_password
+</code></pre>
+
+<p>初始化之后会给一个root用户和默认密码：<code>mysqld --initialize --console</code><br />
+<img src="https://i.loli.net/2020/01/10/n2y5SwMf39RhWoY.png" alt="mysql1.png" /></p>
+
+<p>安装服务：<code>.\bin\mysqld --install</code><br />
+启动服务：<code>net start mysql</code><br />
+<img src="https://i.loli.net/2020/01/10/6WBK5ZczSJOhQEo.png" alt="mysql2.png" /></p>
+
+<p>第一次进入之后会让更改密码：<code>alter user root@localhost identified by &quot;password&quot;</code>
+<img src="https://i.loli.net/2020/01/10/JVwjgWMuQGplUNK.png" alt="mysql3.png" /></p>
+
+<h2 id="php">PHP</h2>
+
+<p>下载地址：<a href="https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip">https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip</a> ，php主要就是一堆的配置。
+复制<code>php.ini-development</code>为<code>php.ini</code>，放几个常用配置：</p>
+
+<pre><code>short_open_tag = On
+post_max_size = 20M
+upload_max_filesize = 50M
+On windows:
+extension_dir = &quot;ext&quot;
+按需开启相对应扩展
+</code></pre>
+
+<h3 id="phpmyadmin-安装">phpmyadmin 安装</h3>
+
+<p><a href="https://www.phpmyadmin.net/">官网下载</a> phpMyadmin，解压到上边配好的 webroot 目录下，打开，看到熟悉的页面。尝试登陆一下，发现报错<code>mysqli::real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]</code>
+<img src="https://i.loli.net/2020/01/10/8gcbjSpFTBXqayC.png" alt="errormysql.png" /></p>
+
+<p>去<a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password">mysql官网</a>看一下解释
+<img src="https://i.loli.net/2020/01/10/kvfZpGwXAg98diC.png" alt="mysql8.png" /></p>
+
+<p>大致意思就是 mysql8.0 之后有了更安全的加密方式且被设置为默认的加密方式，而当前登录暂时不支持该方式，解决方法是设置加密方式为之前的<code>default_authentication_plugin=mysql_native_password</code>，然后命令行进入 mysql 设置 <code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';</code>，再刷新一下 <code>FLUSH PRIVILEGES;</code>，除此之外似乎也没找到更好的解决方式，只能等待 phpmyadmin 支持新的加密方式了。
+<img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png" /></p>
+
+<pre><code>&gt; use mysql  
+&gt; ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
+&gt; FLUSH PRIVILEGES;
+</code></pre>
               
             </div>
           </div>
@@ -249,7 +458,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/" data-tooltip="codingPages中申请ssl报错">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/coding-pages-ssl-error/" data-tooltip="codingPages中申请ssl报错">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -257,7 +466,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/about/" data-tooltip="About">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/execute-multiple-commands-in-powershell/" data-tooltip="powerShell中执行多个命令">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -275,19 +484,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -312,7 +521,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 xczizz All Rights Reserved
+    &copy; 2020 xczizz All Rights Reserved
   </span>
   <p class="copyrights">
     <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
@@ -328,7 +537,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/codingpages%E4%B8%AD%E7%94%B3%E8%AF%B7ssl%E6%8A%A5%E9%94%99/" data-tooltip="codingPages中申请ssl报错">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/coding-pages-ssl-error/" data-tooltip="codingPages中申请ssl报错">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -336,7 +545,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/about/" data-tooltip="About">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/execute-multiple-commands-in-powershell/" data-tooltip="powerShell中执行多个命令">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -354,19 +563,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://xczizz.github.io/2019/12/php-environment-setup-under-windows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -390,19 +599,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fxczizz.github.io%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fxczizz.github.io%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fxczizz.github.io%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -446,7 +655,7 @@
     
   
     
-      <div id="cover" style="background-image:url('https://xczizz.github.io/images/13623.jpg');"></div>
+      <div id="cover" style="background-image:url('https://idsze.cn/images/13623.jpg');"></div>
     
   
 
