@@ -440,10 +440,23 @@ extension_dir = &quot;ext&quot;
 <p>大致意思就是 mysql8.0 之后有了更安全的加密方式且被设置为默认的加密方式，而当前登录暂时不支持该方式，解决方法是设置加密方式为之前的<code>default_authentication_plugin=mysql_native_password</code>，然后命令行进入 mysql 设置 <code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';</code>，再刷新一下 <code>FLUSH PRIVILEGES;</code>，除此之外似乎也没找到更好的解决方式，只能等待 phpmyadmin 支持新的加密方式了。
 <img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png" /></p>
 
-<pre><code>&gt; use mysql  
-&gt; ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
+<pre><code>&gt; ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
 &gt; FLUSH PRIVILEGES;
 </code></pre>
+
+<p>修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 <code>配置文件现在需要一个短语密码。</code> 解决方法：</p>
+
+<p>1、在 <code>phpMyAdmin/libraries/config.default.php</code> 中把 <code>$cfg['blowfish_secret']</code>给一个值</p>
+
+<p>2、在 <code>phpMyAdmin/config.sample.inc.php</code> 中的 <code>$cfg['blowfish_secret']</code> 也给一个值</p>
+
+<blockquote>
+<p>官方给的注释：<br />
+<code>This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.</code><br />
+<code>$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */</code></p>
+</blockquote>
+
+<p>字面意思是用来 cookie 加密，防止混淆。</p>
               
             </div>
           </div>
