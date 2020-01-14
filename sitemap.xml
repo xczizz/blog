@@ -4,26 +4,51 @@
   
   <url>
     <loc>https://idsze.cn/categories/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idsze.cn/tags/markdown/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+    <loc>https://idsze.cn/tags/git/</loc>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/categories/git/</loc>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</loc>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/post/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/tags/</loc>
+    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</loc>
+    <lastmod>2020-01-13T18:57:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/hosts/</loc>
+    <lastmod>2020-01-13T18:57:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/markdown/</loc>
     <lastmod>2020-01-10T22:26:57+08:00</lastmod>
   </url>
   
@@ -45,6 +70,11 @@
   <url>
     <loc>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</loc>
     <lastmod>2020-01-09T18:19:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/tags/nodejs/</loc>
+    <lastmod>2020-01-09T15:12:32+08:00</lastmod>
   </url>
   
   <url>
@@ -73,22 +103,27 @@
   </url>
   
   <url>
-    <loc>https://idsze.cn/categories/apache/</loc>
+    <loc>https://idsze.cn/tags/apache/</loc>
     <lastmod>2019-12-01T19:28:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idsze.cn/categories/mysql/</loc>
+    <loc>https://idsze.cn/tags/mysql/</loc>
     <lastmod>2019-12-01T19:28:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idsze.cn/categories/php/</loc>
+    <loc>https://idsze.cn/tags/php/</loc>
     <lastmod>2019-12-01T19:28:38+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://idsze.cn/2019/12/php-environment-setup-under-windows/</loc>
+    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2019-12-01T19:28:38+08:00</lastmod>
   </url>
   

@@ -13,10 +13,10 @@
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Archives">
-<meta name="twitter:title" content="Archives">
-<meta property="og:url" content="https://idsze.cn/archives/">
-<meta property="twitter:url" content="https://idsze.cn/archives/">
+<meta property="og:title" content="git">
+<meta name="twitter:title" content="git">
+<meta property="og:url" content="https://idsze.cn/categories/git/">
+<meta property="twitter:url" content="https://idsze.cn/categories/git/">
 <meta property="og:site_name" content="My New Hugo Site">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -39,16 +39,16 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=640">
 
 
-    <title>Archives</title>
+    <title>git</title>
 
     <link rel="icon" href="/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="/archives/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/categories/git/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://idsze.cn/archives/">
+    <link rel="canonical" href="https://idsze.cn/categories/git/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -190,82 +190,162 @@
   </div>
 </nav>
 
+      
+        
+
+      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        <div id="archives" class="main-content-wrap">
-          <form id="filter-form" action="#">
-            <input name="date" type="text" class="form-control input--xlarge" placeholder="搜索日期 (YYYY/MM/DD)" autofocus="autofocus">
-          </form>
-          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="" data-message-one="" data-message-other=""></h5>
-<section class="boxes">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
   
     
-    <div class="archive archive-year box" data-date="2020">
-      <h4 class="archive-title" style="text-decoration: none;">2020</h4>
       
-        <ul class="archive-posts archive-month" data-date="202001">
-          <h5 class="archive-title" style="text-decoration: none;">一月</h5>
-          
-            <li class="archive-post archive-day" data-date="20200114">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/">git push的时候提示HEAD detached from origin/master</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20200113">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/">github上的图片加载不出来</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20200110">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/vscode-markdown-snippet-config/">vscode中配置markdown的代码片段不生效</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20200109">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/customize-the-sorting-of-folders/">自定义文件夹排序</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20200109">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/">更改nodejs的全局包的默认安装位置</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20200109">
-              <a class="archive-post-title" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/">Git Subtree Push 报错 Assertion Failed</a>
-            </li>
-          
-        </ul>
+        
       
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/">
+          git push的时候提示HEAD detached from origin/master
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-14T20:35:03&#43;08:00">
+        
+  
+  
+  
+  
+    2020-01-14
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="/categories/git">git</a>
+    
+  
+
+  </div>
+
     </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>本地分支从主分支分离出来了，解决方式：<br />
+1. 拉出临时分支 <code>git branch temp  b57d3f2</code><br />
+2. 切换到主分支 <code>git checkout master</code><br />
+3. 合并临时分支 <code>git merge temp</code><br />
+4. 推送主分支   <code>git push origin master</code><br />
+5. 删除临时分支 <code>git branch -d temp</code></p>
+      
+      <p>
+        <a href="https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/" class="postShorten-excerpt_link link">阅读全文</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
   
     
-    <div class="archive archive-year box" data-date="2019">
-      <h4 class="archive-title" style="text-decoration: none;">2019</h4>
       
-        <ul class="archive-posts archive-month" data-date="201912">
-          <h5 class="archive-title" style="text-decoration: none;">十二月</h5>
-          
-            <li class="archive-post archive-day" data-date="20191212">
-              <a class="archive-post-title" href="https://idsze.cn/2019/12/coding-pages-ssl-error/">codingPages中申请ssl报错</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20191201">
-              <a class="archive-post-title" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/">windows下的php环境安装</a>
-            </li>
-          
-        </ul>
+        
       
-        <ul class="archive-posts archive-month" data-date="201911">
-          <h5 class="archive-title" style="text-decoration: none;">十一月</h5>
-          
-            <li class="archive-post archive-day" data-date="20191125">
-              <a class="archive-post-title" href="https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/">powerShell中执行多个命令</a>
-            </li>
-          
-        </ul>
-      
-    </div>
+    
   
-</section>
-        </div>
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/">
+          Git Subtree Push 报错 Assertion Failed
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-09T15:10:44&#43;08:00">
+        
+  
+  
+  
+  
+    2020-01-09
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="/categories/%e5%b0%8f%e6%8a%80%e5%b7%a7">小技巧</a>, 
+    
+      <a class="category-link" href="/categories/git">git</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>今天使用<code>git subtree push xxx</code>的时候竟然爆了一个错误：<code>Assertion failed xxx</code> 和 <code>No new revisions were found</code> ，查了半天愣是没找到任何解决方式。</p>
+
+<p><img src="https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png" alt="报错的地方.png" /></p>
+      
+      <p>
+        <a href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/" class="postShorten-excerpt_link link">阅读全文</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+            
+
+          </section>
+        
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 xczizz All Rights Reserved
+  </span>
+  <p class="copyrights">
+    <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+  </span>
+</footer>
+
       </div>
     </div>
     
