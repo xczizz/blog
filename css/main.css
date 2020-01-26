@@ -2387,7 +2387,10 @@ body {
   width: 960px;
 }
 .footer-inner:before {
-  display: none;
+  content: " ";
+  float: left;	
+  width: 260px;	
+  min-height: 100px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .footer-inner {
@@ -2643,4 +2646,8 @@ body {
   .post-body {
     text-align: justify;
   }
+}
+.icp a {
+  border: none;
+  color: #999;
 }
