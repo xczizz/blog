@@ -319,7 +319,16 @@ extension_dir = &#34;ext&#34;
 <aside id="sidebar" class="sidebar">
   <div class="sidebar-inner">
 
-    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
         src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
@@ -331,14 +340,14 @@ extension_dir = &#34;ext&#34;
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="https://idsze.cn/categories/">      
          
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -348,7 +357,7 @@ extension_dir = &#34;ext&#34;
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">16</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -382,6 +391,27 @@ extension_dir = &#34;ext&#34;
 
     </section>
     
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#apache">Apache</a>
+<ul>
+<li><a href="#配置-apache-支持-php">配置 Apache 支持 PHP</a></li>
+</ul></li>
+<li><a href="#mysql">Mysql</a></li>
+<li><a href="#php">PHP</a>
+<ul>
+<li><a href="#phpmyadmin-安装">phpmyadmin 安装</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav></div>
+    </div>
+</section>
+
   </div>
 </aside>
 

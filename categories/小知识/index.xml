@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小知识 on My Hugo Site</title>
+    <link>https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>
+    <description>Recent content in 小知识 on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 02 Aug 2017 18:27:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php中几个常用的排序算法</title>
+      <link>https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/</link>
+      <pubDate>Wed, 02 Aug 2017 18:27:09 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
+// 循环
+function bubbleSort($numbers) {
+    $count= count($numbers);
+    if ($count &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;= 0) return false;
+    for ($i = 0; $i &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; $count; $i++) {
+        for ($j = 0; $j &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; $count- 1 - $i; $j++) {
+            if ($numbers[$j] &amp;gt; $numbers[$j + 1]) {
+                list($numbers[$j], $numbers[$j +1]) = [$numbers[$j + 1], $numbers[$j]];
+            }
+        }
+    }
+ 
+    return $numbers;
+}
+ 
+$num = array(20, 40, 60, 80, 30, 70, 90, 10, 50, 0);
+var_dump(bubbleSort($num));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Html中的input File在Chrome中弹出缓慢</title>
+      <link>https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/</link>
+      <pubDate>Mon, 10 Jul 2017 12:24:02 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/</guid>
+      <description>&lt;p&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot; accept=&amp;quot;image/*&amp;quot;&amp;gt;&lt;/code&gt;  改为如下:&lt;br /&gt;
+&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot; accept=&amp;quot;image/gif,image/jpeg,image/jpg,image/png&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;accept=&amp;quot;image/*&amp;quot;&lt;/code&gt;属性会对每一个文件都遍历一次所有的&lt;code&gt;&amp;quot;image/*&amp;quot;&lt;/code&gt;文件类型，当文件较多时，文件的检验时间较长。&lt;/p&gt;
+
+&lt;p&gt;如果是&lt;code&gt;accept=&amp;quot;audio/*&amp;quot;&lt;/code&gt;和&lt;code&gt;accept=&amp;quot;video/*&amp;quot;&lt;/code&gt;，同样指明所需文件的类型MIME类型&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

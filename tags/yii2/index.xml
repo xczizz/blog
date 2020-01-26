@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yii2 on My Hugo Site</title>
+    <link>https://idsze.cn/tags/yii2/</link>
+    <description>Recent content in yii2 on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 11 Jul 2017 14:11:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/yii2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yii2中更改editormd的图片上传路径</title>
+      <link>https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/</link>
+      <pubDate>Tue, 11 Jul 2017 14:11:28 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/</guid>
+      <description>&lt;p&gt;文件路径：&lt;code&gt;vendor/bower/editor.md/plugins/image-dialog/image-dialog.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;更改图片上传到 &lt;a href=&#34;https://sm.ms&#34;&gt;https://sm.ms&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Yii2中引用vendor中的js和css</title>
+      <link>https://idsze.cn/post/history/use-js-and-css-in-vendor-floder/</link>
+      <pubDate>Mon, 26 Jun 2017 17:19:40 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/use-js-and-css-in-vendor-floder/</guid>
+      <description>&lt;p&gt;以AdminLte为例，register.html在使用的时候无法显示单选框，查看元素发现少了&lt;code&gt;iCkeck.js&lt;/code&gt;文件&lt;/p&gt;
+
+&lt;p&gt;直接使用Yii2的资源管理包：
+assets目录下新建一个Asset文件（&lt;code&gt;AdminLtePluginAsset.php&lt;/code&gt;）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace app\assets;
+use yii\web\AssetBundle;
+class AdminLtePluginAsset extends AssetBundle
+{
+    public $sourcePath = &amp;#39;@vendor/almasaeed2010/adminlte/plugins&amp;#39;;
+    public $js = [
+        &amp;#39;iCheck/icheck.min.js&amp;#39;
+        // more plugin Js here
+    ];
+    public $css = [
+        &amp;#39;iCheck/all.css&amp;#39;
+        // more plugin CSS here
+    ];
+    public $depends = [
+        // 注明依赖关系
+        &amp;#39;dmstr\web\AdminLteAsset&amp;#39;,
+    ];
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

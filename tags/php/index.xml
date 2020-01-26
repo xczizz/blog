@@ -34,5 +34,53 @@
 查看支持的命令 httpd -h&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
+    <item>
+      <title>Php中几个常用的排序算法</title>
+      <link>https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/</link>
+      <pubDate>Wed, 02 Aug 2017 18:27:09 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
+// 循环
+function bubbleSort($numbers) {
+    $count= count($numbers);
+    if ($count &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;= 0) return false;
+    for ($i = 0; $i &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; $count; $i++) {
+        for ($j = 0; $j &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; $count- 1 - $i; $j++) {
+            if ($numbers[$j] &amp;gt; $numbers[$j + 1]) {
+                list($numbers[$j], $numbers[$j +1]) = [$numbers[$j + 1], $numbers[$j]];
+            }
+        }
+    }
+ 
+    return $numbers;
+}
+ 
+$num = array(20, 40, 60, 80, 30, 70, 90, 10, 50, 0);
+var_dump(bubbleSort($num));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Serialize和json_encode效率比较</title>
+      <link>https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/</link>
+      <pubDate>Mon, 31 Jul 2017 14:43:47 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/</guid>
+      <description>&lt;p&gt;将数组转为字符串，&lt;code&gt;serialize&lt;/code&gt;比&lt;code&gt;json_encode&lt;/code&gt;效率高很多。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Js中的数组函数和php中数组函数的对比</title>
+      <link>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</link>
+      <pubDate>Wed, 07 Jun 2017 17:04:41 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// js
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;span style=&#34;color:#75715e&#34;&gt;// php
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;$arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
   </channel>
 </rss>

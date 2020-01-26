@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
     <title>Linux知识小记 - My Hugo Site</title>
-    <meta name="keywords" content="xczizz,Golang">
+    <meta name="keywords" content="linux,">
+    
     
     <meta property="og:title" content="Linux知识小记">
     <meta property="og:site_name" content="My Hugo Site">
@@ -124,6 +125,24 @@
 </time>
 </span> 
       
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
        <span>
 &nbsp; | &nbsp;
 <span class="post-meta-item-icon">
@@ -406,20 +425,28 @@ gunzip aaa.gz</code></pre></div>
     </div>
     <footer class="post-footer">
      
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/linux" rel="tag" title="linux">#linux#</a>
+    
+</div>
+
+
 
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="https://idsze.cn/post/execute-multiple-commands-in-powershell/" rel="next" title="powerShell中执行多个命令">
-        <i class="fa fa-chevron-left"></i> powerShell中执行多个命令
+        <a href="https://idsze.cn/post/history/install-redis-in-linux-and-windows/" rel="next" title="Redis安装相关">
+        <i class="fa fa-chevron-left"></i> Redis安装相关
         </a>
     
     </div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/" rel="prev" title="Composer Install和composer Update的区别">
-        Composer Install和composer Update的区别 <i class="fa fa-chevron-right"></i>
+        <a href="https://idsze.cn/post/history/install-xunsearch/" rel="prev" title="Xunsearch安装">
+        Xunsearch安装 <i class="fa fa-chevron-right"></i>
         </a>
     
     </div>
@@ -448,7 +475,16 @@ gunzip aaa.gz</code></pre></div>
 <aside id="sidebar" class="sidebar">
   <div class="sidebar-inner">
 
-    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
         src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
@@ -460,14 +496,14 @@ gunzip aaa.gz</code></pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="https://idsze.cn/categories/">      
          
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -477,7 +513,7 @@ gunzip aaa.gz</code></pre></div>
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">16</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -511,6 +547,45 @@ gunzip aaa.gz</code></pre></div>
 
     </section>
     
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#redhat-系列">RedHat 系列 </a></li>
+<li><a href="#debian系列">Debian系列 </a>
+<ul>
+<li><a href="#查看文本的方式">查看文本的方式</a>
+<ul>
+<li><a href="#跳到指定行">跳到指定行</a></li>
+<li><a href="#显示行号">显示行号</a></li>
+<li><a href="#添加到组-附加组">添加到组(附加组)</a></li>
+<li><a href="#查看用户所属组">查看用户所属组</a></li>
+<li><a href="#删除用户">删除用户</a></li>
+<li><a href="#查看所有用户">查看所有用户</a></li>
+<li><a href="#修改密码">修改密码</a></li>
+<li><a href="#查看在线用户">查看在线用户</a></li>
+<li><a href="#踢用户下线">踢用户下线</a></li>
+<li><a href="#修改文件或者目录权限">修改文件或者目录权限</a></li>
+<li><a href="#使用ssh密钥登录">使用ssh密钥登录</a></li>
+<li><a href="#防火墙的一些含义">防火墙的一些含义</a></li>
+<li><a href="#查看磁盘容量-查看文件大小">查看磁盘容量，查看文件大小</a></li>
+<li><a href="#find命令参数">find命令参数</a></li>
+<li><a href="#查看文件修改时间">查看文件修改时间</a></li>
+<li><a href="#压缩以及解压">压缩以及解压</a></li>
+<li><a href="#查看linux-启动的服务">查看linux 启动的服务</a></li>
+<li><a href="#查看linux版本-适用于redhat和centos系列">查看linux版本(适用于redhat和centos系列)</a></li>
+<li><a href="#后台运行神器screen命令的使用">后台运行神器screen命令的使用</a></li>
+<li><a href="#文件上传下载">文件上传下载</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav></div>
+    </div>
+</section>
+
   </div>
 </aside>
 

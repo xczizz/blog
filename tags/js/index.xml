@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on My Hugo Site</title>
+    <link>https://idsze.cn/tags/js/</link>
+    <description>Recent content in js on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 07 Jun 2017 19:04:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Js学习笔记</title>
+      <link>https://idsze.cn/post/history/javascript-study-notes/</link>
+      <pubDate>Wed, 07 Jun 2017 19:04:47 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/javascript-study-notes/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;语句还是要以分号结尾，规范一些&lt;/li&gt;
+&lt;li&gt;变量名是大小写英文、数字、&lt;code&gt;$&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;的组合，且不能用数字开头&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;建议使用严格模式 &lt;code&gt;use strict&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;也是弱类型语言 （比较的时候类型自动转换）&lt;/li&gt;
+&lt;li&gt;严格区分大小写&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Js中的数组函数和php中数组函数的对比</title>
+      <link>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</link>
+      <pubDate>Wed, 07 Jun 2017 17:04:41 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// js
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;span style=&#34;color:#75715e&#34;&gt;// php
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;$arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

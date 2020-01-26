@@ -1,0 +1,609 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Yii2中更改editormd的图片上传路径 - My Hugo Site</title>
+    <meta name="keywords" content="yii2,editormd,">
+    
+    
+    <meta property="og:title" content="Yii2中更改editormd的图片上传路径">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="title" content="Yii2中更改editormd的图片上传路径 - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/" itemprop="url">
+        Yii2中更改editormd的图片上传路径
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-11">
+    2017-07-11
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">867 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>文件路径：<code>vendor/bower/editor.md/plugins/image-dialog/image-dialog.js</code></p>
+
+<p>更改图片上传到 <a href="https://sm.ms">https://sm.ms</a></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/*!
+</span><span style="color:#75715e"> * Image (upload) dialog plugin for Editor.md
+</span><span style="color:#75715e"> * 2017/7/11 做过一些更改，上传到http://sm.ms
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @file        image-dialog.js
+</span><span style="color:#75715e"> * @author      pandao
+</span><span style="color:#75715e"> * @version     1.3.4
+</span><span style="color:#75715e"> * @updateTime  2015-06-09
+</span><span style="color:#75715e"> * {@link       https://github.com/pandao/editor.md}
+</span><span style="color:#75715e"> * @license     MIT
+</span><span style="color:#75715e"> */</span>
+
+(<span style="color:#66d9ef">function</span>() {
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">factory</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">exports</span>) {
+
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pluginName</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;image-dialog&#34;</span>;
+
+        <span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">imageDialog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_this</span>       <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cm</span>          <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cm</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lang</span>        <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lang</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">editor</span>      <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">editor</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">settings</span>    <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">settings</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cursor</span>      <span style="color:#f92672">=</span> <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">getCursor</span>();
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">selection</span>   <span style="color:#f92672">=</span> <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">getSelection</span>();
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">imageLang</span>   <span style="color:#f92672">=</span> <span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">image</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">classPrefix</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">iframeName</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;image-iframe&#34;</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogName</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">pluginName</span>, <span style="color:#a6e22e">dialog</span>;
+
+            <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">focus</span>();
+
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">loading</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">show</span>) {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_loading</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;dialog-mask&#34;</span>);
+                <span style="color:#a6e22e">_loading</span>[(<span style="color:#a6e22e">show</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;show&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hide&#34;</span>]();
+            };
+
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dialogName</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>)
+            {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">guid</span>   <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Date).<span style="color:#a6e22e">getTime</span>();
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">action</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUploadURL</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUploadURL</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;?&#34;</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&amp;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;?&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;guid=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">guid</span>;
+
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">crossDomainUpload</span>)
+                {
+                    <span style="color:#a6e22e">action</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&amp;callback=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">uploadCallbackURL</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;dialog_id=editormd-image-dialog-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">guid</span>;
+                }
+
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogContent</span> <span style="color:#f92672">=</span> ( (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&lt;form action=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">action</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\&#34; target=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">iframeName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34; method=\&#34;post\&#34; enctype=\&#34;multipart/form-data\&#34; class=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;form\&#34;&gt;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;div class=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;form\&#34;&gt;&#34;</span> ) <span style="color:#f92672">+</span>
+                    ( (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&lt;iframe name=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">iframeName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34; id=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">iframeName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34; guid=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">guid</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34;&gt;&lt;/iframe&gt;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span> ) <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;label&gt;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;/label&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;input type=\&#34;text\&#34; data-url /&gt;&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#66d9ef">function</span>(){
+                        <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&lt;div class=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;file-input\&#34;&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#e6db74">&#34;&lt;input type=\&#34;file\&#34; name=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;image-file\&#34; accept=\&#34;image/gif,image/jpeg,image/jpg,image/png\&#34; /&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#e6db74">&#34;&lt;input type=\&#34;submit\&#34; value=\&#34;本地上传\&#34;&gt;&#34;</span> <span style="color:#f92672">+</span>
+                            <span style="color:#e6db74">&#34;&lt;/div&gt;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>;
+                    })() <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;br/&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;label&gt;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">alt</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;/label&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;input type=\&#34;text\&#34; value=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">selection</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34; data-alt /&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;br/&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;label&gt;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">link</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;/label&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;input type=\&#34;text\&#34; value=\&#34;http://\&#34; data-link /&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;&lt;br/&gt;&#34;</span> <span style="color:#f92672">+</span>
+                    ( (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&lt;/form&gt;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&lt;/div&gt;&#34;</span>);
+
+                <span style="color:#75715e">//var imageFooterHTML = &#34;&lt;button class=\&#34;&#34; + classPrefix + &#34;btn &#34; + classPrefix + &#34;image-manager-btn\&#34; style=\&#34;float:left;\&#34;&gt;&#34; + imageLang.managerButton + &#34;&lt;/button&gt;&#34;;
+</span><span style="color:#75715e"></span>
+                <span style="color:#a6e22e">dialog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">createDialog</span>({
+                    <span style="color:#a6e22e">title</span>      <span style="color:#f92672">:</span> <span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">title</span>,
+                    <span style="color:#a6e22e">width</span>      <span style="color:#f92672">:</span> (<span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) <span style="color:#f92672">?</span> <span style="color:#ae81ff">465</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">380</span>,
+                    <span style="color:#a6e22e">height</span>     <span style="color:#f92672">:</span> <span style="color:#ae81ff">254</span>,
+                    <span style="color:#a6e22e">name</span>       <span style="color:#f92672">:</span> <span style="color:#a6e22e">dialogName</span>,
+                    <span style="color:#a6e22e">content</span>    <span style="color:#f92672">:</span> <span style="color:#a6e22e">dialogContent</span>,
+                    <span style="color:#a6e22e">mask</span>       <span style="color:#f92672">:</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">dialogShowMask</span>,
+                    <span style="color:#a6e22e">drag</span>       <span style="color:#f92672">:</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">dialogDraggable</span>,
+                    <span style="color:#a6e22e">lockScreen</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">dialogLockScreen</span>,
+                    <span style="color:#a6e22e">maskStyle</span>  <span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">opacity</span>         <span style="color:#f92672">:</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">dialogMaskOpacity</span>,
+                        <span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">dialogMaskBgColor</span>
+                    },
+                    <span style="color:#a6e22e">buttons</span> <span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">enter</span> <span style="color:#f92672">:</span> [<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">buttons</span>.<span style="color:#a6e22e">enter</span>, <span style="color:#66d9ef">function</span>() {
+                            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-url]&#34;</span>).<span style="color:#a6e22e">val</span>();
+                            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">alt</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-alt]&#34;</span>).<span style="color:#a6e22e">val</span>();
+                            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-link]&#34;</span>).<span style="color:#a6e22e">val</span>();
+
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;&#34;</span>)
+                            {
+                                <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">imageURLEmpty</span>);
+                                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                            }
+
+                            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">altAttr</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">alt</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34; \&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">alt</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\&#34;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>;
+
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">link</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;http://&#34;</span>)
+                            {
+                                <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">replaceSelection</span>(<span style="color:#e6db74">&#34;![&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">alt</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;](&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">altAttr</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>);
+                            }
+                            <span style="color:#66d9ef">else</span>
+                            {
+                                <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">replaceSelection</span>(<span style="color:#e6db74">&#34;[![&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">alt</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;](&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">altAttr</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)](&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">altAttr</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>);
+                            }
+
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">alt</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+                                <span style="color:#a6e22e">cm</span>.<span style="color:#a6e22e">setCursor</span>(<span style="color:#a6e22e">cursor</span>.<span style="color:#a6e22e">line</span>, <span style="color:#a6e22e">cursor</span>.<span style="color:#a6e22e">ch</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>);
+                            }
+
+                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hide</span>().<span style="color:#a6e22e">lockScreen</span>(<span style="color:#66d9ef">false</span>).<span style="color:#a6e22e">hideMask</span>();
+
+                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                        }],
+
+                        <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:</span> [<span style="color:#a6e22e">lang</span>.<span style="color:#a6e22e">buttons</span>.<span style="color:#a6e22e">cancel</span>, <span style="color:#66d9ef">function</span>() {
+                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hide</span>().<span style="color:#a6e22e">lockScreen</span>(<span style="color:#66d9ef">false</span>).<span style="color:#a6e22e">hideMask</span>();
+
+                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                        }]
+                    }
+                });
+
+                <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;image-dialog-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">guid</span>);
+
+                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageUpload</span>) {
+                    <span style="color:#66d9ef">return</span> ;
+                }
+
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fileInput</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[name=\&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">classPrefix</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;image-file\&#34;]&#34;</span>);
+
+                <span style="color:#75715e">// 上传到https://sm.ms
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sm_upload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">i</span>){
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">i</span>) {
+                        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+                        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormData</span>();
+                        <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;smfile&#39;</span>,<span style="color:#a6e22e">file</span>[<span style="color:#ae81ff">0</span>]);
+                        <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;POST&#39;</span>, <span style="color:#e6db74">&#39;https://sm.ms/api/upload&#39;</span>, <span style="color:#66d9ef">true</span>);
+                        <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+                                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>);
+                                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">code</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;success&#34;</span>){
+                                    <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-url]&#34;</span>).<span style="color:#a6e22e">val</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">url</span>);
+                                    <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-alt]&#34;</span>).<span style="color:#a6e22e">val</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">filename</span>);
+                                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">url</span>,<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">data</span>.<span style="color:#66d9ef">delete</span>);
+                                    <span style="color:#a6e22e">sm_clear</span>();
+                                }<span style="color:#66d9ef">else</span>{
+                                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">msg</span>)
+                                }
+                                <span style="color:#a6e22e">loading</span>(<span style="color:#66d9ef">false</span>)
+                            }
+                        };
+                        <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>(<span style="color:#a6e22e">formData</span>);
+                    }<span style="color:#66d9ef">else</span>{
+                        <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">val</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+                        <span style="color:#a6e22e">loading</span>(<span style="color:#66d9ef">false</span>)
+                    }
+                };
+
+                <span style="color:#75715e">// 清除历史，防止被删
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sm_clear</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">get_xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+                    <span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#e6db74">&#39;https://sm.ms/api/clear&#39;</span>, <span style="color:#66d9ef">true</span>);
+                    <span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>){
+                            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">responseText</span>)
+                        }
+                    };
+                    <span style="color:#a6e22e">get_xhr</span>.<span style="color:#a6e22e">send</span>();
+                };
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">submitHandler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fileInput</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">files</span>;
+
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+                        <span style="color:#a6e22e">sm_upload</span>(<span style="color:#a6e22e">files</span>, <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">length</span>, <span style="color:#ae81ff">0</span>)
+                    }
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                };
+
+                <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#34;change&#34;</span>, <span style="color:#66d9ef">function</span>() {
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fileName</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">val</span>();
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isImage</span>   <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RegExp(<span style="color:#e6db74">&#34;(\\.(&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageFormats</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;|&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;))$&#34;</span>); <span style="color:#75715e">// /(\.(webp|jpg|jpeg|gif|bmp|png))$/
+</span><span style="color:#75715e"></span>
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">fileName</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;&#34;</span>)
+                    {
+                        <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">uploadFileEmpty</span>);
+
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                    }
+
+                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isImage</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">fileName</span>))
+                    {
+                        <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">imageLang</span>.<span style="color:#a6e22e">formatNotAllowed</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">imageFormats</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;, &#34;</span>));
+
+                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                    }
+
+                    <span style="color:#a6e22e">loading</span>(<span style="color:#66d9ef">true</span>);
+
+                    <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[type=\&#34;submit\&#34;]&#34;</span>).<span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">submitHandler</span>).<span style="color:#a6e22e">trigger</span>(<span style="color:#e6db74">&#34;click&#34;</span>);
+                });
+            }
+
+            <span style="color:#a6e22e">dialog</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dialogName</span>);
+            <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[type=\&#34;text\&#34;]&#34;</span>).<span style="color:#a6e22e">val</span>(<span style="color:#e6db74">&#34;&#34;</span>);
+            <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[type=\&#34;file\&#34;]&#34;</span>).<span style="color:#a6e22e">val</span>(<span style="color:#e6db74">&#34;&#34;</span>);
+            <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;[data-link]&#34;</span>).<span style="color:#a6e22e">val</span>(<span style="color:#e6db74">&#34;http://&#34;</span>);
+
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dialogShowMask</span>(<span style="color:#a6e22e">dialog</span>);
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">dialogLockScreen</span>();
+            <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">show</span>();
+
+        };
+
+    };
+
+    <span style="color:#75715e">// CommonJS/Node.js
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">require</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;function&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">exports</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;object&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">module</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;object&#34;</span>)
+    {
+        <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">factory</span>;
+    }
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">define</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;function&#34;</span>)  <span style="color:#75715e">// AMD/CMD/Sea.js
+</span><span style="color:#75715e"></span>    {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">define</span>.<span style="color:#a6e22e">amd</span>) { <span style="color:#75715e">// for Require.js
+</span><span style="color:#75715e"></span>
+            <span style="color:#a6e22e">define</span>([<span style="color:#e6db74">&#34;editormd&#34;</span>], <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">editormd</span>) {
+                <span style="color:#a6e22e">factory</span>(<span style="color:#a6e22e">editormd</span>);
+            });
+
+        } <span style="color:#66d9ef">else</span> { <span style="color:#75715e">// for Sea.js
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">define</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">require</span>) {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">editormd</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./../../editormd&#34;</span>);
+                <span style="color:#a6e22e">factory</span>(<span style="color:#a6e22e">editormd</span>);
+            });
+        }
+    }
+    <span style="color:#66d9ef">else</span>
+    {
+        <span style="color:#a6e22e">factory</span>(window.<span style="color:#a6e22e">editormd</span>);
+    }
+
+})();
+</code></pre></div>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/yii2" rel="tag" title="yii2">#yii2#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/" rel="next" title="Serialize和json_encode效率比较">
+        <i class="fa fa-chevron-left"></i> Serialize和json_encode效率比较
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/" rel="prev" title="Html中的input File在Chrome中弹出缓慢">
+        Html中的input File在Chrome中弹出缓慢 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">6</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">16</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on My Hugo Site</title>
+    <link>https://idsze.cn/tags/redis/</link>
+    <description>Recent content in redis on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 26 May 2018 18:23:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis安装相关</title>
+      <link>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</link>
+      <pubDate>Sat, 26 May 2018 18:23:34 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</guid>
+      <description>&lt;h1 id=&#34;linux进入redis服务&#34;&gt;linux进入redis服务&lt;/h1&gt;
+
+&lt;p&gt;直接&lt;code&gt;redis-cli&lt;/code&gt;
+&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;redis&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;查看redis进程&#34;&gt;查看redis进程&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;service redis status&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

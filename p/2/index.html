@@ -173,6 +173,72 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/post/history/install-redis-in-linux-and-windows/" itemprop="url">
+        Redis安装相关
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-05-26">
+    2018-05-26
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">143 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h1 id="linux进入redis服务">linux进入redis服务</h1>
+
+<p>直接<code>redis-cli</code>
+<img src="http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="redis" /></p>
+
+<h1 id="查看redis进程">查看redis进程</h1>
+
+<p><code>service redis status</code></p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/post/history/install-redis-in-linux-and-windows/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://idsze.cn/post/history/linux-study-notes/" itemprop="url">
         Linux知识小记
         </a>
@@ -188,6 +254,24 @@
 </time>
 </span> 
       
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
        <span>
 &nbsp; | &nbsp;
 <span class="post-meta-item-icon">
@@ -216,8 +300,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/" itemprop="url">
-        Composer Install和composer Update的区别
+        <a class="post-title-link" href="https://idsze.cn/post/history/install-xunsearch/" itemprop="url">
+        Xunsearch安装
         </a>
       </h1>
       <div class="post-meta">
@@ -226,71 +310,62 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-06-16">
-    2017-06-16
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-09-18">
+    2017-09-18
 </time>
 </span> 
       
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
        <span>
 &nbsp; | &nbsp;
 <span class="post-meta-item-icon">
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">80 字 ~1分钟</span>
+<span class="leancloud-visitors-count">640 字 ~2分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>composer install 和 composer update 区别：</p>
+    <ol>
+<li><p>安装库
+<code>yum -y install make gcc gcc-c++ libtool autoconf automake</code></p></li>
 
-<p>install 的时候如果发现 composer.lock 中存在锁定版本，就会安装该版本。不存在的话会安装.json里的版本并创建 <code>.lock</code> 文件,update 是更新所有依赖的版本并更新 composer.lock 文件。</p>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
+<li><p>安装软件（先下载软件包，解压到单独目录）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd /software
+wget http://www.xunsearch.com/download/xunsearch-full-latest.tar.bz2
+tar -xjf xunsearch-full-latest.tar.bz2
+cd xunsearch-full-1.3.0/
+sh setup.sh
+//选择安装路径在/software/xunsearch
+cd xunsearch
+bin/xs-ctl.sh start</pre></div></li>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/javascript-study-notes/" itemprop="url">
-        Js学习笔记
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-06-07">
-    2017-06-07
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">532 字 ~2分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <ul>
-<li>语句还是要以分号结尾，规范一些</li>
-<li>变量名是大小写英文、数字、<code>$</code>和<code>_</code>的组合，且不能用数字开头</li>
-<li><u>变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错</u></li>
-<li>建议使用严格模式 <code>use strict</code></li>
-<li>也是弱类型语言 （比较的时候类型自动转换）</li>
-<li>严格区分大小写</li>
-</ul>
+<li><p>添加到开机启动命令
+<code>vi /etc/rc.local</code>
+ 在文件最后加一句<code>cd /software/xunsearch ; bin/xs-ctl.sh restart</code></p></li>
+</ol>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/javascript-study-notes/" rel="contents">
+    <a class="btn" href="https://idsze.cn/post/history/install-xunsearch/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -301,8 +376,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/" itemprop="url">
-        Js中的数组函数和php中数组函数的对比
+        <a class="post-title-link" href="https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/" itemprop="url">
+        Php中几个常用的排序算法
         </a>
       </h1>
       <div class="post-meta">
@@ -311,33 +386,242 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-06-07">
-    2017-06-07
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-08-02">
+    2017-08-02
 </time>
 </span> 
       
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86" itemprop="url" rel="index">
+        <span itemprop="name">小知识</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
        <span>
 &nbsp; | &nbsp;
 <span class="post-meta-item-icon">
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">685 字 ~2分钟</span>
+<span class="leancloud-visitors-count">285 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// js
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span><span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,<span style="color:#e6db74">&#39;world&#39;</span>];
-<span style="color:#75715e">// php
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">$arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,<span style="color:#e6db74">&#39;world&#39;</span>];
-</code></pre></div>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
+// 循环
+function bubbleSort($numbers) {
+    $count= count($numbers);
+    if ($count <span style="color:#960050;background-color:#1e0010">&lt;</span>= 0) return false;
+    for ($i = 0; $i <span style="color:#960050;background-color:#1e0010">&lt;</span> $count; $i++) {
+        for ($j = 0; $j <span style="color:#960050;background-color:#1e0010">&lt;</span> $count- 1 - $i; $j++) {
+            if ($numbers[$j] &gt; $numbers[$j + 1]) {
+                list($numbers[$j], $numbers[$j +1]) = [$numbers[$j + 1], $numbers[$j]];
+            }
+        }
+    }
+ 
+    return $numbers;
+}
+ 
+$num = array(20, 40, 60, 80, 30, 70, 90, 10, 50, 0);
+var_dump(bubbleSort($num));</code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/" rel="contents">
+    <a class="btn" href="https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/" rel="contents">
       阅读全文 &raquo;
     </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/" itemprop="url">
+        Serialize和json_encode效率比较
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-31">
+    2017-07-31
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1378 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>将数组转为字符串，<code>serialize</code>比<code>json_encode</code>效率高很多。</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/" itemprop="url">
+        Yii2中更改editormd的图片上传路径
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-11">
+    2017-07-11
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">867 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>文件路径：<code>vendor/bower/editor.md/plugins/image-dialog/image-dialog.js</code></p>
+
+<p>更改图片上传到 <a href="https://sm.ms">https://sm.ms</a></p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/" itemprop="url">
+        Html中的input File在Chrome中弹出缓慢
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-10">
+    2017-07-10
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86" itemprop="url" rel="index">
+        <span itemprop="name">小知识</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">169 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><code>&lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;</code>  改为如下:<br />
+<code>&lt;input type=&quot;file&quot; accept=&quot;image/gif,image/jpeg,image/jpg,image/png&quot;&gt;</code></p>
+
+<p><code>accept=&quot;image/*&quot;</code>属性会对每一个文件都遍历一次所有的<code>&quot;image/*&quot;</code>文件类型，当文件较多时，文件的检验时间较长。</p>
+
+<p>如果是<code>accept=&quot;audio/*&quot;</code>和<code>accept=&quot;video/*&quot;</code>，同样指明所需文件的类型MIME类型</p>
     </div>
     
     <footer class="post-footer"><div class="post-eof"></div></footer>
@@ -381,7 +665,13 @@
         
         
     
+        
+        
+          <a class="page-number" href="https://idsze.cn/p/3/">3</a>
+        
+        
     
+    <a class="extend next" rel="next" href="https://idsze.cn/p/3/"><i class="fa fa-angle-right"></i></a>
 </nav>
 
 
@@ -411,14 +701,14 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="https://idsze.cn/categories/">      
          
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -428,7 +718,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">16</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
