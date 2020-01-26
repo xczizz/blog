@@ -1,139 +1,270 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://idsze.cn/categories/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/git/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/categories/git/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/post/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/</loc>
-    <lastmod>2020-01-14T20:35:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</loc>
-    <lastmod>2020-01-13T18:57:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/hosts/</loc>
-    <lastmod>2020-01-13T18:57:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/markdown/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/vscode/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2020-01-10T22:26:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</loc>
-    <lastmod>2020-01-09T18:19:48+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/nodejs/</loc>
-    <lastmod>2020-01-09T15:12:32+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</loc>
-    <lastmod>2020-01-09T15:12:32+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</loc>
-    <lastmod>2020-01-09T15:10:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/about/</loc>
-    <lastmod>2019-12-17T15:13:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2019/12/coding-pages-ssl-error/</loc>
-    <lastmod>2019-12-12T21:46:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/categories/ssl/</loc>
-    <lastmod>2019-12-12T21:46:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/apache/</loc>
-    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/mysql/</loc>
-    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/tags/php/</loc>
-    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2019/12/php-environment-setup-under-windows/</loc>
-    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2019-12-01T19:28:38+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</loc>
-    <lastmod>2019-11-25T00:39:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idsze.cn/archives/</loc>
-  </url>
-  
-</urlset>
+<search>
+    
+     <entry>
+        <title>git push的时候提示HEAD detached from origin/master</title>
+        <url>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</url>
+        <categories>
+          <category>git</category>
+        </categories>
+        <tags>
+          <tag>git</tag>
+        </tags>
+        <content type="html"> 本地分支从主分支分离出来了，解决方式：
+1. 拉出临时分支 git branch temp b57d3f2
+2. 切换到主分支 git checkout master
+3. 合并临时分支 git merge temp
+4. 推送主分支 git push origin master
+5. 删除临时分支 git branch -d temp
+参考链接：https://blog.csdn.net/yongzili/article/details/93795441
+</content>
+    </entry>
+    
+     <entry>
+        <title>github上的图片加载不出来</title>
+        <url>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</url>
+        <categories>
+          
+        </categories>
+        <tags>
+          <tag>hosts</tag>
+        </tags>
+        <content type="html"> 从这个站点查看下列三个站点的 IP 地址，然后添加到 hosts 里:
+192.30.253.112 raw.githubusercontent.com 185.199.109.153 assets-cdn.github.com 199.232.5.194 github.global.ssl.fastly.net 但还是有图片加载不出来
+</content>
+    </entry>
+    
+     <entry>
+        <title>vscode中配置markdown的代码片段不生效</title>
+        <url>https://idsze.cn/post/vscode-markdown-snippet-config/</url>
+        <categories>
+          <category>小技巧</category>
+        </categories>
+        <tags>
+          <tag>vscode</tag><tag>markdown</tag>
+        </tags>
+        <content type="html"> vscode 中设置了markdown的一个more的代码段，但在 .md 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：
+&amp;#34;[markdown]&amp;#34;: { &amp;#34;editor.formatOnSave&amp;#34;: true, &amp;#34;editor.renderWhitespace&amp;#34;: &amp;#34;all&amp;#34;, &amp;#34;editor.quickSuggestions&amp;#34;: { &amp;#34;other&amp;#34;: true, &amp;#34;comments&amp;#34;: true, &amp;#34;strings&amp;#34;: true }, &amp;#34;editor.acceptSuggestionOnEnter&amp;#34;: &amp;#34;on&amp;#34; } more 的代码段：
+&amp;#34;read more&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;more&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!--more--&amp;gt;\n\n$0&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;read more&amp;#34; } 参考链接： https://blog.csdn.net/serryuer/article/details/89393760
+</content>
+    </entry>
+    
+     <entry>
+        <title>自定义文件夹排序</title>
+        <url>https://idsze.cn/post/customize-the-sorting-of-folders/</url>
+        <categories>
+          <category>小技巧</category>
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加desktop.ini配置文件来给子文件夹增加“备注”属性，以便可以排序。
+大体的目录结构如下：
+├── D // D盘 ├── firstFolder // 需要排序的第一个文件夹 │ ├── subFolder // 子文件夹或者其他 │ ├── Desktop.ini // desktop 配置文件 ├── secondFolder // 需要排序的第二个文件夹 │ ├── subFolder // 子文件夹或者其他 │ ├── Desktop.ini // desktop 配置文件 ├── thirdFolder // 需要排序的第三个文件夹 │ ├── subFolder // 子文件夹或者其他 │ ├── Desktop.ini // desktop 配置文件 ├── otherFolder // 其他文件夹 ├── otherFolder // 其他文件夹  使用 markdown 编写如上的文件目录，使用的符号：├ │ ─，也不知道这是怎么搞出来的，复制的别人 = =
+ desktop的内容 [.ShellClassInfo] InfoTip=3 这里的 InfoTip 即为备注信息，直接写为数字可以排序。 在 powershell 命令行使用attrb &#43;H &#43;S Desktop.ini可以将该文件设置为系统属性和隐藏属性，下次使用需要在文件夹选项中将这个显示出来。使用之后，desktop 的内容自动改变:
+[.ShellClassInfo] InfoTip=3 [ViewState] Mode= Vid= FolderType=Generic 完事之后需要刷新文件夹才可立即生效，怎么刷新文件夹，暂时没研究清楚，有一个曲线救国的方式：随便更改一下文件夹的图标（可以更改为一模一样的），就能立即生效。
+attrb 可使用 attrb /?来查看用法。
+更多配置信息：https://hwiegman.home.xs4all.nl/desktopini.html
+</content>
+    </entry>
+    
+     <entry>
+        <title>更改nodejs的全局包的默认安装位置</title>
+        <url>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</url>
+        <categories>
+          <category>小技巧</category>
+        </categories>
+        <tags>
+          <tag>nodejs</tag>
+        </tags>
+        <content type="html"> 默认情况下，位置应该在C:/users/xx/AppData/Roaming/node下，现在更改到D盘。
+查看位置：npm config ls
+更改位置：npm config set prefix &amp;quot;D:\node_global_modules&amp;quot;
+顺便看到npm缓存位置也在C盘，那就一块改到D盘：npm config set cache &amp;quot;D:\nodejs\node_cache
+但是这么改完还是不能用的，需要在添加环境变量，在用户的Path里增加一个D:\nodejs\node_global_modules，然后在系统变量里面新建一个叫NODE_PATH的变量，值为D:\node\node_global\node_modules，这个值是全局模块的文件夹路径，以后安装的全局模块就在这里。
+</content>
+    </entry>
+    
+     <entry>
+        <title>Git Subtree Push 报错 Assertion Failed</title>
+        <url>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</url>
+        <categories>
+          <category>小技巧</category><category>git</category>
+        </categories>
+        <tags>
+          <tag>git</tag>
+        </tags>
+        <content type="html"> 今天使用git subtree push xxx的时候竟然爆了一个错误：Assertion failed xxx 和 No new revisions were found ，查了半天愣是没找到任何解决方式。
+代码也没问题，使用方式也正确，之前在 win7 上也没问题，于是换成win7上相同的环境再试一下，下载了一个gitBush ，woc竟然莫名其妙的push成功，真的是终端问题？？ powershell和gitbush两个终端上的git push结构不一样？？
+</content>
+    </entry>
+    
+     <entry>
+        <title>codingPages中申请ssl报错</title>
+        <url>https://idsze.cn/post/coding-pages-ssl-error/</url>
+        <categories>
+          <category>ssl</category>
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> 错误码：urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &amp;quot;&amp;lt;!DOCTYPE html&amp;gt;\n&amp;lt;html&amp;gt;\n &amp;lt;head&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Content-type\&amp;quot; content=\&amp;quot;text/html; charset=utf-8\&amp;quot;&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Co&amp;quot;
+查了下ip为荷兰： 估计可能是 githubPages 的解析地址。先暂停 github 的解析，然后重新申请。
+结果又报错：urn:acme:error:dns: No valid IP addresses found for idsze.cn
+在官方的常见错误列表中查到是 dns 解析问题，之前把 coding 的解析到了境内，官方要求海外的也要解析。更换之后申请成功。不过证书的有效期只有三个月，有点少。
+</content>
+    </entry>
+    
+     <entry>
+        <title>windows下的php环境安装</title>
+        <url>https://idsze.cn/post/php-environment-setup-under-windows/</url>
+        <categories>
+          <category>瞎折腾</category>
+        </categories>
+        <tags>
+          <tag>php</tag><tag>apache</tag><tag>mysql</tag>
+        </tags>
+        <content type="html"> Apache 直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
+这个是 apache conf 的内容 # NOTE: Where filenames are specified, you must use forward slashes # instead of backslashes (e.g., &amp;#34;c:/apache&amp;#34; instead of &amp;#34;c:\apache&amp;#34;). 简单记几个命令：
+安装服务（需要用管理员权限）: httpd -k install 卸载服务 httpd -k uninstall 启动服务 httpd -k start 停止服务 httpd -k stop 重启服务 httpd -k restart 查看版本 httpd -V 查看支持的命令 httpd -h 可以在 windwos 服务中设为开机自启。
+安装是时候似乎出现一个错误Errors reported here must be corrected before the service can be started.，这不是错误，而是提示，如果此处有错误必须先解决 :joy: 配置 Apache 支持 PHP  配置 php 模块
+# php7 support LoadModule php7_module &amp;#34;C:/php/php740/php7apache2_4.dll&amp;#34; AddType application/x-httpd-php .php .html .htm # configure the path to php.ini PHPIniDir &amp;#34;C:/php/php740&amp;#34; 配置 web 根目录，可以重新设置一个 webRoot
+# customize web root Define WEBROOT &amp;#34;D:/PhpWorkspace/www&amp;#34; DocumentRoot &amp;#34;${WEBROOT}&amp;#34; &amp;lt;Directory &amp;#34;${WEBROOT}&amp;#34;&amp;gt;   Mysql 下载链接：https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip 这个版本没有配置文件，需手动增加一个：my.ini，先上最简单的配置：
+[client] #password = port = 3306 #socket = /tmp/mysql.sock default-character-set = utf8mb4 [mysqld] #bind-address = 0.0.0.0 port = 3306 #socket = /tmp/mysql.sock # 允许最大连接数 max_connections = 200 # 允许连接失败的次数。 max_connect_errors=10 # 服务端使用的字符集默认为utf8mb4 character-set-server=utf8mb4 # 创建新表时将使用的默认存储引擎 default-storage-engine=INNODB #开启查询缓存 explicit_defaults_for_timestamp = true #设置加密方式为原生加密方式吗，解决无法登陆 phpmyadmin 的问题 default_authentication_plugin=mysql_native_password 初始化之后会给一个root用户和默认密码：mysqld --initialize --console
+安装服务：.\bin\mysqld --install
+启动服务：net start mysql
+第一次进入之后会让更改密码：alter user root@localhost identified by &amp;quot;password&amp;quot; PHP 下载地址：https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip ，php主要就是一堆的配置。 复制php.ini-development为php.ini，放几个常用配置：
+short_open_tag = On post_max_size = 20M upload_max_filesize = 50M On windows: extension_dir = &amp;#34;ext&amp;#34; 按需开启相对应扩展 phpmyadmin 安装 官网下载 phpMyadmin，解压到上边配好的 webroot 目录下，打开，看到熟悉的页面。尝试登陆一下，发现报错mysqli::real_connect(): The server requested authentication method unknown to the client [caching_sha2_password] 去mysql官网看一下解释 大致意思就是 mysql8.0 之后有了更安全的加密方式且被设置为默认的加密方式，而当前登录暂时不支持该方式，解决方法是设置加密方式为之前的default_authentication_plugin=mysql_native_password，然后命令行进入 mysql 设置 ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;;，再刷新一下 FLUSH PRIVILEGES;，除此之外似乎也没找到更好的解决方式，只能等待 phpmyadmin 支持新的加密方式了。 &amp;gt; ALTER USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED WITH mysql_native_password BY &amp;#39;password&amp;#39;; &amp;gt; FLUSH PRIVILEGES; 修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 配置文件现在需要一个短语密码。 解决方法：
+1、在 phpMyAdmin/libraries/config.default.php 中把 $cfg[&#39;blowfish_secret&#39;]给一个值
+2、在 phpMyAdmin/config.sample.inc.php 中的 $cfg[&#39;blowfish_secret&#39;] 也给一个值
+ 官方给的注释：
+This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.
+$cfg[&#39;blowfish_secret&#39;] = &#39;&#39;; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+ 字面意思是用来 cookie 加密，防止混淆。
+</content>
+    </entry>
+    
+     <entry>
+        <title>powerShell中执行多个命令</title>
+        <url>https://idsze.cn/post/execute-multiple-commands-in-powershell/</url>
+        <categories>
+          <category>小技巧</category>
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> 使用&amp;amp;&amp;amp;的时候报错，查了下使用;可以输入多个命令。
+也有说使用-and 或者 -or的还没做测试，测试没有成功
+emoji 链接：https://www.webfx.com/tools/emoji-cheat-sheet/
+</content>
+    </entry>
+    
+     <entry>
+        <title>Linux知识小记</title>
+        <url>https://idsze.cn/post/history/linux-study-notes/</url>
+        <categories>
+          
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> 一般来说著名的linux系统基本上分两大类：
+1. RedHat系列：Redhat、Centos、Fedora等
+2. Debian系列：Debian、Ubuntu等 RedHat 系列   常见的安装包格式 rpm 包,安装 rpm 包的命令是rpm -参数
+ 包管理工具 yum rpm软件包是为了简化安装的复杂度，而yum仓库是为了解决软件包之间的依赖关系。  Debian系列   常见的安装包格式 deb 包,安装 de b包的命令是dpkg -参数 包管理工具 apt-get   系统装完之后，可以一一键安装开发编译的工具包:
+Debian 上可以使用 apt-get install build-essential
+CentOS 上使用 yum groupinstall &amp;quot;Development Tools&amp;quot;
+查看文本的方式 cat： 用于将一个文件的内容连续输出在屏幕上
+其命令格式： cat [-option] 文件名
+常用参数：
+-n: 将行号一起显示在屏幕上
+-b：将行号一起显示在屏幕上,但空行不算
+more：同样用于显示文件内容，会在显示完一屏内容后停下，可以下翻。
+其命令格式为： more 文件名
+回车键可以单行下翻， Ctrl&#43;f可以整页下翻，若需退出按q键。
+less: 和 more 一样，唯一区别就是可以使用 pagedown 和 pageup 进行上翻和下翻，方便一些。 其命令格式为： less 文件名
+head: 默认情况下，用于显示文件内容的前10行 其命令格式为： head 文件名
+常用参数： -n :指定显示的行数
+tail: 与 head 相反，默认情况下显示文件内容的后10行 其命令格式为：tail 文件名
+常用参数： -n :指定显示的行数
+跳到指定行 200gg 跳到第二百行行首，200G是行尾
+显示行号  crtl&#43;g可以显示当前光标从所在位置（第几行第几列以及所在位置的百分比） :set nu可以设置全部显示行号 ，:nu 跟crtl&#43;g 一样的效果。  添加到组(附加组) usermod -g groupname username
+usermod -G groupname username
+eg:usermod -g root doze 将doze加入到root 大写G 是将用户添加到附加组，小写g 是更改用户组
+查看用户所属组 groups username 或者 id username 或者 more | /etc/group
+删除用户 userdel wang注：删除用户wang，但不删除其家目录(在/var中)及文件； userdel -r wang注：删除用户wang，其家目录及文件一并删除；
+查看所有用户 cat /etc/passwd
+cat /etc/passwd|grep 用户名 结果显示：strawberry: x:502:0::/home/strawberry:/bin/bash
+结果描述：用户名:密码:ID:组ID:备注:根目录:shell所在目录
+修改密码 普通用户：passwd，需要旧密码 root用户：passwd username
+查看在线用户 who
+踢用户下线 root用户才可以使用：  pkill -kill -t pts/0
+修改文件或者目录权限 d rwx rwx r-x 目录 主用户 组 其他
+- 常规文件 d 目录 b 块设备特殊（磁盘） c 字符特殊设备（终端） s 信号灯   使用文字 chmod ［who］ ［&#43; | - | =］ ［mode］ 文件名 操作对象who可是下述字母中的任一个或者它们的组合：
+u 表示“用户（user）”，即文件或目录的所有者。 g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。 o 表示“其他（others）用户”。 a 表示“所有（all）用户”。它是系统默认值。 1.1. 操作符号可以是：
+&#43; 添加某个权限。 - 取消某个权限。 = 赋予给定权限并取消其他所有权限（如果有的话） 1.2. 设置mode所表示的权限可用下述字母的任意组合：
+r 可读 w 可写 x 可执行 X 只有目标文件对某些用户是可执行的或该目标文件是目录时才追加x 属性 s 在文件执行时把进程的属主或组ID置为该文件的文件属主 t 保存程序的文本到交换设备上 u 与文件属主拥有一样的权限 g 与和文件属主同组的用户拥有一样的权限 o 与其他用户拥有一样的权限。 例：chmod g&#43;r，o&#43;r example 使同组和其他用户对文件example 有读权限。
+ 使用数字 chmod ［mode］ 文件名 0表示没有权限，1表示可执行权限，2表示可写权限，4表示可读权限 例： chmod 644 mm.txt
+  使用ssh密钥登录 安全设置：在配置文件中，禁止root登录，禁止密码登录，
+PasswordAuthentication no //禁止密码 PermitRootLogin no //禁止root  生成密钥：doze用户（su doze）下，进入根目录（/home/doze/） ssh-keygen -t rsa 中间有提示可以输入密钥的密码 将密钥添加到授权文件中（在.ssh目录下操作） cat id_dsa.pub &amp;gt; authorized_keys 此时.ssh下的文件有id_dsa，id_dsa.pub，authorized_keys 设置权限 chmod 600 authorized_keys  chmod 700 .ssh 4.允许用户可以使用ssh密钥登录 sudo vim /etc/ssh/sshd_config 将用户添加到AllowUsers 后边 然后重启sudo service sshd restart。如果少了这一步，报错：该密钥未在远程主机注册 将id_dsa传到本地windows上，使用putty生成ppk文件(可以省略，如果使用Xshell登录的话) 然后就可以正常使用密钥登录了。  防火墙的一些含义 :INPUT ACCEPT [0:0] # 该规则表示INPUT表默认策略是ACCEPT :FORWARD ACCEPT [0:0] # 该规则表示FORWARD表默认策略是ACCEPT :OUTPUT ACCEPT [0:0] # 该规则表示OUTPUT表默认策略是ACCEPT -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT # 意思是允许进入的数据包只能是刚刚我发出去的数据包的回应，ESTABLISHED：已建立的链接状态。RELATED：该数据包与本机发出的数据包有关。 -A INPUT -j REJECT --reject-with icmp-host-prohibited -A FORWARD -j REJECT --reject-with icmp-host-prohibited # 这两条的意思是在INPUT表和FORWARD表中拒绝所有其他不符合上述任何一条规则的数据包。并且发送一条host prohibited的消息给被拒绝的主机。 查看磁盘容量，查看文件大小 df命令是Linux系统以磁盘分区为单位查看文件系统，可以加上参数查看磁盘剩余空间信息，命令格式： df -hl 显示格式为：　文件系统 容量 已用 可用 已用% 挂载点　
+查看文件大小：使用du -a -h -a参数显示子目录和文件大小 -h 带单位显示
+find命令参数 http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html
+查看文件修改时间 查看文件时间戳命令：stat awk.txt
+File: `awk.txt&amp;#39; Size: 20 Blocks: 8 IO Block: 4096 regular file Device: 801h/2049d Inode: 380730 Links: 1 Access: (0644/-rw-r--r--) Uid: ( 0/ root) Gid: ( 0/ root) Access: 2008-04-26 01:50:44.000000000 &#43;0800 Modify: 2008-04-26 01:48:18.000000000 &#43;0800 Change: 2008-04-26 01:48:18.000000000 &#43;0800 说明：Access访问时间。Modify修改时间。Change状态改变时间。可以stat *查看这个目录所有文件的状态
+压缩以及解压 tar 使用
+-c: 压缩 -x：解压 -t：查看内容 -r：向压缩归档文件末尾追加文件 -u：更新原压缩包中的文件 -z：有gzip属性的 -j：有bz2属性的 -Z：有compress属性的 -v：显示所有过程 -O：将文件解开到标准输出
+-f 的参数是必须的，且必须是最后一个，后面跟目标文件名
+gzip 使用
+-c：将输出写到标准输出上，并保留原有文件。 -d ：将压缩文件解压。 -l ：对每个压缩文件，显示下列字段： 压缩文件的大小 未压缩文件的大小 压缩比 未压缩文件的名字 -r ：递归式地查找指定目录并压缩其中的所有文件或者是解压缩。 -t ：测试，检查压缩文件是否完整。 -v： 对每一个压缩和解压的文件，显示文件名和压缩比。 -num： 用指定的数字num调整压缩的速度， -1或&amp;ndash;fast：表示最快压缩方法（低压缩比）， -9或&amp;ndash;bes：t表示最慢压缩方法（高压缩比）。系统缺省值为6。
+写几个例子：
+tar压缩： tar –cvf jpg.tar *.jpg //将目录里所有jpg文件打包成tar.jpg tar –czf jpg.tar.gz *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz tar –cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2 tar –cZf jpg.tar.Z *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z tar解压： tar –xvf file.tar //解压 tar包 tar -xzvf file.tar.gz //解压tar.gz tar -xjvf file.tar.bz2 //解压 tar.bz2 tar –xZvf file.tar.Z //解压tar.Z gzip压缩就比较简单： gzip‍ -c src &amp;gt; dst.gz //src压缩之后还保留源文件 gzip解压： gzip -d aaa.gz gunzip aaa.gz 查看linux 启动的服务 chkconfig --list
+查看linux版本(适用于redhat和centos系列) cat /etc/redhat-release 返回类似CentOS release 6.8 (Final)
+后台运行神器screen命令的使用 直接使用screen相当于打开一个新的窗口，在窗口里可以执行任意的命令。 也可以在screen 命令后跟上需要执行的命令，但是这样如果命令包含了 &amp;gt; 这种写入上操作，是不会生效的。
+- 退出|screen : ctrl &#43; 小写a &#43; 小写d，Screen会给出detached提示
+- 查看 screen 有哪些任务 screen -ls，可以看出任务的pid
+- 连接 screen 的具体某一个任务： screen -r pid,这儿的pid指的是process id
+- 结束某一个任务：kill -9 pid，pid同上，这样会把该任务设为 dead 状态
+- 清空所有不工作的任务： screen -wipe,会清除掉所有的 dead 状态的任务
+文件上传下载 rz 弹出个框框，进行上传 sz filename下载
+</content>
+    </entry>
+    
+     <entry>
+        <title>Composer Install和composer Update的区别</title>
+        <url>https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/</url>
+        <categories>
+          
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> composer install 和 composer update 区别：
+install 的时候如果发现 composer.lock 中存在锁定版本，就会安装该版本。不存在的话会安装.json里的版本并创建 .lock 文件,update 是更新所有依赖的版本并更新 composer.lock 文件。
+</content>
+    </entry>
+    
+     <entry>
+        <title>Js学习笔记</title>
+        <url>https://idsze.cn/post/history/javascript-study-notes/</url>
+        <categories>
+          
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html">  语句还是要以分号结尾，规范一些 变量名是大小写英文、数字、$和_的组合，且不能用数字开头 变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错 建议使用严格模式 use strict 也是弱类型语言 （比较的时候类型自动转换） 严格区分大小写   数据类型：  number（包括了整数和浮点） string boolean null和undefined Array Object （var person = {name: &#39;Bob&#39;, age: 20, zipcode: null};） Map和Set（ES6新增的数据类型）  一切皆对象，函数也是对象  数组对象 字符串对象 Math对象 Number对象 RegExp对象  ES6新增反引号表示多行字符串，字符串模板连接变量  ES6新增的iterable类型包括Array,Map,Set. 抽象是数学中非常常见的概念。举个例子：计算数列的和，比如：1 &#43; 2 &#43; 3 &#43; &amp;hellip; &#43; 100，写起来十分不方便，于是数学家发明了求和符号∑，可以把1 &#43; 2 &#43; 3 &#43; &amp;hellip; &#43; 100记作： 可见，借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。 写计算机程序也是一样，函数就是最基本的一种代码抽象的方式。 JavaScript默认有一个全局对象window，全局作用域的变量实际上被绑定到window的一个属性var course = &#39;Learn JavaScript&#39;;alert(window.course) </content>
+    </entry>
+    
+     <entry>
+        <title>Js中的数组函数和php中数组函数的对比</title>
+        <url>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</url>
+        <categories>
+          
+        </categories>
+        <tags>
+          
+        </tags>
+        <content type="html"> // js var arr=[1,2,&amp;#39;hello&amp;#39;,&amp;#39;world&amp;#39;]; // php $arr = [1,2,&amp;#39;hello&amp;#39;,&amp;#39;world&amp;#39;];     JavaScript PHP 含义 返回值 用法 备注     length count()或者sizeof() 数组长度 - arr.length; count($arr); sizeof()是count()的别名   indexOf() array_search() 指定元素的索引 成功返回第一个键名(或索引)，失败分别返回-1 和 false arr.indexOf(1); array_search(1,$arr); 返回值   slice() array_slice() 数组截取 返回截取的部分 arr.slice(0,2); array_slice($arr,0,2); 前者两个参数都是索引(不包括结束索引)，后者第三个参数表示长度   push() array_push() 从尾部压入(入栈) 返回新数组长度(改变原数组) arr.push(&#39;A&#39;) array_push($arr,&#39;A&#39;) -   pop() array_pop() 弹出数组最后一个(出栈) 返回弹出的值(改变原数组) arr.pop() array_pop($arr) -   unshift() array_unshift() 从头压入数据 返回新数组长度(改变原数组) arr.unshift() array_unshift($arr,&#39;A&#39;) -   shift() array_shift() 弹出数组第一个元素 返回弹出的值(改变原数组) arr.shift() array_shift($arr) -   sort() sort() 排序 后者返回值为bool arr.sort() sort($arr) -   reverse() array_reverse() 数组反转 前者改变原数组，后者返回翻转后数组 arr.reverse() array_reverse($arr) -   splice() array_splice() 替换指定部分为指定的值 返回被删除的元素(改变原数组) arr.splice(1,2,&#39;A&#39;,&#39;B&#39;) array_splice($arr,1,2,[&#39;A&#39;,&#39;B&#39;]) 写法不太一样，后者要替换的是写个数组，前者分开写元素   concat() array_merge() 数组合并 返回合并后的数组 arr.concat([1,2,3]) array_merge($arr,[1,2,3]) 存在相同字符串键名，后者覆盖前者   join() implode() 数组转字符串 字符串 arr.join(&#39;-&#39;) implode(&#39;-&#39;,$arr)      在js中貌似没有关联数组一说，对象就是关联数组（但其实，array本身也是对象）。js对象中 键值对的声明为 : ，跟php中的=&amp;gt;不一，并且键的名称（其实就是对象的属性）也不需要用引号来包含，除非这个键包含了特殊符号，比如（var xiaohong = {name: &#39;小红&#39;,&#39;middle-school&#39;: &#39;No.1 Middle School&#39;};），包含特殊符号的属性，也只能用关联数组的形式来访问，比如xiaohog[&#39;middle-school&#39;]
+ 1. 一开始以为有关联数组，所以这种写法是错的 var a[&amp;#39;name&amp;#39;] = &amp;#39;aaa&amp;#39;; var a[&amp;#39;age&amp;#39;] = 12; console.log(a[&amp;#39;name&amp;#39;]); // 报错：Uncaught SyntaxError: Unexpected token [ 2. 先定义数组，再添加元素 var a=[]; a[&amp;#39;name&amp;#39;] = &amp;#39;sdf&amp;#39; a[&amp;#39;age&amp;#39;] =12 console.log(a[&amp;#39;name&amp;#39;],a[&amp;#39;age&amp;#39;],typeof(a),a.length) // sdf 12 object 0 // 长度依旧为0 </content>
+    </entry>
+    
+</search>

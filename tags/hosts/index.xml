@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hosts on My New Hugo Site</title>
+    <title>hosts on My Hugo Site</title>
     <link>https://idsze.cn/tags/hosts/</link>
-    <description>Recent content in hosts on My New Hugo Site</description>
+    <description>Recent content in hosts on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 13 Jan 2020 18:57:53 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/hosts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +13,14 @@
     
     <item>
       <title>github上的图片加载不出来</title>
-      <link>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</link>
+      <link>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</link>
       <pubDate>Mon, 13 Jan 2020 18:57:53 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</guid>
-      <description>&lt;p&gt;在下边的网站上查看 github 的 IP 地址，&lt;a href=&#34;https://github.com.ipaddress.com/&#34;&gt;https://github.com.ipaddress.com/&lt;/a&gt;  ，然后添加到 &lt;code&gt;hosts&lt;/code&gt; 里边：&lt;code&gt;192.30.253.112  raw.githubusercontent.com&lt;/code&gt;，但还是有图片加载不出来。&lt;/p&gt;</description>
+      <guid>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</guid>
+      <description>&lt;p&gt;从&lt;a href=&#34;https://www.ipaddress.com/&#34;&gt;这个站点&lt;/a&gt;查看下列三个站点的 IP 地址，然后添加到 &lt;code&gt;hosts&lt;/code&gt; 里:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;192.30.253.112      raw.githubusercontent.com
+185.199.109.153     assets-cdn.github.com
+199.232.5.194       github.global.ssl.fastly.net&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

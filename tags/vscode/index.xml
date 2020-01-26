@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vscode on My New Hugo Site</title>
+    <title>vscode on My Hugo Site</title>
     <link>https://idsze.cn/tags/vscode/</link>
-    <description>Recent content in vscode on My New Hugo Site</description>
+    <description>Recent content in vscode on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 10 Jan 2020 22:26:57 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
@@ -13,23 +13,21 @@
     
     <item>
       <title>vscode中配置markdown的代码片段不生效</title>
-      <link>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</link>
+      <link>https://idsze.cn/post/vscode-markdown-snippet-config/</link>
       <pubDate>Fri, 10 Jan 2020 22:26:57 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</guid>
+      <guid>https://idsze.cn/post/vscode-markdown-snippet-config/</guid>
       <description>&lt;p&gt;vscode 中设置了markdown的一个&lt;code&gt;more&lt;/code&gt;的代码段，但在 &lt;code&gt;.md&lt;/code&gt; 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;[markdown]&amp;quot;: {
-        &amp;quot;editor.formatOnSave&amp;quot;: true,
-        &amp;quot;editor.renderWhitespace&amp;quot;: &amp;quot;all&amp;quot;,
-        &amp;quot;editor.quickSuggestions&amp;quot;: {
-            &amp;quot;other&amp;quot;: true,
-            &amp;quot;comments&amp;quot;: true,
-            &amp;quot;strings&amp;quot;: true
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&amp;#34;[markdown]&amp;#34;: {
+        &amp;#34;editor.formatOnSave&amp;#34;: true,
+        &amp;#34;editor.renderWhitespace&amp;#34;: &amp;#34;all&amp;#34;,
+        &amp;#34;editor.quickSuggestions&amp;#34;: {
+            &amp;#34;other&amp;#34;: true,
+            &amp;#34;comments&amp;#34;: true,
+            &amp;#34;strings&amp;#34;: true
         },
-        &amp;quot;editor.acceptSuggestionOnEnter&amp;quot;: &amp;quot;on&amp;quot;
-    }
-&lt;/code&gt;&lt;/pre&gt;</description>
+        &amp;#34;editor.acceptSuggestionOnEnter&amp;#34;: &amp;#34;on&amp;#34;
+    }&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

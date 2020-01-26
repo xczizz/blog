@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>My Hugo Site</title>
     <link>https://idsze.cn/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 14 Jan 2020 20:35:03 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>git push的时候提示HEAD detached from origin/master</title>
-      <link>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</link>
+      <link>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</link>
       <pubDate>Tue, 14 Jan 2020 20:35:03 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</guid>
+      <guid>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</guid>
       <description>&lt;p&gt;本地分支从主分支分离出来了，解决方式：&lt;br /&gt;
 1. 拉出临时分支 &lt;code&gt;git branch temp  b57d3f2&lt;/code&gt;&lt;br /&gt;
 2. 切换到主分支 &lt;code&gt;git checkout master&lt;/code&gt;&lt;br /&gt;
@@ -27,44 +27,44 @@
     
     <item>
       <title>github上的图片加载不出来</title>
-      <link>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</link>
+      <link>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</link>
       <pubDate>Mon, 13 Jan 2020 18:57:53 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</guid>
-      <description>&lt;p&gt;在下边的网站上查看 github 的 IP 地址，&lt;a href=&#34;https://github.com.ipaddress.com/&#34;&gt;https://github.com.ipaddress.com/&lt;/a&gt;  ，然后添加到 &lt;code&gt;hosts&lt;/code&gt; 里边：&lt;code&gt;192.30.253.112  raw.githubusercontent.com&lt;/code&gt;，但还是有图片加载不出来。&lt;/p&gt;</description>
+      <guid>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</guid>
+      <description>&lt;p&gt;从&lt;a href=&#34;https://www.ipaddress.com/&#34;&gt;这个站点&lt;/a&gt;查看下列三个站点的 IP 地址，然后添加到 &lt;code&gt;hosts&lt;/code&gt; 里:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;192.30.253.112      raw.githubusercontent.com
+185.199.109.153     assets-cdn.github.com
+199.232.5.194       github.global.ssl.fastly.net&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>vscode中配置markdown的代码片段不生效</title>
-      <link>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</link>
+      <link>https://idsze.cn/post/vscode-markdown-snippet-config/</link>
       <pubDate>Fri, 10 Jan 2020 22:26:57 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</guid>
+      <guid>https://idsze.cn/post/vscode-markdown-snippet-config/</guid>
       <description>&lt;p&gt;vscode 中设置了markdown的一个&lt;code&gt;more&lt;/code&gt;的代码段，但在 &lt;code&gt;.md&lt;/code&gt; 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;quot;[markdown]&amp;quot;: {
-        &amp;quot;editor.formatOnSave&amp;quot;: true,
-        &amp;quot;editor.renderWhitespace&amp;quot;: &amp;quot;all&amp;quot;,
-        &amp;quot;editor.quickSuggestions&amp;quot;: {
-            &amp;quot;other&amp;quot;: true,
-            &amp;quot;comments&amp;quot;: true,
-            &amp;quot;strings&amp;quot;: true
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&amp;#34;[markdown]&amp;#34;: {
+        &amp;#34;editor.formatOnSave&amp;#34;: true,
+        &amp;#34;editor.renderWhitespace&amp;#34;: &amp;#34;all&amp;#34;,
+        &amp;#34;editor.quickSuggestions&amp;#34;: {
+            &amp;#34;other&amp;#34;: true,
+            &amp;#34;comments&amp;#34;: true,
+            &amp;#34;strings&amp;#34;: true
         },
-        &amp;quot;editor.acceptSuggestionOnEnter&amp;quot;: &amp;quot;on&amp;quot;
-    }
-&lt;/code&gt;&lt;/pre&gt;</description>
+        &amp;#34;editor.acceptSuggestionOnEnter&amp;#34;: &amp;#34;on&amp;#34;
+    }&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>自定义文件夹排序</title>
-      <link>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</link>
+      <link>https://idsze.cn/post/customize-the-sorting-of-folders/</link>
       <pubDate>Thu, 09 Jan 2020 18:19:48 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</guid>
+      <guid>https://idsze.cn/post/customize-the-sorting-of-folders/</guid>
       <description>&lt;p&gt;D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加&lt;code&gt;desktop.ini&lt;/code&gt;配置文件来给子文件夹增加“备注”属性，以便可以排序。&lt;br /&gt;
 大体的目录结构如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;├── D                                           // D盘
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;├── D                                           // D盘
 ├── firstFolder                                 // 需要排序的第一个文件夹
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
@@ -75,16 +75,15 @@
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
 ├── otherFolder                                 // 其他文件夹
-├── otherFolder                                 // 其他文件夹
-&lt;/code&gt;&lt;/pre&gt;</description>
+├── otherFolder                                 // 其他文件夹&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>更改nodejs的全局包的默认安装位置</title>
-      <link>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</link>
+      <link>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</link>
       <pubDate>Thu, 09 Jan 2020 15:12:32 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</guid>
+      <guid>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</guid>
       <description>&lt;p&gt;默认情况下，位置应该在&lt;code&gt;C:/users/xx/AppData/Roaming/node&lt;/code&gt;下，现在更改到&lt;code&gt;D盘&lt;/code&gt;。&lt;br /&gt;
 查看位置：&lt;code&gt;npm config ls&lt;/code&gt;&lt;br /&gt;
 更改位置：&lt;code&gt;npm config set prefix &amp;quot;D:\node_global_modules&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
@@ -92,10 +91,10 @@
     
     <item>
       <title>Git Subtree Push 报错 Assertion Failed</title>
-      <link>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</link>
+      <link>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</link>
       <pubDate>Thu, 09 Jan 2020 15:10:44 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</guid>
+      <guid>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</guid>
       <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx&lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34; /&gt;&lt;/p&gt;</description>
@@ -107,56 +106,101 @@
       <pubDate>Tue, 17 Dec 2019 15:13:34 +0800</pubDate>
       
       <guid>https://idsze.cn/about/</guid>
-      <description>重新开始写笔记吧，以前使用过hexo，后来觉得不能后台处理且不够个性化(现在倒觉得曾经是多虑了)就改成自搭服务器使用 yii2 来写着玩，谁料这么个小破服务器因为端口太开放，数据库在上个月被黑了😭，最后一次备份是在17年11月，这特么跟没做有啥区别，也没开启 binlog，得了，啥也没有了，虽然之前的内容也都是一些技术笔记，没啥特别重要的价值，但也心痛了好一阵子。总觉得自己是个小个人博客应该不会被光顾，没意义，可捣坏的人也是这么想的，印象深刻，以后数据库可得定时备份，端口能不对外开放就不开放，常用端口不得已开放可以改端口号。
-这次使用hugo写吧，顺带学习一下传说中的nextc语言😁。</description>
+      <description>重新开始写笔记吧，以前使用过hexo，后来觉得不能后台处理且不够个性化(现在倒觉得曾经是多虑了)就改成自搭服务器使用 yii2 来写着玩，谁料这么个小</description>
     </item>
     
     <item>
       <title>codingPages中申请ssl报错</title>
-      <link>https://idsze.cn/2019/12/coding-pages-ssl-error/</link>
+      <link>https://idsze.cn/post/coding-pages-ssl-error/</link>
       <pubDate>Thu, 12 Dec 2019 21:46:03 +0800</pubDate>
       
-      <guid>https://idsze.cn/2019/12/coding-pages-ssl-error/</guid>
+      <guid>https://idsze.cn/post/coding-pages-ssl-error/</guid>
       <description>&lt;p&gt;错误码：&lt;code&gt;urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &amp;quot;&amp;lt;!DOCTYPE html&amp;gt;\n&amp;lt;html&amp;gt;\n &amp;lt;head&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Content-type\&amp;quot; content=\&amp;quot;text/html; charset=utf-8\&amp;quot;&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Co&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>windows下的php环境安装</title>
-      <link>https://idsze.cn/2019/12/php-environment-setup-under-windows/</link>
+      <link>https://idsze.cn/post/php-environment-setup-under-windows/</link>
       <pubDate>Sun, 01 Dec 2019 19:28:38 +0800</pubDate>
       
-      <guid>https://idsze.cn/2019/12/php-environment-setup-under-windows/</guid>
+      <guid>https://idsze.cn/post/php-environment-setup-under-windows/</guid>
       <description>&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
 
 &lt;p&gt;直接在&lt;a href=&#34;http://httpd.apache.org/download.cgi&#34;&gt;官网下载&lt;/a&gt;。解压之后有个&lt;code&gt;readme_first.html&lt;/code&gt;就有使用说明。先更改&lt;code&gt;ServerRoot&lt;/code&gt;为绝对路径（注意路径写正斜杠），就可以跑起来。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;这个是 apache conf 的内容
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;这个是 apache conf 的内容
 
 # NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &amp;quot;c:/apache&amp;quot; instead of &amp;quot;c:\apache&amp;quot;).
-&lt;/code&gt;&lt;/pre&gt;
-
+# instead of backslashes (e.g., &amp;#34;c:/apache&amp;#34; instead of &amp;#34;c:\apache&amp;#34;).&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;简单记几个命令：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;安装服务（需要用管理员权限）:  httpd -k install
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;安装服务（需要用管理员权限）:  httpd -k install
 卸载服务   httpd -k uninstall
 启动服务   httpd -k start
 停止服务   httpd -k stop
 重启服务   httpd -k restart
 查看版本   httpd -V
-查看支持的命令 httpd -h
-&lt;/code&gt;&lt;/pre&gt;</description>
+查看支持的命令 httpd -h&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>powerShell中执行多个命令</title>
-      <link>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</link>
+      <link>https://idsze.cn/post/execute-multiple-commands-in-powershell/</link>
       <pubDate>Mon, 25 Nov 2019 00:39:44 +0800</pubDate>
       
-      <guid>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</guid>
+      <guid>https://idsze.cn/post/execute-multiple-commands-in-powershell/</guid>
       <description>&lt;p&gt;使用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;的时候报错，查了下使用&lt;code&gt;;&lt;/code&gt;可以输入多个命令。&lt;/p&gt;
 
 &lt;p&gt;也有说使用&lt;code&gt;-and&lt;/code&gt; 或者 &lt;code&gt;-or&lt;/code&gt;的还没做测试，测试没有成功&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux知识小记</title>
+      <link>https://idsze.cn/post/history/linux-study-notes/</link>
+      <pubDate>Mon, 14 May 2018 13:41:48 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/linux-study-notes/</guid>
+      <description>&lt;p&gt;一般来说著名的linux系统基本上分两大类：&lt;br /&gt;
+1. RedHat系列：Redhat、Centos、Fedora等&lt;br /&gt;
+2. Debian系列：Debian、Ubuntu等 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Composer Install和composer Update的区别</title>
+      <link>https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/</link>
+      <pubDate>Fri, 16 Jun 2017 15:42:17 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/</guid>
+      <description>&lt;p&gt;composer install 和 composer update 区别：&lt;/p&gt;
+
+&lt;p&gt;install 的时候如果发现 composer.lock 中存在锁定版本，就会安装该版本。不存在的话会安装.json里的版本并创建 &lt;code&gt;.lock&lt;/code&gt; 文件,update 是更新所有依赖的版本并更新 composer.lock 文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Js学习笔记</title>
+      <link>https://idsze.cn/post/history/javascript-study-notes/</link>
+      <pubDate>Wed, 07 Jun 2017 19:04:47 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/javascript-study-notes/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;语句还是要以分号结尾，规范一些&lt;/li&gt;
+&lt;li&gt;变量名是大小写英文、数字、&lt;code&gt;$&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;的组合，且不能用数字开头&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;建议使用严格模式 &lt;code&gt;use strict&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;也是弱类型语言 （比较的时候类型自动转换）&lt;/li&gt;
+&lt;li&gt;严格区分大小写&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Js中的数组函数和php中数组函数的对比</title>
+      <link>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</link>
+      <pubDate>Wed, 07 Jun 2017 17:04:41 +0800</pubDate>
+      
+      <guid>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// js
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;span style=&#34;color:#75715e&#34;&gt;// php
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;$arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

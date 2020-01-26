@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on My New Hugo Site</title>
+    <title>git on My Hugo Site</title>
     <link>https://idsze.cn/tags/git/</link>
-    <description>Recent content in git on My New Hugo Site</description>
+    <description>Recent content in git on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 14 Jan 2020 20:35:03 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/git/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>git push的时候提示HEAD detached from origin/master</title>
-      <link>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</link>
+      <link>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</link>
       <pubDate>Tue, 14 Jan 2020 20:35:03 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</guid>
+      <guid>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</guid>
       <description>&lt;p&gt;本地分支从主分支分离出来了，解决方式：&lt;br /&gt;
 1. 拉出临时分支 &lt;code&gt;git branch temp  b57d3f2&lt;/code&gt;&lt;br /&gt;
 2. 切换到主分支 &lt;code&gt;git checkout master&lt;/code&gt;&lt;br /&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Git Subtree Push 报错 Assertion Failed</title>
-      <link>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</link>
+      <link>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</link>
       <pubDate>Thu, 09 Jan 2020 15:10:44 +0800</pubDate>
       
-      <guid>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</guid>
+      <guid>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</guid>
       <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx&lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34; /&gt;&lt;/p&gt;</description>
