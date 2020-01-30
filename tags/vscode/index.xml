@@ -13,21 +13,22 @@
     
     <item>
       <title>vscode中配置markdown的代码片段不生效</title>
-      <link>https://idsze.cn/post/vscode-markdown-snippet-config/</link>
+      <link>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</link>
       <pubDate>Fri, 10 Jan 2020 22:26:57 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/vscode-markdown-snippet-config/</guid>
+      <guid>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</guid>
       <description>&lt;p&gt;vscode 中设置了markdown的一个&lt;code&gt;more&lt;/code&gt;的代码段，但在 &lt;code&gt;.md&lt;/code&gt; 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&amp;#34;[markdown]&amp;#34;: {
-        &amp;#34;editor.formatOnSave&amp;#34;: true,
-        &amp;#34;editor.renderWhitespace&amp;#34;: &amp;#34;all&amp;#34;,
-        &amp;#34;editor.quickSuggestions&amp;#34;: {
-            &amp;#34;other&amp;#34;: true,
-            &amp;#34;comments&amp;#34;: true,
-            &amp;#34;strings&amp;#34;: true
-        },
-        &amp;#34;editor.acceptSuggestionOnEnter&amp;#34;: &amp;#34;on&amp;#34;
-    }&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[markdown]&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.formatOnSave&amp;#34;&lt;/span&gt;: true,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.renderWhitespace&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;all&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.quickSuggestions&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;other&amp;#34;&lt;/span&gt;: true,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;comments&amp;#34;&lt;/span&gt;: true,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;strings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.acceptSuggestionOnEnter&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

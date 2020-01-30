@@ -1,0 +1,729 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Yii2笔记 - My Hugo Site</title>
+    <meta name="keywords" content="yii2,composer,html,">
+    
+    
+    <meta property="og:title" content="Yii2笔记">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="baidu-site-verification" content="3QjhF2nVG2" />
+    <meta name="title" content="Yii2笔记 - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2017/08/note-for-yii2/" itemprop="url">
+        Yii2笔记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-08-31">
+    2017-08-31
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3833 字 ~8分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <hr>
+<h3 id="yii-维护页面">Yii 维护页面</h3>
+<ol>
+<li>网站维护，入口文件index.php  直接echo</li>
+<li>在应用的配置文件（<code>man.php</code>）中加入以下代码：</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="s1">&#39;catchAll&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>             <span class="c1">//打开之后所有页面进入维护模式
+</span><span class="c1"></span>        <span class="s1">&#39;site/maintenance&#39;</span><span class="p">,</span>    <span class="c1">//维护页面控制器
+</span><span class="c1"></span>        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;网站维护&#39;</span><span class="p">,</span>  <span class="c1">//参数（可有可无）
+</span><span class="c1"></span>     <span class="p">],</span>      
+</code></pre></div><hr>
+<h3 id="registerjsfile">registerJsFile()</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">registerJsFile</span><span class="p">(</span><span class="s1">&#39;@web/js/about.js&#39;</span><span class="p">,[</span><span class="s1">&#39;depends&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;yii\web\YiiAsset&#39;</span><span class="p">,</span><span class="s1">&#39;position&#39;</span><span class="o">=&gt;</span><span class="nx">\yii\web\View</span><span class="o">::</span><span class="na">POS_END</span><span class="p">]);</span>
+</code></pre></div><p><img src="http://upload-images.jianshu.io/upload_images/2001662-db3845f37a81ea06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参数说明"></p>
+<hr>
+<h3 id="注册用户当输入用户名的时候直接判断是否存在而不是提交再判断">注册用户，当输入用户名的时候，直接判断是否存在，而不是提交再判断</h3>
+<p>那么这种做法是，开启<code>ActiveForm</code>的<code>enableAjaxValidation</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> 
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span><span class="cp">?&gt;</span>
+</code></pre></div><p>然后在<code>controller</code>里添加一个<code>ajax</code>验证字段</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$model</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SignupForm</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">isAjax</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">response</span><span class="o">-&gt;</span><span class="na">format</span> <span class="o">=</span> <span class="nx">Response</span><span class="o">::</span><span class="na">FORMAT_JSON</span><span class="p">;</span>
+
+                    <span class="k">return</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="nv">$model</span><span class="p">);</span>
+            <span class="p">}</span> <span class="c1">//ajax提交过来的会直接进行验证
+</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">signup</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">getUser</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">(</span><span class="nv">$user</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">goHome</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;signup&#39;</span><span class="p">,</span> <span class="p">[</span>
+            <span class="s1">&#39;model&#39;</span> <span class="o">=&gt;</span> <span class="nv">$model</span><span class="p">,</span>
+        <span class="p">]);</span>
+</code></pre></div><hr>
+<h3 id="权限流程">权限流程</h3>
+<ol>
+<li>菜单管理添加菜单，在<code>数据</code>选项中添加<code>{&quot;icon&quot;:&quot;fa fa-rss&quot;}</code>可以更换图标，要用<code>双引号</code></li>
+<li>路由列表 &ndash; 添加路由</li>
+<li>权限管理新增权限，把新添加的菜单权限放进去,并分配路由</li>
+<li>角色管理 &ndash; 把新增的菜单分配给角色</li>
+</ol>
+<h3 id="添加新的应用">添加新的应用</h3>
+<ol>
+<li>根目录下Copy一份<strong>backend</strong> 应用改名为<strong>blogapp</strong></li>
+<li>打开<strong>environments/index.php</strong> 增加其初始化工作。（开发环境和生产环境里面配置如下</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">return</span> <span class="p">[</span>  
+    <span class="s1">&#39;Development&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+        <span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;dev&#39;</span><span class="p">,</span>  
+        <span class="s1">&#39;setWritable&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;backend/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;backend/web/assets&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/web/assets&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/web/assets&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+        <span class="s1">&#39;setExecutable&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;yii&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+        <span class="s1">&#39;setCookieValidationKey&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;backend/config/main-local.php&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/config/main-local.php&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/config/main-local.php&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+    <span class="p">],</span>  
+    <span class="s1">&#39;Production&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+        <span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;prod&#39;</span><span class="p">,</span>  
+        <span class="s1">&#39;setWritable&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;backend/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;backend/web/assets&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/web/assets&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/runtime&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/web/assets&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+        <span class="s1">&#39;setExecutable&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;yii&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+        <span class="s1">&#39;setCookieValidationKey&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
+            <span class="s1">&#39;backend/config/main-local.php&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;frontend/config/main-local.php&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;api/config/main-local.php&#39;</span><span class="p">,</span>  
+        <span class="p">],</span>  
+    <span class="p">],</span>  
+<span class="p">];</span>  
+</code></pre></div><ol start="3">
+<li>根目录  **environments/**中<code>dev/</code>和<code>prod/</code>下各copy一份backend命名为<code>blogapp</code>即可</li>
+<li><code>common/config/bootstrap.php</code> 里添加<code>Yii::setAlias('@blogapp', dirname(dirname(__DIR__)) . '/blogapp');</code></li>
+<li>有关应用<code>blogapp</code>文件夹里所有文件,有<code>backend</code>关健字全改成<code>blogapp</code>。才样，才能使用这个独立应用,</li>
+<li><strong>最重要的一步</strong>： 在<code>服务端</code>和<code>本地</code>都要进行一次<code>初始化</code>，即更新一下入口文件个和配置，<strong>windows</strong>使用<code>init</code>,<strong>linux</strong> 使用<code>./init</code></li>
+</ol>
+<h3 id="yii-验证码的使用">Yii 验证码的使用</h3>
+<blockquote>
+<p>在<code>site/contact</code>下有默认的验证码可以参考</p>
+</blockquote>
+<p>现在给注册用户页面添加一个验证码的功能：</p>
+<ol>
+<li>Form表单(<code>frontend/models/SignupForm</code>):</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">SignupForm</span> <span class="k">extends</span> <span class="nx">Model</span><span class="p">{</span>
+  <span class="k">public</span> <span class="nv">$username</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$email</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$password</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$repassword</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$verifyCode</span><span class="p">;</span><span class="c1">//验证码这个变量是必须建的，因为要储存验证码的值   
+</span><span class="c1"></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">rules</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;/^[a-z0-9_\x{4e00}-\x{9fa5}]{2,10}$/ui&#34;</span><span class="p">,</span><span class="s1">&#39;message&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;用户名不合格&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;required&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;unique&#39;</span><span class="p">,</span> <span class="s1">&#39;targetClass&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\common\models\User&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="nx">Yii</span><span class="o">::</span><span class="na">t</span><span class="p">(</span><span class="s1">&#39;app/user&#39;</span><span class="p">,</span><span class="s1">&#39;This username has already been taken.&#39;</span><span class="p">)],</span>
+            <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span> <span class="o">=&gt;</span> <span class="mi">255</span><span class="p">],</span>
+
+            <span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;trim&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;required&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span> <span class="o">=&gt;</span> <span class="mi">255</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;unique&#39;</span><span class="p">,</span> <span class="s1">&#39;targetClass&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\common\models\User&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="nx">Yii</span><span class="o">::</span><span class="na">t</span><span class="p">(</span><span class="s1">&#39;app/user&#39;</span><span class="p">,</span><span class="s1">&#39;This email address has already been taken.&#39;</span><span class="p">)],</span>
+
+            <span class="p">[[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span> <span class="s1">&#39;required&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span> <span class="o">=&gt;</span> <span class="mi">16</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;repassword&#39;</span><span class="p">,</span> <span class="s1">&#39;required&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;repassword&#39;</span><span class="p">,</span> <span class="s1">&#39;compare&#39;</span><span class="p">,</span> <span class="s1">&#39;compareAttribute&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;两次密码不一致&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;verifyCode&#39;</span><span class="p">,</span> <span class="s1">&#39;captcha&#39;</span><span class="p">,</span> <span class="s1">&#39;captchaAction&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;site/captcha&#39;</span><span class="p">],</span><span class="c1">//如果是自定义的验证码，那么需要在这儿进行路由添加并且要跟view里的路径一样，否则会一直验证码错误，默认为site/catpcha
+</span><span class="c1"></span>        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="c1">//继续其他的
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><ol start="2">
+<li>控制器（如果上面没有指定captchaAction，可以在这块位置来定义,现在定义在<code>SiteController</code>）</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">actions</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;error&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;yii\web\ErrorAction&#39;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;captcha&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;yii\captcha\CaptchaAction&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;fixedVerifyCode&#39;</span> <span class="o">=&gt;</span> <span class="nx">YII_ENV_TEST</span> <span class="o">?</span> <span class="s1">&#39;testme&#39;</span> <span class="o">:</span> <span class="k">null</span><span class="p">,</span> <span class="c1">//验证码是否为固定值，默认为空。如果是测试环境，就是固定值为testme
+</span><span class="c1"></span>                <span class="s1">&#39;backColor&#39;</span> <span class="o">=&gt;</span> <span class="mh">0x00FF99</span><span class="p">,</span> <span class="c1">//背景颜色，默认白色
+</span><span class="c1"></span>                <span class="s1">&#39;foreColor&#39;</span> <span class="o">=&gt;</span> <span class="mh">0xFF66FF</span><span class="p">,</span> <span class="c1">//字体颜色，默认蓝色
+</span><span class="c1"></span>                <span class="s1">&#39;maxLength&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">//最大字符长度，默认7
+</span><span class="c1"></span>                <span class="s1">&#39;minLength&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">//最小字符长度，默认6
+</span><span class="c1"></span>                <span class="s1">&#39;height&#39;</span> <span class="o">=&gt;</span> <span class="mi">35</span><span class="p">,</span>  <span class="c1">//高度，默认50
+</span><span class="c1"></span>                <span class="s1">&#39;width&#39;</span> <span class="o">=&gt;</span> <span class="mi">80</span><span class="p">,</span>  <span class="c1">//宽度，默认120
+</span><span class="c1"></span>                <span class="s1">&#39;offset&#39;</span> <span class="o">=&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="c1">//字符之间的间隔，默认-2
+</span><span class="c1"></span>                <span class="s1">&#39;fontFile&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;@yii/captcha/SpicyRice.ttf&#39;</span><span class="p">,</span>  <span class="c1">//字体文件
+</span><span class="c1"></span>                <span class="s1">&#39;imageLibrary &#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;gd&#39;</span><span class="p">,</span><span class="c1">//使用的库，默认为空，自己确定,优先使用imagick。只支持gd 和 imagick
+</span><span class="c1"></span>                <span class="s1">&#39;padding&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">//文本周围填充，默认2
+</span><span class="c1"></span>                <span class="s1">&#39;transparent&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span> <span class="c1">//是否开启透明背景，默认false
+</span><span class="c1"></span>                <span class="s1">&#39;testLimit&#39;</span> <span class="o">=&gt;</span> <span class="mi">999</span><span class="p">,</span> <span class="c1">//见下
+</span><span class="c1"></span>            <span class="p">],</span>
+            <span class="s1">&#39;captcha1&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;yii\captcha\CaptchaAction&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;fixedVerifyCode&#39;</span> <span class="o">=&gt;</span> <span class="nx">YII_ENV_TEST</span> <span class="o">?</span> <span class="s1">&#39;testme&#39;</span> <span class="o">:</span> <span class="k">null</span><span class="p">,</span> <span class="c1">//测试环境代码相同
+</span><span class="c1"></span>            <span class="p">],</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+</code></pre></div><ol start="3">
+<li>视图页面（<code>view/site/signup</code>）:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">yii\bootstrap\ActiveForm</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">yii\captcha\Captcha</span><span class="p">;</span>
+ <span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+        <span class="err">&lt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">textInput</span><span class="p">([</span><span class="s1">&#39;autofocus&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">])</span> <span class="cp">?&gt;</span>
+
+                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">passwordInput</span><span class="p">()</span> <span class="cp">?&gt;</span>
+
+                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;repassword&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">passwordInput</span><span class="p">()</span> <span class="cp">?&gt;</span>
+
+                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;verifyCode&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">,</span><span class="s1">&#39;enableClientValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nx">Captcha</span><span class="o">::</span><span class="na">className</span><span class="p">(),</span> <span class="p">[</span>
+                    <span class="s1">&#39;template&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-lg-3&#34;&gt;{image}&lt;/div&gt;&lt;div class=&#34;col-lg-6&#34;&gt;{input}&lt;/div&gt;&lt;/div&gt;&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;captchaAction&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;site/captcha&#39;</span><span class="p">,</span> <span class="c1">//注意，这里要跟form里的一样，要不然会报错
+</span><span class="c1"></span>                    <span class="s1">&#39;imageOptions&#39;</span><span class="o">=&gt;</span><span class="p">[</span><span class="s1">&#39;alt&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;点击换图&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;点击换图&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;cursor:pointer&#39;</span><span class="p">],</span>
+                <span class="p">])</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">end</span><span class="p">();</span> <span class="cp">?&gt;</span>
+</code></pre></div><ol start="4">
+<li>验证码总是不正确：<br>
+<code>testLimit</code>含义：<strong>相同验证码出现的次数。默认为3。（小于等于0的值意味着不限制）为1，或小于3，这种情况下，相同的验证码只能出现一次，而用户如果开启了ajax验证的话，填写的时候ajax验证一次已达到上限1次，提交的时候再验证一次，他会判断是否大于了testLimit的值，第二次验证testLimit会加1，显然大于了1，这时会重新生成验证码，从而出现验证码老是不正确</strong></li>
+</ol>
+<p>另一个原因：<!-- raw HTML omitted --><strong>因为开启了<code>enableAjaxValidation </code>，通过查看请求连接发现：虽然关闭验证码的<code>enableAjaxValidation</code>，但是，当点击提交的时候，还是会发送ajax请求（来验证整个输入的表单），然而，因为我们在<code>controller </code>里添加了一个验证，所以验证成功之后就刷新了验证码，导致提交时候的验证就失效了</strong><!-- raw HTML omitted --><br>
+大概的流程如下：
+① 点击提交 
+② 开启了<code>enableAjaxValidation </code>（不开启就不会报错）的时候会带着整个表单进行验证 
+③ <code>controller</code>中有一句话</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">isAjax</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">response</span><span class="o">-&gt;</span><span class="na">format</span> <span class="o">=</span> <span class="nx">Response</span><span class="o">::</span><span class="na">FORMAT_JSON</span><span class="p">;</span>
+                    <span class="k">return</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="nv">$model</span><span class="p">);</span><span class="c1">//在这儿第一次验证，成功了，所以已经刷新了
+</span><span class="c1"></span>            <span class="p">}</span>
+</code></pre></div><p>④ 这个位置因为验证成功不会报错，所以又继续进行<code>$model-&gt;signup</code>.然而，在这个函数中，有这么一句话</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+ <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//这儿进行第二次验证，因为码已经刷新，所以报错
+</span><span class="c1"></span>            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div><p>⑤ 只需要吧最后一步的验证中的验证码验证取消即可</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+ <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="s1">&#39;password&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="s1">&#39;repassword&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div><p>⑥ 所以验证码报错，可以取消<code>最后一步验证</code>，也可以直接取消<code>enableAjaxValidation</code></p>
+<blockquote>
+<p>附上验证码的验证过程</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">CaptchaAction</span> <span class="k">extends</span> <span class="nx">Action</span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="nv">$caseSensitive</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$code</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getVerifyCode</span><span class="p">();</span>
+        <span class="nv">$valid</span> <span class="o">=</span> <span class="nv">$caseSensitive</span> <span class="o">?</span> <span class="p">(</span><span class="nv">$input</span> <span class="o">===</span> <span class="nv">$code</span><span class="p">)</span> <span class="o">:</span> <span class="nx">strcasecmp</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="nv">$code</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nv">$session</span> <span class="o">=</span> <span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+        <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">open</span><span class="p">();</span>
+        <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getSessionKey</span><span class="p">()</span> <span class="o">.</span> <span class="s1">&#39;count&#39;</span><span class="p">;</span>
+        <span class="nv">$session</span><span class="p">[</span><span class="nv">$name</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$session</span><span class="p">[</span><span class="nv">$name</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$valid</span> <span class="o">||</span> <span class="nv">$session</span><span class="p">[</span><span class="nv">$name</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">testLimit</span> <span class="o">&amp;&amp;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">testLimit</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getVerifyCode</span><span class="p">(</span><span class="k">true</span><span class="p">);</span> 
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$valid</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ol start="5">
+<li><a href="http://www.yii-china.com/post/detail/94.html">设置参考链接1&ndash;关于设置</a>  ；<a href="http://www.yiichina.com/tutorial/410">刷新网页的时候自动刷新验证码,前提是开启enableClientValidation </a>;<a href="https://segmentfault.com/a/1190000004625968">参考链接2&ndash;关于出错的链接</a>
+当然，Form表单的<code>enableClientVaidation</code>默认就是开启的</li>
+</ol>
+<h3 id="composer-更改为中国镜像">composer 更改为中国镜像</h3>
+<ol>
+<li><strong>修改 composer 的全局配置文件（推荐方式）</strong><br>
+打开命令行窗口（windows用户）或控制台（Linux、Mac 用户）并执行如下命令：
+<code>composer config -g repo.packagist composer https://packagist.phpcomposer.com</code></li>
+<li><strong>修改当前项目的 <code>composer.json</code> 配置文件</strong>：<br>
+进入你的项目的根目录（也就是 composer.json 文件所在目录），执行如下命令：<br>
+<code>composer config repo.packagist composer https://packagist.phpcomposer.com</code><br>
+上述命令将会在当前项目中的 <code>composer.json</code> 文件的末尾自动添加镜像的配置信息（你也可以自己手工添加）：</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;repositories&#34;</span><span class="err">:</span> <span class="p">{</span>
+     <span class="nt">&#34;packagist&#34;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;composer&#34;</span><span class="p">,</span>
+           <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://packagist.phpcomposer.com&#34;</span>
+     <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div><h4 id="checkbox默认选中">checkbox默认选中</h4>
+<p>假设<code>status</code>要显示成复选框，在controller层：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">status</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="p">[</span>
+                <span class="s1">&#39;model&#39;</span> <span class="o">=&gt;</span> <span class="nv">$model</span><span class="p">,</span>
+            <span class="p">]);</span>
+</code></pre></div><p>view层：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&#34;col-md-1 checkbox&#34;</span><span class="o">&gt;</span>
+	<span class="o">&lt;?=</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span><span class="s1">&#39;status&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">checkbox</span><span class="p">([</span><span class="s1">&#39;label&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;原创&#39;</span><span class="p">,</span><span class="s1">&#39;style&#39;</span><span class="o">=&gt;</span><span class="p">[</span><span class="s1">&#39;zoom&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;150%&#39;</span><span class="p">,</span><span class="s1">&#39;margin-top&#39;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">]])</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="cp">?&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>这样默认就会选中，在<code>checkedbox</code>的参数中添加<code>'checked'=&gt;true</code>是<strong>无效</strong>的</p>
+<h4 id="控制台带选项带参数写法">控制台带选项带参数写法</h4>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">console\controllers</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">yii\console\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">HelloController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nv">$rev</span><span class="p">;</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">options</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="p">[</span><span class="s1">&#39;rev&#39;</span><span class="p">];</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">optionAliases</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;rev&#39;</span><span class="p">];</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">actionAll</span><span class="p">(</span><span class="k">array</span> <span class="nv">$name</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">rev</span> <span class="o">==</span> <span class="k">true</span> <span class="o">?</span> <span class="nx">var_dump</span><span class="p">(</span><span class="nx">array_reverse</span><span class="p">(</span><span class="nv">$name</span><span class="p">))</span><span class="o">:</span><span class="nx">var_dump</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>使用：<code>yii hello/all -r q,w,e,r</code> 或者<code>yii hello/all --r q,w,e,r</code><br>
+输出结果都是翻转后的数组，区别是<strong>一个横杠表示使用选项别名，两个表示使用全称的选项</strong>。</p>
+<h3 id="api中三种认证方式的区别">api中三种认证方式的区别</h3>
+<p><code>HttpBasicAuth</code> ： access token 作为一个用户名被传递。这种情况只适合“当access token可以安全的存储在API 接收端”的情况， 比如 调用 API 的是一个在服务器上运行的程序<br>
+<code>QueryParamAuth</code>：access token 在 API URL 中作为一个查询参数被传递，比如 <code>https://example.com/users?access-token=123456789</code><br>
+因为多数的 Web 服务器会保存 query 参数在服务器日志中， 这个方法应该主要是用于响应无法使用 HTTP 头部信息来发送 access token 的 JSONP 请求的。<br>
+<code>OAuth 2</code>：遵照 OAth2.0 协议， 调用者从一个 授权服务器 上获取 access token， 再通过 <code>HTTP Bearer Tokens</code> 发送给 Api 服务器。</p>
+<h3 id="使用migration新建数据库迁移">使用migration新建数据库迁移</h3>
+<p>新建：<code>yii migrate/create &lt;name&gt;</code><br>
+执行：<code>yii migrate/up</code></p>
+<h3 id="批量插入">批量插入</h3>
+<p>是批量插入，不是多次插入</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">[</span><span class="s1">&#39;user1&#39;</span><span class="p">,</span><span class="s1">&#39;goods1&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;user2&#39;</span><span class="p">,</span><span class="s1">&#39;goods2&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+<span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">createCommand</span><span class="p">()</span>
+             <span class="o">-&gt;</span><span class="na">batchInsert</span><span class="p">(</span><span class="s1">&#39;{%table_name}&#39;</span><span class="p">,[</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="s1">&#39;goods&#39;</span><span class="p">],</span><span class="nv">$data</span><span class="p">)</span>
+             <span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="c1">// {%tablen_name}是yii AR中的表名格式 (应使用两个花括号，此处使用一个是因为hugo会解析)
+</span></code></pre></div><h3 id="composer全局设置">composer全局设置</h3>
+<p><code>composer config -g 全局命令 设置</code></p>
+<h3 id="ar模型中的with">AR模型中的with</h3>
+<p>查询多个数据，建议使用with，比如</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">// SQL executed: SELECT * FROM customer LIMIT 100
+</span><span class="c1"></span><span class="nv">$customers</span> <span class="o">=</span> <span class="nx">Customer</span><span class="o">::</span><span class="na">find</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">();</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$customers</span> <span class="k">as</span> <span class="nv">$customer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// SQL executed: SELECT * FROM order WHERE customer_id=...
+</span><span class="c1"></span>    <span class="nv">$orders</span> <span class="o">=</span> <span class="nv">$customer</span><span class="o">-&gt;</span><span class="na">orders</span><span class="p">;</span>
+    <span class="c1">// ...处理 $orders...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>以上代码将执行101 条SQL，第一条 SQL 查询语句取回100个客户，然后， 每个客户要执行一条 SQL 查询语句以取回该客户的所有订单。如果使用了with,只需要两条sql语句:</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">// SQL executed: SELECT * FROM customer LIMIT 100;
+</span><span class="c1">//               SELECT * FROM orders WHERE customer_id IN (1,2,...)
+</span><span class="c1"></span><span class="nv">$customers</span> <span class="o">=</span> <span class="nx">Customer</span><span class="o">::</span><span class="na">find</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="s1">&#39;orders&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">();</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$customers</span> <span class="k">as</span> <span class="nv">$customer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 没有 SQL 语句被执行
+</span><span class="c1"></span>    <span class="nv">$orders</span> <span class="o">=</span> <span class="nv">$customer</span><span class="o">-&gt;</span><span class="na">orders</span><span class="p">;</span>
+    <span class="c1">// ...处理 $orders...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>更详细的介绍：http://www.yiichina.com/doc/guide/2.0/db-active-record# 看第九条 延迟加载和及时加载</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/yii2" rel="tag" title="yii2">#yii2#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2017/09/install-xunsearch/" rel="next" title="Xunsearch安装">
+        <i class="fa fa-chevron-left"></i> Xunsearch安装
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://idsze.cn/2017/08/difference-between-ternary-and-null-coalescing-operator/" rel="prev" title="Php中三元运算符和合并操作符的区别">
+        Php中三元运算符和合并操作符的区别 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">4</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">20</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#yii-维护页面">Yii 维护页面</a></li>
+        <li><a href="#registerjsfile">registerJsFile()</a></li>
+        <li><a href="#注册用户当输入用户名的时候直接判断是否存在而不是提交再判断">注册用户，当输入用户名的时候，直接判断是否存在，而不是提交再判断</a></li>
+        <li><a href="#权限流程">权限流程</a></li>
+        <li><a href="#添加新的应用">添加新的应用</a></li>
+        <li><a href="#yii-验证码的使用">Yii 验证码的使用</a></li>
+        <li><a href="#composer-更改为中国镜像">composer 更改为中国镜像</a></li>
+        <li><a href="#api中三种认证方式的区别">api中三种认证方式的区别</a></li>
+        <li><a href="#使用migration新建数据库迁移">使用migration新建数据库迁移</a></li>
+        <li><a href="#批量插入">批量插入</a></li>
+        <li><a href="#composer全局设置">composer全局设置</a></li>
+        <li><a href="#ar模型中的with">AR模型中的with</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

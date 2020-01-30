@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.59.1" />
+	<meta name="generator" content="Hugo 0.63.2" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
@@ -67,6 +67,12 @@
         </li>
       
         <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
           <a href="https://idsze.cn/categories/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
           </a>
@@ -113,7 +119,80 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/execute-multiple-commands-in-powershell/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/" itemprop="url">
+        windows下的php环境安装
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2019-12-01">
+    2019-12-01
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1221 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="apache">Apache</h2>
+<p>直接在<a href="http://httpd.apache.org/download.cgi">官网下载</a>。解压之后有个<code>readme_first.html</code>就有使用说明。先更改<code>ServerRoot</code>为绝对路径（注意路径写正斜杠），就可以跑起来。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">这个是 apache conf 的内容
+
+# NOTE: Where filenames are specified, you must use forward slashes
+# instead of backslashes (e.g., &#34;c:/apache&#34; instead of &#34;c:\apache&#34;).
+</code></pre></div><p>简单记几个命令：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">安装服务（需要用管理员权限）:  httpd -k install
+卸载服务   httpd -k uninstall
+启动服务   httpd -k start
+停止服务   httpd -k stop
+重启服务   httpd -k restart
+查看版本   httpd -V
+查看支持的命令 httpd -h
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/" itemprop="url">
         powerShell中执行多个命令
         </a>
       </h1>
@@ -158,12 +237,11 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <p>使用<code>&amp;&amp;</code>的时候报错，查了下使用<code>;</code>可以输入多个命令。</p>
-
 <p>也有说使用<code>-and</code> 或者 <code>-or</code>的还没做测试，测试没有成功</p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/execute-multiple-commands-in-powershell/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -174,7 +252,134 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/install-redis-in-linux-and-windows/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/" itemprop="url">
+        动态添加的html无法使用bootstrap的tooltip
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-09-13">
+    2018-09-13
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">315 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 <code>append</code> 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过<code>$('body').on(''click'',xxxx,function(){})</code>来解决部分（比如click）事件，但碰到 tooltip 怎么解决</p>
+<p>bootstrap 中的 tooltip 调用方式为：<code>$('[data-toggle=&quot;tooltip&quot;]').tooltip()</code></p>
+<p>解决方式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;body&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">(</span><span class="p">{</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[data-toggle=&#34;tooltip&#34;]&#39;</span>
+<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/" itemprop="url">
+        本地环境伪造ssl证书
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-06-08">
+    2018-06-08
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">95 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <ol>
+<li>看到报错：<code>curl: (60) SSL certificate problem: unable to get local issuer certificate</code></li>
+<li>下载证书 <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> ，一般放在<code>D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem</code></li>
+<li>配置php.ini</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl.cainfo <span class="o">=</span> <span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span><span class="sb">`</span>
+openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span>
+</code></pre></div><ol start="4">
+<li>重启服务</li>
+</ol>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" itemprop="url">
         Redis安装相关
         </a>
       </h1>
@@ -219,17 +424,14 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h1 id="linux进入redis服务">linux进入redis服务</h1>
-
 <p>直接<code>redis-cli</code>
-<img src="http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="redis" /></p>
-
+<img src="http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="redis"></p>
 <h1 id="查看redis进程">查看redis进程</h1>
-
 <p><code>service redis status</code></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/install-redis-in-linux-and-windows/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -240,7 +442,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/linux-study-notes/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2018/05/linux-study-notes/" itemprop="url">
         Linux知识小记
         </a>
       </h1>
@@ -279,18 +481,20 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">3341 字 ~7分钟</span>
+<span class="leancloud-visitors-count">3333 字 ~7分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>一般来说著名的linux系统基本上分两大类：<br />
-1. RedHat系列：Redhat、Centos、Fedora等<br />
-2. Debian系列：Debian、Ubuntu等 </p>
+    <p>一般来说著名的linux系统基本上分两大类：</p>
+<ol>
+<li>RedHat系列：Redhat、Centos、Fedora等</li>
+<li>Debian系列：Debian、Ubuntu等 </li>
+</ol>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/linux-study-notes/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2018/05/linux-study-notes/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -301,8 +505,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/install-xunsearch/" itemprop="url">
-        Xunsearch安装
+        <a class="post-title-link" href="https://idsze.cn/2018/03/a-simple-lottey-use-php/" itemprop="url">
+        Php写一个简单的抽奖功能
         </a>
       </h1>
       <div class="post-meta">
@@ -311,8 +515,8 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-09-18">
-    2017-09-18
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-03-18">
+    2018-03-18
 </time>
 </span> 
       
@@ -340,33 +544,45 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">640 字 ~2分钟</span>
+<span class="leancloud-visitors-count">521 字 ~2分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <ol>
-<li><p>安装库
-<code>yum -y install make gcc gcc-c++ libtool autoconf automake</code></p></li>
+    <h3 id="可重复的抽奖">可重复的抽奖</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$prize_arr</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;500金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;免禁buff48小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;防偷buff48小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;免禁buff24小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;防偷buff24小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;100金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;50金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">],</span>
+	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;5金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">],</span>
+<span class="p">];</span>
 
-<li><p>安装软件（先下载软件包，解压到单独目录）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd /software
-wget http://www.xunsearch.com/download/xunsearch-full-latest.tar.bz2
-tar -xjf xunsearch-full-latest.tar.bz2
-cd xunsearch-full-1.3.0/
-sh setup.sh
-//选择安装路径在/software/xunsearch
-cd xunsearch
-bin/xs-ctl.sh start</pre></div></li>
-
-<li><p>添加到开机启动命令
-<code>vi /etc/rc.local</code>
- 在文件最后加一句<code>cd /software/xunsearch ; bin/xs-ctl.sh restart</code></p></li>
-</ol>
+<span class="k">function</span> <span class="nf">getRand</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nv">$result</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 默认数组最后用一个
+</span><span class="c1"></span>	<span class="nv">$pro_sum</span> <span class="o">=</span> <span class="nx">array_sum</span><span class="p">(</span><span class="nx">array_map</span><span class="p">(</span><span class="s1">&#39;array_pop&#39;</span><span class="p">,</span> <span class="nv">$prize_arr</span><span class="p">));</span> <span class="c1">// 拿到总数
+</span><span class="c1"></span>	<span class="c1">// $pro_sum = array_sum(array_column($prize_arr, &#39;weight&#39;));  // 两个方法都ok
+</span><span class="c1"></span>
+	<span class="k">foreach</span> <span class="p">(</span><span class="nv">$prize_arr</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nv">$rand_num</span> <span class="o">=</span> <span class="nx">mt_rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">$pro_sum</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nv">$rand_num</span> <span class="o">&lt;=</span> <span class="nv">$value</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">])</span> <span class="p">{</span>
+			<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$key</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nv">$pro_sum</span> <span class="o">-=</span> <span class="nv">$value</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">];</span> <span class="c1">// 说明没有抽到，减去权重,继续来
+</span><span class="c1"></span>		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/install-xunsearch/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2018/03/a-simple-lottey-use-php/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -377,8 +593,8 @@ bin/xs-ctl.sh start</pre></div></li>
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/" itemprop="url">
-        Php中几个常用的排序算法
+        <a class="post-title-link" href="https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/" itemprop="url">
+        Mysql筛选重复数据
         </a>
       </h1>
       <div class="post-meta">
@@ -387,8 +603,8 @@ bin/xs-ctl.sh start</pre></div></li>
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-08-02">
-    2017-08-02
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-03-17">
+    2018-03-17
 </time>
 </span> 
       
@@ -401,8 +617,8 @@ bin/xs-ctl.sh start</pre></div></li>
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86" itemprop="url" rel="index">
-        <span itemprop="name">小知识</span>
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
       </a>
       &nbsp; 
     </span>
@@ -416,213 +632,21 @@ bin/xs-ctl.sh start</pre></div></li>
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">285 字 ~1分钟</span>
+<span class="leancloud-visitors-count">292 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
-// 循环
-function bubbleSort($numbers) {
-    $count= count($numbers);
-    if ($count <span style="color:#960050;background-color:#1e0010">&lt;</span>= 0) return false;
-    for ($i = 0; $i <span style="color:#960050;background-color:#1e0010">&lt;</span> $count; $i++) {
-        for ($j = 0; $j <span style="color:#960050;background-color:#1e0010">&lt;</span> $count- 1 - $i; $j++) {
-            if ($numbers[$j] &gt; $numbers[$j + 1]) {
-                list($numbers[$j], $numbers[$j +1]) = [$numbers[$j + 1], $numbers[$j]];
-            }
-        }
-    }
- 
-    return $numbers;
-}
- 
-$num = array(20, 40, 60, 80, 30, 70, 90, 10, 50, 0);
-var_dump(bubbleSort($num));</code></pre></div>
+    <p>有个需求：选出表里重复的数据，只保留一个</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001662-ccb979fb5bdc40be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="需要处理的数据"></p>
+<p><code>having</code>是在分组之后，对组内数据进行筛选，<code>where</code> 就不多说了，在分组前添加条件的</p>
+<p><code>SELECT id,name,count(name) FROM idiom group by name HAVING count(name)&gt;=2</code> 可以看出大概519个数据都是有重复的</p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/sorting-and-searching-algorithms-in-php/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/" rel="contents">
       阅读全文 &raquo;
     </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/" itemprop="url">
-        Serialize和json_encode效率比较
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-31">
-    2017-07-31
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
-        <span itemprop="name">瞎折腾</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1378 字 ~3分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>将数组转为字符串，<code>serialize</code>比<code>json_encode</code>效率高很多。</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/comparison-of-serialize-and-json_encode-efficiency/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/" itemprop="url">
-        Yii2中更改editormd的图片上传路径
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-11">
-    2017-07-11
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
-        <span itemprop="name">瞎折腾</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">867 字 ~2分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>文件路径：<code>vendor/bower/editor.md/plugins/image-dialog/image-dialog.js</code></p>
-
-<p>更改图片上传到 <a href="https://sm.ms">https://sm.ms</a></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/history/change-editormd-image-upload-path-in-yii2/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/" itemprop="url">
-        Html中的input File在Chrome中弹出缓慢
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-07-10">
-    2017-07-10
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86" itemprop="url" rel="index">
-        <span itemprop="name">小知识</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">169 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p><code>&lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;</code>  改为如下:<br />
-<code>&lt;input type=&quot;file&quot; accept=&quot;image/gif,image/jpeg,image/jpg,image/png&quot;&gt;</code></p>
-
-<p><code>accept=&quot;image/*&quot;</code>属性会对每一个文件都遍历一次所有的<code>&quot;image/*&quot;</code>文件类型，当文件较多时，文件的检验时间较长。</p>
-
-<p>如果是<code>accept=&quot;audio/*&quot;</code>和<code>accept=&quot;video/*&quot;</code>，同样指明所需文件的类型MIME类型</p>
     </div>
     
     <footer class="post-footer"><div class="post-eof"></div></footer>
@@ -672,6 +696,18 @@ var_dump(bubbleSort($num));</code></pre></div>
         
         
     
+        
+        
+          <a class="page-number" href="https://idsze.cn/p/4/">4</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="https://idsze.cn/p/5/">5</a>
+        
+        
+    
     <a class="extend next" rel="next" href="https://idsze.cn/p/3/"><i class="fa fa-angle-right"></i></a>
 </nav>
 
@@ -702,14 +738,14 @@ var_dump(bubbleSort($num));</code></pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="https://idsze.cn/categories/">      
          
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">4</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -719,7 +755,7 @@ var_dump(bubbleSort($num));</code></pre></div>
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">20</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -775,7 +811,7 @@ var_dump(bubbleSort($num));</code></pre></div>
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

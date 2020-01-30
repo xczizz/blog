@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bootstrap on My Hugo Site</title>
+    <link>https://idsze.cn/tags/bootstrap/</link>
+    <description>Recent content in bootstrap on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 13 Sep 2018 09:52:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>动态添加的html无法使用bootstrap的tooltip</title>
+      <link>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</link>
+      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</guid>
+      <description>&lt;p&gt;经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 &lt;code&gt;append&lt;/code&gt; 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过&lt;code&gt;$(&#39;body&#39;).on(&#39;&#39;click&#39;&#39;,xxxx,function(){})&lt;/code&gt;来解决部分（比如click）事件，但碰到 tooltip 怎么解决&lt;/p&gt;
+&lt;p&gt;bootstrap 中的 tooltip 调用方式为：&lt;code&gt;$(&#39;[data-toggle=&amp;quot;tooltip&amp;quot;]&#39;).tooltip()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解决方式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tooltip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;[data-toggle=&amp;#34;tooltip&amp;#34;]&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -13,32 +13,33 @@
     
     <item>
       <title>vscode中配置markdown的代码片段不生效</title>
-      <link>https://idsze.cn/post/vscode-markdown-snippet-config/</link>
+      <link>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</link>
       <pubDate>Fri, 10 Jan 2020 22:26:57 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/vscode-markdown-snippet-config/</guid>
+      <guid>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</guid>
       <description>&lt;p&gt;vscode 中设置了markdown的一个&lt;code&gt;more&lt;/code&gt;的代码段，但在 &lt;code&gt;.md&lt;/code&gt; 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&amp;#34;[markdown]&amp;#34;: {
-        &amp;#34;editor.formatOnSave&amp;#34;: true,
-        &amp;#34;editor.renderWhitespace&amp;#34;: &amp;#34;all&amp;#34;,
-        &amp;#34;editor.quickSuggestions&amp;#34;: {
-            &amp;#34;other&amp;#34;: true,
-            &amp;#34;comments&amp;#34;: true,
-            &amp;#34;strings&amp;#34;: true
-        },
-        &amp;#34;editor.acceptSuggestionOnEnter&amp;#34;: &amp;#34;on&amp;#34;
-    }&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[markdown]&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.formatOnSave&amp;#34;&lt;/span&gt;: true,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.renderWhitespace&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;all&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.quickSuggestions&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;other&amp;#34;&lt;/span&gt;: true,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;comments&amp;#34;&lt;/span&gt;: true,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;strings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;editor.acceptSuggestionOnEnter&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>自定义文件夹排序</title>
-      <link>https://idsze.cn/post/customize-the-sorting-of-folders/</link>
+      <link>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</link>
       <pubDate>Thu, 09 Jan 2020 18:19:48 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/customize-the-sorting-of-folders/</guid>
-      <description>&lt;p&gt;D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加&lt;code&gt;desktop.ini&lt;/code&gt;配置文件来给子文件夹增加“备注”属性，以便可以排序。&lt;br /&gt;
+      <guid>https://idsze.cn/2020/01/customize-the-sorting-of-folders/</guid>
+      <description>&lt;p&gt;D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加&lt;code&gt;desktop.ini&lt;/code&gt;配置文件来给子文件夹增加“备注”属性，以便可以排序。&lt;br&gt;
 大体的目录结构如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;├── D                                           // D盘
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;├── D                                           // D盘
 ├── firstFolder                                 // 需要排序的第一个文件夹
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
@@ -49,39 +50,28 @@
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
 ├── otherFolder                                 // 其他文件夹
-├── otherFolder                                 // 其他文件夹&lt;/pre&gt;&lt;/div&gt;</description>
+├── otherFolder                                 // 其他文件夹
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>更改nodejs的全局包的默认安装位置</title>
-      <link>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</link>
+      <link>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</link>
       <pubDate>Thu, 09 Jan 2020 15:12:32 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</guid>
-      <description>&lt;p&gt;默认情况下，位置应该在&lt;code&gt;C:/users/xx/AppData/Roaming/node&lt;/code&gt;下，现在更改到&lt;code&gt;D盘&lt;/code&gt;。&lt;br /&gt;
-查看位置：&lt;code&gt;npm config ls&lt;/code&gt;&lt;br /&gt;
+      <guid>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</guid>
+      <description>&lt;p&gt;默认情况下，位置应该在&lt;code&gt;C:/users/xx/AppData/Roaming/node&lt;/code&gt;下，现在更改到&lt;code&gt;D盘&lt;/code&gt;。&lt;br&gt;
+查看位置：&lt;code&gt;npm config ls&lt;/code&gt;&lt;br&gt;
 更改位置：&lt;code&gt;npm config set prefix &amp;quot;D:\node_global_modules&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Git Subtree Push 报错 Assertion Failed</title>
-      <link>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</link>
-      <pubDate>Thu, 09 Jan 2020 15:10:44 +0800</pubDate>
-      
-      <guid>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</guid>
-      <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx&lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34; /&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>powerShell中执行多个命令</title>
-      <link>https://idsze.cn/post/execute-multiple-commands-in-powershell/</link>
+      <link>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</link>
       <pubDate>Mon, 25 Nov 2019 00:39:44 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/execute-multiple-commands-in-powershell/</guid>
+      <guid>https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/</guid>
       <description>&lt;p&gt;使用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;的时候报错，查了下使用&lt;code&gt;;&lt;/code&gt;可以输入多个命令。&lt;/p&gt;
-
 &lt;p&gt;也有说使用&lt;code&gt;-and&lt;/code&gt; 或者 &lt;code&gt;-or&lt;/code&gt;的还没做测试，测试没有成功&lt;/p&gt;</description>
     </item>
     

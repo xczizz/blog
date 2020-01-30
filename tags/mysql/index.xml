@@ -13,25 +13,132 @@
     
     <item>
       <title>windows下的php环境安装</title>
-      <link>https://idsze.cn/post/php-environment-setup-under-windows/</link>
+      <link>https://idsze.cn/2019/12/php-environment-setup-under-windows/</link>
       <pubDate>Sun, 01 Dec 2019 19:28:38 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/php-environment-setup-under-windows/</guid>
+      <guid>https://idsze.cn/2019/12/php-environment-setup-under-windows/</guid>
       <description>&lt;h2 id=&#34;apache&#34;&gt;Apache&lt;/h2&gt;
-
 &lt;p&gt;直接在&lt;a href=&#34;http://httpd.apache.org/download.cgi&#34;&gt;官网下载&lt;/a&gt;。解压之后有个&lt;code&gt;readme_first.html&lt;/code&gt;就有使用说明。先更改&lt;code&gt;ServerRoot&lt;/code&gt;为绝对路径（注意路径写正斜杠），就可以跑起来。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;这个是 apache conf 的内容
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;这个是 apache conf 的内容
 
 # NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &amp;#34;c:/apache&amp;#34; instead of &amp;#34;c:\apache&amp;#34;).&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;简单记几个命令：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;安装服务（需要用管理员权限）:  httpd -k install
+# instead of backslashes (e.g., &amp;#34;c:/apache&amp;#34; instead of &amp;#34;c:\apache&amp;#34;).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单记几个命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;安装服务（需要用管理员权限）:  httpd -k install
 卸载服务   httpd -k uninstall
 启动服务   httpd -k start
 停止服务   httpd -k stop
 重启服务   httpd -k restart
 查看版本   httpd -V
-查看支持的命令 httpd -h&lt;/pre&gt;&lt;/div&gt;</description>
+查看支持的命令 httpd -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql筛选重复数据</title>
+      <link>https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/</link>
+      <pubDate>Sat, 17 Mar 2018 18:57:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/</guid>
+      <description>&lt;p&gt;有个需求：选出表里重复的数据，只保留一个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-ccb979fb5bdc40be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;需要处理的数据&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;having&lt;/code&gt;是在分组之后，对组内数据进行筛选，&lt;code&gt;where&lt;/code&gt; 就不多说了，在分组前添加条件的&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SELECT id,name,count(name) FROM idiom group by name HAVING count(name)&amp;gt;=2&lt;/code&gt; 可以看出大概519个数据都是有重复的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql开启远程连接</title>
+      <link>https://idsze.cn/2018/03/mysql-open-remote-connection/</link>
+      <pubDate>Tue, 13 Mar 2018 19:41:10 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/mysql-open-remote-connection/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;查看端口是否开放
+&lt;code&gt;netstat -an | grep 3306&lt;/code&gt;
+&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-c53b9c2a115c76ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;3306&#34;&gt;
+发现3306只对本地有效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更改mysql配置文件中的绑定地址
+&lt;code&gt;vim /etc/mysql/mysql.conf.d/mysqld.cnf&lt;/code&gt; 注销 &lt;code&gt;bind-address = 127.0.0.1&lt;/code&gt;这一行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 &lt;code&gt;/etc/init.d/mysql restart&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql添加用户来操作指定数据库</title>
+      <link>https://idsze.cn/2018/03/mysql-add-user-to-operate-the-specified-database/</link>
+      <pubDate>Tue, 13 Mar 2018 19:23:32 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/mysql-add-user-to-operate-the-specified-database/</guid>
+      <description>&lt;h3 id=&#34;创建授权&#34;&gt;创建授权&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;先创用户再授权&lt;br&gt;
+新建用户：&lt;code&gt;create user &#39;username&#39;@&#39;host&#39; identified by &#39;password&#39;;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;username&lt;/code&gt; 为用户名&lt;br&gt;
+&lt;code&gt;password&lt;/code&gt; 为密码&lt;br&gt;
+&lt;code&gt;host&lt;/code&gt; 如果为&lt;code&gt;localhost&lt;/code&gt;则只能本地登录，使用&lt;code&gt;%&lt;/code&gt;为不限制&lt;br&gt;
+授权： &lt;code&gt;grant privileges on databasename.tablename to &#39;username&#39;@&#39;host&#39;;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;privileges&lt;/code&gt; 为用户的操作权限，可以是 insert,update等等，&lt;a href=&#34;%5Bhttp://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html%5D(http://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html)&#34;&gt;官方权限列表&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql中int和bigint以及smallint和tinyint的区别</title>
+      <link>https://idsze.cn/2017/08/difference-between-int-bigint-smallint-tinyint-in-mysql/</link>
+      <pubDate>Wed, 02 Aug 2017 12:55:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/difference-between-int-bigint-smallint-tinyint-in-mysql/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;无符号的最大值就是二进制最大位数锁代表的数值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;有符号&lt;/th&gt;
+&lt;th&gt;无符号&lt;/th&gt;
+&lt;th&gt;存储大小&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^31 (-2,147,483,648) 到 2^31 – 1 (2,147,483,647)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到4294967295 (2^32)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4字节(也就是32位)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;bigint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^63 (-9223372036854775808) 到 2^63-1 (9223372036854775807)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到18446744073709551615 (2^64)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;8字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mediumint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^23 (-8388608) 到 2^23-1 (8388607)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到16777215 (2^24)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;smallint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^15 (-32,768) 到 2^15 – 1 (32,767) &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到65535 (2^16)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;2字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tinyint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-128 到 127&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到255 (2^8)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;int(10),括号里的这个10 所代表的含义：10是一个显示宽度，和当前int大小没有任何关系，这个10是没有任何操作的，除非int的属性选择为&lt;code&gt;UNSIGNED ZEROFILL&lt;/code&gt;，即&lt;code&gt;填充0&lt;/code&gt;，此时也不可能有负数，当位数(长度)不够括号里的数值的时候，会自动补0，超过没有操作。&lt;/p&gt;</description>
     </item>
     
   </channel>

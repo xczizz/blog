@@ -1,739 +1,480 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
-<meta name="author" content="Mao Doze">
-<meta name="keywords" content="php环境, apache设置">
-<meta name="description" content="Apache
-
-直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
-
-这个是 apache conf 的内容
-
-# NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
-
-
-简单记几个命令：
-
-安装服务（需要用管理员权限）:  httpd -k install
-卸载服务   httpd -k uninstall
-启动服务   httpd -k start
-停止服务   httpd -k stop
-重启服务   httpd -k restart
-查看版本   httpd -V
-查看支持的命令 httpd -h
-">
-
-
-<meta property="og:description" content="Apache
-
-直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
-
-这个是 apache conf 的内容
-
-# NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
-
-
-简单记几个命令：
-
-安装服务（需要用管理员权限）:  httpd -k install
-卸载服务   httpd -k uninstall
-启动服务   httpd -k start
-停止服务   httpd -k stop
-重启服务   httpd -k restart
-查看版本   httpd -V
-查看支持的命令 httpd -h
-">
-<meta property="og:type" content="article">
-<meta property="og:title" content="windows下的php环境安装">
-<meta name="twitter:title" content="windows下的php环境安装">
-<meta property="og:url" content="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-<meta property="twitter:url" content="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-<meta property="og:site_name" content="My New Hugo Site">
-<meta property="og:description" content="Apache
-
-直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
-
-这个是 apache conf 的内容
-
-# NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
-
-
-简单记几个命令：
-
-安装服务（需要用管理员权限）:  httpd -k install
-卸载服务   httpd -k uninstall
-启动服务   httpd -k start
-停止服务   httpd -k stop
-重启服务   httpd -k restart
-查看版本   httpd -V
-查看支持的命令 httpd -h
-">
-<meta name="twitter:description" content="Apache
-
-直接在官网下载。解压之后有个readme_first.html就有使用说明。先更改ServerRoot为绝对路径（注意路径写正斜杠），就可以跑起来。
-
-这个是 apache conf 的内容
-
-# NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
-
-
-简单记几个命令：
-
-安装服务（需要用管理员权限）:  httpd -k install
-卸载服务   httpd -k uninstall
-启动服务   httpd -k start
-停止服务   httpd -k stop
-重启服务   httpd -k restart
-查看版本   httpd -V
-查看支持的命令 httpd -h
-">
-<meta property="og:locale" content="zh-cn">
-
-  
-    <meta property="article:published_time" content="2019-12-01T19:28:38">
-  
-  
-    <meta property="article:modified_time" content="2019-12-01T19:28:38">
-  
-  
-  
-    
-      <meta property="article:section" content="瞎折腾">
-    
-  
-  
-    
-      <meta property="article:tag" content="php">
-    
-      <meta property="article:tag" content="apache">
-    
-      <meta property="article:tag" content="mysql">
-    
-  
-
-
-<meta name="twitter:card" content="summary">
-
-
-
-
-
-
-
-
-
-
-
-  <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=640">
-  <meta property="twitter:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=640">
-
-
-    <title>windows下的php环境安装</title>
-
-    <link rel="icon" href="/favicon.ico">
-    
-
-    
-
-    <link rel="canonical" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>windows下的php环境安装 - My Hugo Site</title>
+    <meta name="keywords" content="php环境,apache设置,">
     
     
-    <link rel="stylesheet" href="/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    <meta property="og:title" content="windows下的php环境安装">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="baidu-site-verification" content="3QjhF2nVG2" />
+    <meta name="title" content="windows下的php环境安装 - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
     
-    
-      
-        <link rel="stylesheet"  href="https://idsze.cn/css/custom.css">
-      
-    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
 
-    
-      
-    
-    
-  </head>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
 
-  <body>
-    <div id="blog">
-      <header id="header" data-behavior="4">
-  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-  <div class="header-title">
-    <a class="header-title-link" href="/">My New Hugo Site</a>
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-  
-    
-      <a class="header-right-picture "
-         href="/#about">
-    
-    
-    
-      
-        <img class="header-picture" src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=90" alt="作者的图片" />
-      
-    
-    </a>
-  
-</header>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
 
-      <nav id="sidebar" data-behavior="4">
-  <div class="sidebar-container">
-    
-      <div class="sidebar-profile">
-        <a href="/#about">
-          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110" alt="作者的图片" />
-        </a>
-        <h4 class="sidebar-profile-name">Mao Doze</h4>
-        
-          <h5 class="sidebar-profile-bio">All life is a game of luck.</h5>
-        
-      </div>
-    
-    <ul class="sidebar-buttons">
-      
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-      
-      <span class="sidebar-button-desc">首页</span>
-    </a>
-  </li>
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="/categories">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+<nav class="site-nav">
+    <ul id="menu" class="menu">
       
-      <span class="sidebar-button-desc">分类</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="/tags">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
-      <span class="sidebar-button-desc">标签</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="/archives">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
       
-      <span class="sidebar-button-desc">归档</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="/about">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+        <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
       
-      <span class="sidebar-button-desc">关于</span>
-    </a>
-  </li>
-
-
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
     </ul>
-    <ul class="sidebar-buttons">
-      
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://github.com/xczizz" target="_blank" rel="noopener">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
-      
-      <span class="sidebar-button-desc">GitHub</span>
-    </a>
-  </li>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://weibo.com/maodoze" target="_blank" rel="noopener">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-weibo"></i>
-      
-      <span class="sidebar-button-desc">Weibo</span>
-    </a>
-  </li>
-
-
-    </ul>
-    <ul class="sidebar-buttons">
-      
-
-    </ul>
-  </div>
+    </div>
 </nav>
 
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2019/12/php-environment-setup-under-windows/" itemprop="url">
+        windows下的php环境安装
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2019-12-01">
+    2019-12-01
+</time>
+</span> 
       
 
-      <div id="main" data-behavior="4"
-        class="
-               hasCoverMetaIn
-               ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
-          
-            <div class="post-header main-content-wrap text-left">
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
   
-    <h1 class="post-title" itemprop="headline">
-      windows下的php环境安装
-    </h1>
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
   
-  
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-12-01T19:28:38&#43;08:00">
-        
-  
-  
-  
-  
-    2019-12-01
-  
+</span>
 
-      </time>
-    
-    
-  
-  
-    <span>发布在</span>
-    
-      <a class="category-link" href="/categories/%e7%9e%8e%e6%8a%98%e8%85%be">瞎折腾</a>
-    
-  
 
-  </div>
-
-</div>
-          
-          <div class="post-content markdown" itemprop="articleBody">
-            <div class="main-content-wrap">
-              <h2 id="apache">Apache</h2>
-
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1221 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="apache">Apache</h2>
 <p>直接在<a href="http://httpd.apache.org/download.cgi">官网下载</a>。解压之后有个<code>readme_first.html</code>就有使用说明。先更改<code>ServerRoot</code>为绝对路径（注意路径写正斜杠），就可以跑起来。</p>
-
-<pre><code>这个是 apache conf 的内容
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">这个是 apache conf 的内容
 
 # NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &quot;c:/apache&quot; instead of &quot;c:\apache&quot;).
-</code></pre>
-
-<p>简单记几个命令：</p>
-
-<pre><code>安装服务（需要用管理员权限）:  httpd -k install
+# instead of backslashes (e.g., &#34;c:/apache&#34; instead of &#34;c:\apache&#34;).
+</code></pre></div><p>简单记几个命令：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">安装服务（需要用管理员权限）:  httpd -k install
 卸载服务   httpd -k uninstall
 启动服务   httpd -k start
 停止服务   httpd -k stop
 重启服务   httpd -k restart
 查看版本   httpd -V
 查看支持的命令 httpd -h
-</code></pre>
-
-<p>可以在 windwos 服务中设为开机自启。</p>
-
+</code></pre></div><p>可以在 windwos 服务中设为开机自启。</p>
 <p>安装是时候似乎出现一个错误<code>Errors reported here must be corrected before the service can be started.</code>，这不是错误，而是提示，如果此处有错误必须先解决 😂
-<img src="https://i.loli.net/2020/01/10/vrenXfuo5bGk7OD.png" alt="apache.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/vrenXfuo5bGk7OD.png" alt="apache.png"></p>
 <h3 id="配置-apache-支持-php">配置 Apache 支持 PHP</h3>
-
 <ol>
-<li><p>配置 php 模块</p>
-
-<pre><code># php7 support
-LoadModule php7_module &quot;C:/php/php740/php7apache2_4.dll&quot;
+<li>配置 php 模块</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># php7 support
+LoadModule php7_module &#34;C:/php/php740/php7apache2_4.dll&#34;
 AddType application/x-httpd-php .php .html .htm
 # configure the path to php.ini
-PHPIniDir &quot;C:/php/php740&quot;
-</code></pre></li>
-
-<li><p>配置 web 根目录，可以重新设置一个 webRoot</p>
-
-<pre><code># customize web root
-Define WEBROOT &quot;D:/PhpWorkspace/www&quot;
-DocumentRoot &quot;${WEBROOT}&quot;
-&lt;Directory &quot;${WEBROOT}&quot;&gt; 
-</code></pre></li>
+PHPIniDir &#34;C:/php/php740&#34;
+</code></pre></div><ol start="2">
+<li>配置 web 根目录，可以重新设置一个 webRoot</li>
 </ol>
-
-<h2 id="mysql">Mysql</h2>
-
-<p>下载链接：<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip">https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip</a>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># customize web root</span>
+Define WEBROOT <span class="s2">&#34;D:/PhpWorkspace/www&#34;</span>
+DocumentRoot <span class="s2">&#34;</span><span class="si">${</span><span class="nv">WEBROOT</span><span class="si">}</span><span class="s2">&#34;</span>
+&lt;Directory <span class="s2">&#34;</span><span class="si">${</span><span class="nv">WEBROOT</span><span class="si">}</span><span class="s2">&#34;</span>&gt; 
+</code></pre></div><h2 id="mysql">Mysql</h2>
+<p>下载链接：https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
 这个版本没有配置文件，需手动增加一个：<code>my.ini</code>，先上最简单的配置：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>client<span class="o">]</span>
+<span class="c1">#password =</span> 
+<span class="nv">port</span> <span class="o">=</span> <span class="m">3306</span>
+<span class="c1">#socket = /tmp/mysql.sock</span>
+default-character-set <span class="o">=</span> utf8mb4
 
-<pre><code>[client]
-#password = 
-port = 3306
-#socket = /tmp/mysql.sock
-default-character-set = utf8mb4
-
-[mysqld]
-#bind-address = 0.0.0.0
-port  = 3306
-#socket  = /tmp/mysql.sock
-# 允许最大连接数
-max_connections = 200
-# 允许连接失败的次数。
-max_connect_errors=10
-# 服务端使用的字符集默认为utf8mb4
-character-set-server=utf8mb4
-# 创建新表时将使用的默认存储引擎
-default-storage-engine=INNODB
-#开启查询缓存
-explicit_defaults_for_timestamp = true
-#设置加密方式为原生加密方式吗，解决无法登陆 phpmyadmin 的问题
-default_authentication_plugin=mysql_native_password
-</code></pre>
-
-<p>初始化之后会给一个root用户和默认密码：<code>mysqld --initialize --console</code><br />
-<img src="https://i.loli.net/2020/01/10/n2y5SwMf39RhWoY.png" alt="mysql1.png" /></p>
-
-<p>安装服务：<code>.\bin\mysqld --install</code><br />
-启动服务：<code>net start mysql</code><br />
-<img src="https://i.loli.net/2020/01/10/6WBK5ZczSJOhQEo.png" alt="mysql2.png" /></p>
-
+<span class="o">[</span>mysqld<span class="o">]</span>
+<span class="c1">#bind-address = 0.0.0.0</span>
+<span class="nv">port</span>  <span class="o">=</span> <span class="m">3306</span>
+<span class="c1">#socket  = /tmp/mysql.sock</span>
+<span class="c1"># 允许最大连接数</span>
+<span class="nv">max_connections</span> <span class="o">=</span> <span class="m">200</span>
+<span class="c1"># 允许连接失败的次数。</span>
+<span class="nv">max_connect_errors</span><span class="o">=</span><span class="m">10</span>
+<span class="c1"># 服务端使用的字符集默认为utf8mb4</span>
+character-set-server<span class="o">=</span>utf8mb4
+<span class="c1"># 创建新表时将使用的默认存储引擎</span>
+default-storage-engine<span class="o">=</span>INNODB
+<span class="c1">#开启查询缓存</span>
+<span class="nv">explicit_defaults_for_timestamp</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="c1">#设置加密方式为原生加密方式吗，解决无法登陆 phpmyadmin 的问题</span>
+<span class="nv">default_authentication_plugin</span><span class="o">=</span>mysql_native_password
+</code></pre></div><p>初始化之后会给一个root用户和默认密码：<code>mysqld --initialize --console</code><br>
+<img src="https://i.loli.net/2020/01/10/n2y5SwMf39RhWoY.png" alt="mysql1.png"></p>
+<p>安装服务：<code>.\bin\mysqld --install</code><br>
+启动服务：<code>net start mysql</code><br>
+<img src="https://i.loli.net/2020/01/10/6WBK5ZczSJOhQEo.png" alt="mysql2.png"></p>
 <p>第一次进入之后会让更改密码：<code>alter user root@localhost identified by &quot;password&quot;</code>
-<img src="https://i.loli.net/2020/01/10/JVwjgWMuQGplUNK.png" alt="mysql3.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/JVwjgWMuQGplUNK.png" alt="mysql3.png"></p>
 <h2 id="php">PHP</h2>
-
-<p>下载地址：<a href="https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip">https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip</a> ，php主要就是一堆的配置。
+<p>下载地址：https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip ，php主要就是一堆的配置。
 复制<code>php.ini-development</code>为<code>php.ini</code>，放几个常用配置：</p>
-
-<pre><code>short_open_tag = On
-post_max_size = 20M
-upload_max_filesize = 50M
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">short_open_tag</span> <span class="o">=</span> On
+<span class="nv">post_max_size</span> <span class="o">=</span> 20M
+<span class="nv">upload_max_filesize</span> <span class="o">=</span> 50M
 On windows:
-extension_dir = &quot;ext&quot;
+<span class="nv">extension_dir</span> <span class="o">=</span> <span class="s2">&#34;ext&#34;</span>
 按需开启相对应扩展
-</code></pre>
-
-<h3 id="phpmyadmin-安装">phpmyadmin 安装</h3>
-
+</code></pre></div><h3 id="phpmyadmin-安装">phpmyadmin 安装</h3>
 <p><a href="https://www.phpmyadmin.net/">官网下载</a> phpMyadmin，解压到上边配好的 webroot 目录下，打开，看到熟悉的页面。尝试登陆一下，发现报错<code>mysqli::real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]</code>
-<img src="https://i.loli.net/2020/01/10/8gcbjSpFTBXqayC.png" alt="errormysql.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/8gcbjSpFTBXqayC.png" alt="errormysql.png"></p>
 <p>去<a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password">mysql官网</a>看一下解释
-<img src="https://i.loli.net/2020/01/10/kvfZpGwXAg98diC.png" alt="mysql8.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/kvfZpGwXAg98diC.png" alt="mysql8.png"></p>
 <p>大致意思就是 mysql8.0 之后有了更安全的加密方式且被设置为默认的加密方式，而当前登录暂时不支持该方式，解决方法是设置加密方式为之前的<code>default_authentication_plugin=mysql_native_password</code>，然后命令行进入 mysql 设置 <code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';</code>，再刷新一下 <code>FLUSH PRIVILEGES;</code>，除此之外似乎也没找到更好的解决方式，只能等待 phpmyadmin 支持新的加密方式了。
-<img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png" /></p>
-
-<pre><code>&gt; ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';  
-&gt; FLUSH PRIVILEGES;
-</code></pre>
-
-<p>修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 <code>配置文件现在需要一个短语密码。</code> 解决方法：</p>
-
+<img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png"></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt; ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;password&#39;</span><span class="p">;</span>  
+&gt; FLUSH PRIVILEGES<span class="p">;</span>
+</code></pre></div><p>修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 <code>配置文件现在需要一个短语密码。</code> 解决方法：</p>
 <p>1、在 <code>phpMyAdmin/libraries/config.default.php</code> 中把 <code>$cfg['blowfish_secret']</code>给一个值</p>
-
 <p>2、在 <code>phpMyAdmin/config.sample.inc.php</code> 中的 <code>$cfg['blowfish_secret']</code> 也给一个值</p>
-
 <blockquote>
-<p>官方给的注释：<br />
-<code>This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.</code><br />
+<p>官方给的注释：<br>
+<code>This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.</code><br>
 <code>$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */</code></p>
 </blockquote>
-
 <p>字面意思是用来 cookie 加密，防止混淆。</p>
-              
-            </div>
-          </div>
-          <div id="post-footer" class="post-footer main-content-wrap">
-            
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">标签</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="/tags/php/">php</a>
-
-  <a class="tag tag--primary tag--small" href="/tags/apache/">apache</a>
-
-  <a class="tag tag--primary tag--small" href="/tags/mysql/">mysql</a>
-
-                  </div>
-                
-              
-            
-            <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/coding-pages-ssl-error/" data-tooltip="codingPages中申请ssl报错">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/execute-multiple-commands-in-powershell/" data-tooltip="powerShell中执行多个命令">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  
-</div>
-
-            
-              
-            
-          </div>
-        </article>
-        <footer id="footer" class="main-content-wrap">
-  <span class="copyrights">
-    &copy; 2020 xczizz All Rights Reserved
-  </span>
-  <p class="copyrights">
-    <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
-  </span>
-</footer>
-
-      </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/12/coding-pages-ssl-error/" data-tooltip="codingPages中申请ssl报错">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/execute-multiple-commands-in-powershell/" data-tooltip="powerShell中执行多个命令">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://idsze.cn/2019/12/php-environment-setup-under-windows/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  
-</div>
-
-      </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
-  <ul class="share-options">
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
-          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
-          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fidsze.cn%2F2019%2F12%2Fphp-environment-setup-under-windows%2F">
-          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
     </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/php" rel="tag" title="php">#php#</a>
     
-    <div id="about">
-  <div id="about-card">
-    <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+    <a href="https://idsze.cn/tags/apache" rel="tag" title="apache">#apache#</a>
+    
+    <a href="https://idsze.cn/tags/mysql" rel="tag" title="mysql">#mysql#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2019/12/coding-pages-ssl-error/" rel="next" title="codingPages中申请ssl报错">
+        <i class="fa fa-chevron-left"></i> codingPages中申请ssl报错
+        </a>
+    
     </div>
+
+    <div class="post-nav-prev post-nav-item">
     
-      <img id="about-card-picture" src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110" alt="作者的图片" />
+        <a href="https://idsze.cn/2019/11/execute-multiple-commands-in-powershell/" rel="prev" title="powerShell中执行多个命令">
+        powerShell中执行多个命令 <i class="fa fa-chevron-right"></i>
+        </a>
     
-    <h4 id="about-card-name">Mao Doze</h4>
-    
-      <div id="about-card-bio">All life is a game of luck.</div>
-    
-    
-      <div id="about-card-job">
-        <i class="fa fa-briefcase"></i>
-        <br/>
-        Network Engineering
-      </div>
-    
-    
-      <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
-        <br/>
-        YunCheng
-      </div>
-    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
   </div>
 </div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
 
-    
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
 
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">4</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">20</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
     
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#apache">Apache</a>
+      <ul>
+        <li><a href="#配置-apache-支持-php">配置 Apache 支持 PHP</a></li>
+      </ul>
+    </li>
+    <li><a href="#mysql">Mysql</a></li>
+    <li><a href="#php">PHP</a>
+      <ul>
+        <li><a href="#phpmyadmin-安装">phpmyadmin 安装</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
   
-    
-      <div id="cover" style="background-image:url('https://idsze.cn/images/13623.jpg');"></div>
-    
-  
 
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-
-
-<script src="/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
-
-
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
   });
-});
 </script>
-
-
-  
-    
-  
-
-
-
-
-    
-  </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
 </html>
-

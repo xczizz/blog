@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssl on My Hugo Site</title>
+    <link>https://idsze.cn/tags/ssl/</link>
+    <description>Recent content in ssl on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 12 Dec 2019 21:46:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>codingPages中申请ssl报错</title>
+      <link>https://idsze.cn/2019/12/coding-pages-ssl-error/</link>
+      <pubDate>Thu, 12 Dec 2019 21:46:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2019/12/coding-pages-ssl-error/</guid>
+      <description>&lt;p&gt;错误码：&lt;code&gt;urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &amp;quot;&amp;lt;!DOCTYPE html&amp;gt;\n&amp;lt;html&amp;gt;\n &amp;lt;head&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Content-type\&amp;quot; content=\&amp;quot;text/html; charset=utf-8\&amp;quot;&amp;gt;\n &amp;lt;meta http-equiv=\&amp;quot;Co&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>本地环境伪造ssl证书</title>
+      <link>https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/</link>
+      <pubDate>Fri, 08 Jun 2018 18:36:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;看到报错：&lt;code&gt;curl: (60) SSL certificate problem: unable to get local issuer certificate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;下载证书 &lt;a href=&#34;https://curl.haxx.se/ca/cacert.pem&#34;&gt;https://curl.haxx.se/ca/cacert.pem&lt;/a&gt; ，一般放在&lt;code&gt;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配置php.ini&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl.cainfo &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+openssl.capath&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;重启服务&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

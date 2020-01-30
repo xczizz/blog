@@ -150,14 +150,14 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">567 字 ~2分钟</span>
+<span class="leancloud-visitors-count">566 字 ~2分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加<code>desktop.ini</code>配置文件来给子文件夹增加“备注”属性，以便可以排序。<br />
+    <p>D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加<code>desktop.ini</code>配置文件来给子文件夹增加“备注”属性，以便可以排序。<br>
 大体的目录结构如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">├── D                                           // D盘
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">├── D                                           // D盘
 ├── firstFolder                                 // 需要排序的第一个文件夹
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
@@ -168,27 +168,24 @@
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
 ├── otherFolder                                 // 其他文件夹
-├── otherFolder                                 // 其他文件夹</pre></div>
-<blockquote>
-<p>使用 markdown 编写如上的文件目录，使用的符号：<code>├</code> <code>│</code> <code>─</code>，也不知道这是怎么搞出来的，复制的别人 = =</p>
+├── otherFolder                                 // 其他文件夹
+</code></pre></div><blockquote>
+<p>使用 markdown 编写如上的文件目录，使用的符号：<code>├ </code> <code>│</code> <code>─</code>，也不知道这是怎么搞出来的，复制的别人 = =</p>
 </blockquote>
-
 <h2 id="desktop的内容">desktop的内容</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[.ShellClassInfo]
-InfoTip=3</pre></div>
-<p>这里的 <strong>InfoTip</strong> 即为备注信息，直接写为数字可以排序。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[.ShellClassInfo]
+InfoTip=3
+</code></pre></div><p>这里的 <strong>InfoTip</strong> 即为备注信息，直接写为数字可以排序。
 在 powershell 命令行使用<code>attrb +H +S Desktop.ini</code>可以将该文件设置为<strong>系统属性</strong>和<strong>隐藏属性</strong>，下次使用需要在文件夹选项中将这个显示出来。使用之后，desktop 的内容自动改变:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[.ShellClassInfo]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[.ShellClassInfo]
 InfoTip=3
 [ViewState]
 Mode=
 Vid=
-FolderType=Generic</pre></div>
-<p>完事之后需要刷新文件夹才可立即生效，怎么刷新文件夹，暂时没研究清楚，有一个曲线救国的方式：随便更改一下文件夹的图标（可以更改为一模一样的），就能立即生效。</p>
-
-<p><code>attrb</code> 可使用 <code>attrb /?</code>来查看用法。</p>
-
-<p>更多配置信息：<a href="https://hwiegman.home.xs4all.nl/desktopini.html">https://hwiegman.home.xs4all.nl/desktopini.html</a></p>
+FolderType=Generic
+</code></pre></div><p>完事之后需要刷新文件夹才可立即生效，怎么刷新文件夹，暂时没研究清楚，有一个曲线救国的方式：随便更改一下文件夹的图标（可以更改为一模一样的），就能立即生效。</p>
+<p><code>attrb</code> 可使用 <code>attrb /? </code>来查看用法。</p>
+<p>更多配置信息：https://hwiegman.home.xs4all.nl/desktopini.html</p>
     </div>
     <footer class="post-footer">
      
@@ -255,7 +252,7 @@ FolderType=Generic</pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -272,7 +269,7 @@ FolderType=Generic</pre></div>
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -309,12 +306,9 @@ FolderType=Generic</pre></div>
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
         <div class="post-toc-content"><nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#desktop的内容">desktop的内容</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#desktop的内容">desktop的内容</a></li>
+  </ul>
 </nav></div>
     </div>
 </section>
@@ -334,7 +328,7 @@ FolderType=Generic</pre></div>
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

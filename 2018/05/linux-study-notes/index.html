@@ -1,0 +1,593 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Linux知识小记 - My Hugo Site</title>
+    <meta name="keywords" content="linux,">
+    
+    
+    <meta property="og:title" content="Linux知识小记">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="baidu-site-verification" content="3QjhF2nVG2" />
+    <meta name="title" content="Linux知识小记 - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2018/05/linux-study-notes/" itemprop="url">
+        Linux知识小记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-05-14">
+    2018-05-14
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3333 字 ~7分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>一般来说著名的linux系统基本上分两大类：</p>
+<ol>
+<li>RedHat系列：Redhat、Centos、Fedora等</li>
+<li>Debian系列：Debian、Ubuntu等 </li>
+</ol>
+<h2 id="redhat-系列">RedHat 系列 </h2>
+<ol>
+<li>常见的安装包格式 rpm 包,安装 rpm 包的命令是<code>rpm -参数</code></li>
+<li>包管理工具 yum <br>
+<strong>rpm软件包是为了简化安装的复杂度，而yum仓库是为了解决软件包之间的依赖关系。</strong></li>
+</ol>
+<h2 id="debian系列">Debian系列 </h2>
+<ol>
+<li>常见的安装包格式 deb 包,安装 de b包的命令是<code>dpkg -参数</code></li>
+<li>包管理工具 apt-get </li>
+</ol>
+<p>系统装完之后，可以一一键安装开发编译的工具包:<br>
+Debian 上可以使用 <code>apt-get install build-essential</code><br>
+CentOS 上使用 <code>yum groupinstall &quot;Development Tools&quot;</code></p>
+<hr>
+<h3 id="查看文本的方式">查看文本的方式</h3>
+<p><code>cat</code>： 用于将一个文件的内容连续输出在屏幕上<br>
+其命令格式：
+<code>cat [-option]  文件名</code><br>
+常用参数：<br>
+<code>-n: 将行号一起显示在屏幕上</code><br>
+<code>-b：将行号一起显示在屏幕上,但空行不算</code></p>
+<p><code>more</code>：同样用于显示文件内容，会在显示完一屏内容后停下，可以下翻。<br>
+其命令格式为： <code>more 文件名</code><br>
+回车键可以单行下翻， Ctrl+f可以整页下翻，若需退出按q键。</p>
+<p><code>less</code>: 和 more 一样，唯一区别就是可以使用 pagedown 和 pageup 进行上翻和下翻，方便一些。
+其命令格式为： <code>less 文件名</code></p>
+<p><code>head</code>: 默认情况下，用于显示文件内容的前10行
+其命令格式为： <code>head 文件名</code><br>
+常用参数：
+<code>-n :指定显示的行数   </code></p>
+<p><code>tail</code>: 与 head 相反，默认情况下显示文件内容的后10行
+其命令格式为：<code> tail 文件名</code><br>
+常用参数：
+<code> -n :指定显示的行数</code></p>
+<h4 id="跳到指定行">跳到指定行</h4>
+<p><code>200gg</code> 跳到第二百行行首，<code>200G</code>是行尾</p>
+<h4 id="显示行号">显示行号</h4>
+<ul>
+<li><code>crtl+g</code>可以显示当前光标从所在位置（第几行第几列以及所在位置的百分比）</li>
+<li><code>:set nu</code>可以设置全部显示行号 ，<code>:nu</code> 跟crtl+g 一样的效果。</li>
+</ul>
+<h4 id="添加到组附加组">添加到组(附加组)</h4>
+<p><code>usermod -g groupname username</code><br>
+<code>usermod -G groupname username</code><br>
+eg:<code> usermod -g root doze</code> 将<code>doze</code>加入到<code>root</code>
+大写G 是将用户添加到附加组，小写g 是更改用户组</p>
+<h4 id="查看用户所属组">查看用户所属组</h4>
+<p><code>groups username</code> 或者 <code>id username</code> 或者 <code>more | /etc/group</code></p>
+<h4 id="删除用户">删除用户</h4>
+<p><code>userdel wang</code>注：删除用户wang，但不删除其家目录(在<code>/var</code>中)及文件；
+<code>userdel -r wang</code>注：删除用户wang，其家目录及文件一并删除；</p>
+<h4 id="查看所有用户">查看所有用户</h4>
+<p><code>cat /etc/passwd</code><br>
+<code>cat /etc/passwd|grep 用户名</code>
+结果显示：<code>strawberry: x:502:0::/home/strawberry:/bin/bash</code><br>
+结果描述：<code>用户名:密码:ID:组ID:备注:根目录:shell所在目录</code></p>
+<h4 id="修改密码">修改密码</h4>
+<p>普通用户：<code>passwd</code>，需要旧密码
+root用户：<code>passwd username</code></p>
+<h4 id="查看在线用户">查看在线用户</h4>
+<p><code>who</code></p>
+<h4 id="踢用户下线">踢用户下线</h4>
+<p>root用户才可以使用：
+<code> pkill -kill -t pts/0</code></p>
+<h4 id="修改文件或者目录权限">修改文件或者目录权限</h4>
+<p><code>d rwx  rwx  r-x</code>
+<code>目录 主用户 组 其他</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">- 常规文件
+d 目录
+b 块设备特殊（磁盘） 
+c 字符特殊设备（终端） 
+s 信号灯 
+</code></pre></div><ol>
+<li>使用文字
+<code>chmod ［who］ ［+ | - | =］ ［mode］ 文件名</code>
+操作对象<code>who</code>可是下述字母中的任一个或者它们的组合：</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">u 表示“用户（user）”，即文件或目录的所有者。
+g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。
+o 表示“其他（others）用户”。
+a 表示“所有（all）用户”。它是系统默认值。
+</code></pre></div><p>1.1. 操作符号可以是：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">+ 添加某个权限。
+- 取消某个权限。
+= 赋予给定权限并取消其他所有权限（如果有的话）
+</code></pre></div><p>1.2. 设置<code>mode</code>所表示的权限可用下述字母的任意组合：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">r 可读
+w 可写
+x 可执行
+X 只有目标文件对某些用户是可执行的或该目标文件是目录时才追加x 属性
+s 在文件执行时把进程的属主或组ID置为该文件的文件属主
+t 保存程序的文本到交换设备上
+u 与文件属主拥有一样的权限
+g 与和文件属主同组的用户拥有一样的权限
+o 与其他用户拥有一样的权限。
+</code></pre></div><p>例：<code>chmod g+r，o+r example</code> 使同组和其他用户对文件example 有读权限。
+2. 使用数字
+<code>chmod ［mode］ 文件名</code>
+<code>0表示没有权限，1表示可执行权限，2表示可写权限，4表示可读权限</code>
+例： <code>chmod 644 mm.txt</code></p>
+<hr>
+<h4 id="使用ssh密钥登录">使用ssh密钥登录</h4>
+<p>安全设置：在配置文件中，禁止root登录，禁止密码登录，</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">PasswordAuthentication  no //禁止密码
+PermitRootLogin no  //禁止root
+</code></pre></div><ol>
+<li>生成密钥：doze用户（<code>su doze</code>）下，进入根目录（<code>/home/doze/</code>）
+<code>ssh-keygen -t rsa</code> 中间有提示可以输入密钥的密码</li>
+<li>将密钥添加到授权文件中（在.ssh目录下操作）
+<code>cat id_dsa.pub &gt; authorized_keys</code>
+此时<code>.ssh</code>下的文件有<code>id_dsa</code>，<code>id_dsa.pub</code>，<code>authorized_keys</code></li>
+<li>设置权限
+<code> chmod 600 authorized_keys </code>
+<code>chmod 700  .ssh</code>
+4.允许用户可以使用ssh密钥登录
+<code>sudo vim /etc/ssh/sshd_config</code> 将用户添加到<code>AllowUsers</code> 后边
+然后重启<code>sudo service sshd restart</code>。如果少了这一步，<code>报错：该密钥未在远程主机注册</code></li>
+<li>将<code>id_dsa</code>传到本地windows上，使用putty生成<code>ppk</code>文件(可以省略，如果使用Xshell登录的话)
+然后就可以正常使用密钥登录了。</li>
+</ol>
+<h4 id="防火墙的一些含义">防火墙的一些含义</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">:INPUT ACCEPT <span class="o">[</span>0:0<span class="o">]</span>
+<span class="c1"># 该规则表示INPUT表默认策略是ACCEPT</span>
+:FORWARD ACCEPT <span class="o">[</span>0:0<span class="o">]</span>
+<span class="c1"># 该规则表示FORWARD表默认策略是ACCEPT</span>
+:OUTPUT ACCEPT <span class="o">[</span>0:0<span class="o">]</span>
+<span class="c1"># 该规则表示OUTPUT表默认策略是ACCEPT</span>
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+<span class="c1"># 意思是允许进入的数据包只能是刚刚我发出去的数据包的回应，ESTABLISHED：已建立的链接状态。RELATED：该数据包与本机发出的数据包有关。</span>
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+<span class="c1"># 这两条的意思是在INPUT表和FORWARD表中拒绝所有其他不符合上述任何一条规则的数据包。并且发送一条host prohibited的消息给被拒绝的主机。</span>
+</code></pre></div><h4 id="查看磁盘容量查看文件大小">查看磁盘容量，查看文件大小</h4>
+<p>df命令是<a href="http://lib.csdn.net/base/linux">Linux</a>系统以磁盘分区为单位查看文件系统，可以加上参数查看磁盘剩余空间信息，命令格式：
+<code>df -hl</code>
+显示格式为：　</p>
+<p><code>文件系统 容量 已用 可用 已用% 挂载点　</code></p>
+<p>查看文件大小：使用<code>du -a -h</code>
+-a参数显示子目录和文件大小  -h 带单位显示</p>
+<h4 id="find命令参数">find命令参数</h4>
+<p><a href="http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html">http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html</a></p>
+<h4 id="查看文件修改时间">查看文件修改时间</h4>
+<p>查看文件时间戳命令：<code>stat awk.txt</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">File: <span class="sb">`</span>awk.txt<span class="err">&#39;</span>
+Size: <span class="m">20</span>  Blocks: <span class="m">8</span>  IO Block: <span class="m">4096</span>  regular file
+Device: 801h/2049d  Inode: <span class="m">380730</span>  Links: <span class="m">1</span>
+Access: <span class="o">(</span>0644/-rw-r--r--<span class="o">)</span> Uid: <span class="o">(</span>  0/  root<span class="o">)</span>  Gid: <span class="o">(</span>  0/  root<span class="o">)</span>
+Access: 2008-04-26 01:50:44.000000000 +0800
+Modify: 2008-04-26 01:48:18.000000000 +0800
+Change: 2008-04-26 01:48:18.000000000 +0800
+</code></pre></div><p>说明：Access访问时间。Modify修改时间。Change状态改变时间。可以<code>stat *</code>查看这个目录所有文件的状态</p>
+<h4 id="压缩以及解压">压缩以及解压</h4>
+<p>tar 使用</p>
+<p><strong>-c: 压缩</strong>
+<strong>-x：解压</strong>
+-t：查看内容
+-r：向压缩归档文件末尾追加文件
+-u：更新原压缩包中的文件
+-z：有gzip属性的
+-j：有bz2属性的
+-Z：有compress属性的
+<strong>-v：显示所有过程</strong>
+-O：将文件解开到标准输出</p>
+<p><strong>-f</strong> 的参数是必须的，且必须是最后一个，后面跟目标文件名</p>
+<p>gzip 使用</p>
+<p><strong>-c：将输出写到标准输出上，并保留原有文件。</strong>
+<strong>-d ：将压缩文件解压。</strong>
+-l ：对每个压缩文件，显示下列字段： 压缩文件的大小 未压缩文件的大小 压缩比 未压缩文件的名字
+-r ：递归式地查找指定目录并压缩其中的所有文件或者是解压缩。
+-t ：测试，检查压缩文件是否完整。
+-v： 对每一个压缩和解压的文件，显示文件名和压缩比。
+-num： 用指定的数字num调整压缩的速度，
+-1或&ndash;fast：表示最快压缩方法（低压缩比），
+-9或&ndash;bes：t表示最慢压缩方法（高压缩比）。系统缺省值为6。</p>
+<p>写几个例子：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">tar压缩：
+tar –cvf jpg.tar *.jpg //将目录里所有jpg文件打包成tar.jpg
+tar –czf jpg.tar.gz *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz
+tar –cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2
+tar –cZf jpg.tar.Z *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z
+tar解压：
+tar –xvf file.tar //解压 tar包
+tar -xzvf file.tar.gz //解压tar.gz
+tar -xjvf file.tar.bz2   //解压 tar.bz2
+tar –xZvf file.tar.Z   //解压tar.Z
+gzip压缩就比较简单：
+gzip‍ -c src &gt; dst.gz //src压缩之后还保留源文件
+gzip解压：
+gzip -d  aaa.gz
+gunzip aaa.gz
+</code></pre></div><h4 id="查看linux-启动的服务">查看linux 启动的服务</h4>
+<p><code>chkconfig --list</code></p>
+<h4 id="查看linux版本适用于redhat和centos系列">查看linux版本(适用于redhat和centos系列)</h4>
+<p><code> cat /etc/redhat-release</code>
+返回类似<code>CentOS release 6.8 (Final)</code></p>
+<h4 id="后台运行神器screen命令的使用">后台运行神器screen命令的使用</h4>
+<p>直接使用<code>screen</code>相当于打开一个新的窗口，在窗口里可以执行任意的命令。
+也可以在<code>screen</code> 命令后跟上需要执行的命令，但是这样如果命令包含了 <code>&gt;</code> 这种写入上操作，是不会生效的。</p>
+<ul>
+<li>退出|<code>screen</code> : ctrl + 小写a + 小写d，Screen会给出<code>detached</code>提示</li>
+<li>查看 screen 有哪些任务 <code>screen -ls</code>，可以看出任务的pid</li>
+<li>连接 screen 的具体某一个任务： <code>screen -r pid</code>,这儿的pid指的是process id</li>
+<li>结束某一个任务：<code>kill -9 pid</code>，pid同上，这样会把该任务设为 dead 状态</li>
+<li>清空所有不工作的任务： <code>screen -wipe</code>,会清除掉所有的 dead 状态的任务</li>
+</ul>
+<h4 id="文件上传下载">文件上传下载</h4>
+<p><code>rz</code> 弹出个框框，进行上传
+<code>sz filename</code>下载</p>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/linux" rel="tag" title="linux">#linux#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" rel="next" title="Redis安装相关">
+        <i class="fa fa-chevron-left"></i> Redis安装相关
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://idsze.cn/2018/03/a-simple-lottey-use-php/" rel="prev" title="Php写一个简单的抽奖功能">
+        Php写一个简单的抽奖功能 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">4</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">20</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#redhat-系列">RedHat 系列 </a></li>
+    <li><a href="#debian系列">Debian系列 </a>
+      <ul>
+        <li><a href="#查看文本的方式">查看文本的方式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

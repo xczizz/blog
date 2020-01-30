@@ -13,12 +13,11 @@
     
     <item>
       <title>Composer Install和composer Update的区别</title>
-      <link>https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/</link>
+      <link>https://idsze.cn/2017/06/the-difference-between-composer-install-and-composer-update/</link>
       <pubDate>Fri, 16 Jun 2017 15:42:17 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/the-difference-between-composer-install-and-composer-update/</guid>
+      <guid>https://idsze.cn/2017/06/the-difference-between-composer-install-and-composer-update/</guid>
       <description>&lt;p&gt;composer install 和 composer update 区别：&lt;/p&gt;
-
 &lt;p&gt;install 的时候如果发现 composer.lock 中存在锁定版本，就会安装该版本。不存在的话会安装.json里的版本并创建 &lt;code&gt;.lock&lt;/code&gt; 文件,update 是更新所有依赖的版本并更新 composer.lock 文件。&lt;/p&gt;</description>
     </item>
     

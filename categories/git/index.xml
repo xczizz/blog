@@ -17,12 +17,14 @@
       <pubDate>Tue, 14 Jan 2020 20:35:03 +0800</pubDate>
       
       <guid>https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/</guid>
-      <description>&lt;p&gt;本地分支从主分支分离出来了，解决方式：&lt;br /&gt;
-1. 拉出临时分支 &lt;code&gt;git branch temp  b57d3f2&lt;/code&gt;&lt;br /&gt;
-2. 切换到主分支 &lt;code&gt;git checkout master&lt;/code&gt;&lt;br /&gt;
-3. 合并临时分支 &lt;code&gt;git merge temp&lt;/code&gt;&lt;br /&gt;
-4. 推送主分支   &lt;code&gt;git push origin master&lt;/code&gt;&lt;br /&gt;
-5. 删除临时分支 &lt;code&gt;git branch -d temp&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本地分支从主分支分离出来了，解决方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;拉出临时分支 &lt;code&gt;git branch temp  b57d3f2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换到主分支 &lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;合并临时分支 &lt;code&gt;git merge temp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;推送主分支   &lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除临时分支 &lt;code&gt;git branch -d temp&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -31,9 +33,8 @@
       <pubDate>Thu, 09 Jan 2020 15:10:44 +0800</pubDate>
       
       <guid>https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/</guid>
-      <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx&lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx &lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

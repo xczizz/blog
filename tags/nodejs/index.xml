@@ -13,12 +13,12 @@
     
     <item>
       <title>更改nodejs的全局包的默认安装位置</title>
-      <link>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</link>
+      <link>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</link>
       <pubDate>Thu, 09 Jan 2020 15:12:32 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/</guid>
-      <description>&lt;p&gt;默认情况下，位置应该在&lt;code&gt;C:/users/xx/AppData/Roaming/node&lt;/code&gt;下，现在更改到&lt;code&gt;D盘&lt;/code&gt;。&lt;br /&gt;
-查看位置：&lt;code&gt;npm config ls&lt;/code&gt;&lt;br /&gt;
+      <guid>https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/</guid>
+      <description>&lt;p&gt;默认情况下，位置应该在&lt;code&gt;C:/users/xx/AppData/Roaming/node&lt;/code&gt;下，现在更改到&lt;code&gt;D盘&lt;/code&gt;。&lt;br&gt;
+查看位置：&lt;code&gt;npm config ls&lt;/code&gt;&lt;br&gt;
 更改位置：&lt;code&gt;npm config set prefix &amp;quot;D:\node_global_modules&amp;quot;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     

@@ -159,8 +159,7 @@
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span><span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,<span style="color:#e6db74">&#39;world&#39;</span>];
 <span style="color:#75715e">// php
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">$arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;hello&#39;</span>,<span style="color:#e6db74">&#39;world&#39;</span>];
-</code></pre></div>
-<table>
+</code></pre></div><table>
 <thead>
 <tr>
 <th>JavaScript</th>
@@ -171,7 +170,6 @@
 <th>备注</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>length</td>
@@ -181,7 +179,6 @@
 <td><code>arr.length;</code> <code>count($arr);</code></td>
 <td>sizeof()是count()的别名</td>
 </tr>
-
 <tr>
 <td>indexOf()</td>
 <td>array_search()</td>
@@ -190,7 +187,6 @@
 <td><code>arr.indexOf(1);</code> <code>array_search(1,$arr);</code></td>
 <td>返回值</td>
 </tr>
-
 <tr>
 <td>slice()</td>
 <td>array_slice()</td>
@@ -199,7 +195,6 @@
 <td><code>arr.slice(0,2);</code> <code>array_slice($arr,0,2);</code></td>
 <td>前者两个参数都是索引(不包括结束索引)，后者第三个参数表示长度</td>
 </tr>
-
 <tr>
 <td>push()</td>
 <td>array_push()</td>
@@ -208,7 +203,6 @@
 <td><code>arr.push('A')</code> <code>array_push($arr,'A')</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>pop()</td>
 <td>array_pop()</td>
@@ -217,7 +211,6 @@
 <td><code>arr.pop()</code> <code>array_pop($arr)</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>unshift()</td>
 <td>array_unshift()</td>
@@ -226,7 +219,6 @@
 <td><code>arr.unshift()</code> <code>array_unshift($arr,'A')</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>shift()</td>
 <td>array_shift()</td>
@@ -235,7 +227,6 @@
 <td><code>arr.shift()</code> <code>array_shift($arr)</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>sort()</td>
 <td>sort()</td>
@@ -244,7 +235,6 @@
 <td><code>arr.sort()</code> <code>sort($arr)</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>reverse()</td>
 <td>array_reverse()</td>
@@ -253,7 +243,6 @@
 <td><code>arr.reverse()</code> <code>array_reverse($arr)</code></td>
 <td>-</td>
 </tr>
-
 <tr>
 <td>splice()</td>
 <td>array_splice()</td>
@@ -262,7 +251,6 @@
 <td><code>arr.splice(1,2,'A','B')</code> <code>array_splice($arr,1,2,['A','B'])</code></td>
 <td>写法不太一样，后者要替换的是写个数组，前者分开写元素</td>
 </tr>
-
 <tr>
 <td>concat()</td>
 <td>array_merge()</td>
@@ -271,7 +259,6 @@
 <td><code>arr.concat([1,2,3])</code> <code>array_merge($arr,[1,2,3])</code></td>
 <td>存在相同字符串键名，后者覆盖前者</td>
 </tr>
-
 <tr>
 <td>join()</td>
 <td>implode()</td>
@@ -282,7 +269,6 @@
 </tr>
 </tbody>
 </table>
-
 <blockquote>
 <p>在js中貌似没有关联数组一说，对象就是关联数组（但其实，array本身也是对象）。js对象中 <code>键值对</code>的声明为 <code>:</code> ，跟php中的<code>=&gt;</code>不一，并且键的名称（其实就是对象的属性）也不需要用引号来包含，除非这个键包含了特殊符号，比如（<code>var xiaohong = {name: '小红','middle-school': 'No.1 Middle School'};</code>），包含特殊符号的属性，也只能用关联数组的形式来访问，比如<code>xiaohog['middle-school']</code></p>
 </blockquote>
@@ -297,7 +283,7 @@
 <span style="color:#a6e22e">a</span>[<span style="color:#e6db74">&#39;age&#39;</span>] <span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>[<span style="color:#e6db74">&#39;name&#39;</span>],<span style="color:#a6e22e">a</span>[<span style="color:#e6db74">&#39;age&#39;</span>],<span style="color:#66d9ef">typeof</span>(<span style="color:#a6e22e">a</span>),<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span>)
 <span style="color:#75715e">// sdf 12 object 0
-</span><span style="color:#75715e">// 长度依旧为0
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 长度依旧为0
 </span></code></pre></div>
     </div>
     <footer class="post-footer">
@@ -371,7 +357,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -388,7 +374,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -424,7 +410,7 @@
     
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
-        <div class="post-toc-content"></div>
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
     </div>
 </section>
 
@@ -443,7 +429,7 @@
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

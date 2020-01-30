@@ -13,13 +13,15 @@
     
     <item>
       <title>Linux知识小记</title>
-      <link>https://idsze.cn/post/history/linux-study-notes/</link>
+      <link>https://idsze.cn/2018/05/linux-study-notes/</link>
       <pubDate>Mon, 14 May 2018 13:41:48 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/linux-study-notes/</guid>
-      <description>&lt;p&gt;一般来说著名的linux系统基本上分两大类：&lt;br /&gt;
-1. RedHat系列：Redhat、Centos、Fedora等&lt;br /&gt;
-2. Debian系列：Debian、Ubuntu等 &lt;/p&gt;</description>
+      <guid>https://idsze.cn/2018/05/linux-study-notes/</guid>
+      <description>&lt;p&gt;一般来说著名的linux系统基本上分两大类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RedHat系列：Redhat、Centos、Fedora等&lt;/li&gt;
+&lt;li&gt;Debian系列：Debian、Ubuntu等 &lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
   </channel>

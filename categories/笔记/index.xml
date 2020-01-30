@@ -6,104 +6,357 @@
     <description>Recent content in 笔记 on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 26 May 2018 18:23:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 20:35:03 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>git push的时候提示HEAD detached from origin/master</title>
+      <link>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</link>
+      <pubDate>Tue, 14 Jan 2020 20:35:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/</guid>
+      <description>&lt;p&gt;本地分支从主分支分离出来了，解决方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;拉出临时分支 &lt;code&gt;git branch temp  b57d3f2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换到主分支 &lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;合并临时分支 &lt;code&gt;git merge temp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;推送主分支   &lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除临时分支 &lt;code&gt;git branch -d temp&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git Subtree Push 报错 Assertion Failed</title>
+      <link>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</link>
+      <pubDate>Thu, 09 Jan 2020 15:10:44 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/</guid>
+      <description>&lt;p&gt;今天使用&lt;code&gt;git subtree push xxx&lt;/code&gt;的时候竟然爆了一个错误：&lt;code&gt;Assertion failed xxx &lt;/code&gt; 和 &lt;code&gt;No new revisions were found&lt;/code&gt; ，查了半天愣是没找到任何解决方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png&#34; alt=&#34;报错的地方.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>动态添加的html无法使用bootstrap的tooltip</title>
+      <link>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</link>
+      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</guid>
+      <description>&lt;p&gt;经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 &lt;code&gt;append&lt;/code&gt; 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过&lt;code&gt;$(&#39;body&#39;).on(&#39;&#39;click&#39;&#39;,xxxx,function(){})&lt;/code&gt;来解决部分（比如click）事件，但碰到 tooltip 怎么解决&lt;/p&gt;
+&lt;p&gt;bootstrap 中的 tooltip 调用方式为：&lt;code&gt;$(&#39;[data-toggle=&amp;quot;tooltip&amp;quot;]&#39;).tooltip()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解决方式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tooltip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;[data-toggle=&amp;#34;tooltip&amp;#34;]&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
       <title>Redis安装相关</title>
-      <link>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</link>
+      <link>https://idsze.cn/2018/05/install-redis-in-linux-and-windows/</link>
       <pubDate>Sat, 26 May 2018 18:23:34 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</guid>
+      <guid>https://idsze.cn/2018/05/install-redis-in-linux-and-windows/</guid>
       <description>&lt;h1 id=&#34;linux进入redis服务&#34;&gt;linux进入redis服务&lt;/h1&gt;
-
 &lt;p&gt;直接&lt;code&gt;redis-cli&lt;/code&gt;
-&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;redis&#34; /&gt;&lt;/p&gt;
-
+&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;redis&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;查看redis进程&#34;&gt;查看redis进程&lt;/h1&gt;
-
 &lt;p&gt;&lt;code&gt;service redis status&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux知识小记</title>
-      <link>https://idsze.cn/post/history/linux-study-notes/</link>
+      <link>https://idsze.cn/2018/05/linux-study-notes/</link>
       <pubDate>Mon, 14 May 2018 13:41:48 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/linux-study-notes/</guid>
-      <description>&lt;p&gt;一般来说著名的linux系统基本上分两大类：&lt;br /&gt;
-1. RedHat系列：Redhat、Centos、Fedora等&lt;br /&gt;
-2. Debian系列：Debian、Ubuntu等 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Xunsearch安装</title>
-      <link>https://idsze.cn/post/history/install-xunsearch/</link>
-      <pubDate>Mon, 18 Sep 2017 13:52:48 +0800</pubDate>
-      
-      <guid>https://idsze.cn/post/history/install-xunsearch/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;安装库
-&lt;code&gt;yum -y install make gcc gcc-c++ libtool autoconf automake&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;安装软件（先下载软件包，解压到单独目录）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;cd /software
-wget http://www.xunsearch.com/download/xunsearch-full-latest.tar.bz2
-tar -xjf xunsearch-full-latest.tar.bz2
-cd xunsearch-full-1.3.0/
-sh setup.sh
-//选择安装路径在/software/xunsearch
-cd xunsearch
-bin/xs-ctl.sh start&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;添加到开机启动命令
-&lt;code&gt;vi /etc/rc.local&lt;/code&gt;
- 在文件最后加一句&lt;code&gt;cd /software/xunsearch ; bin/xs-ctl.sh restart&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+      <guid>https://idsze.cn/2018/05/linux-study-notes/</guid>
+      <description>&lt;p&gt;一般来说著名的linux系统基本上分两大类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RedHat系列：Redhat、Centos、Fedora等&lt;/li&gt;
+&lt;li&gt;Debian系列：Debian、Ubuntu等 &lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     
     <item>
+      <title>Php写一个简单的抽奖功能</title>
+      <link>https://idsze.cn/2018/03/a-simple-lottey-use-php/</link>
+      <pubDate>Sun, 18 Mar 2018 23:00:59 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/a-simple-lottey-use-php/</guid>
+      <description>&lt;h3 id=&#34;可重复的抽奖&#34;&gt;可重复的抽奖&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;$prize_arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;500金币&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;免禁buff48小时体验&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;防偷buff48小时体验&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;免禁buff24小时体验&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;防偷buff24小时体验&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;100金币&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;50金币&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;5金币&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getRand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$prize_arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nv&#34;&gt;$result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$prize_arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 默认数组最后用一个
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nv&#34;&gt;$pro_sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;array_sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;array_map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;array_pop&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$prize_arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 拿到总数
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// $pro_sum = array_sum(array_column($prize_arr, &amp;#39;weight&amp;#39;));  // 两个方法都ok
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$prize_arr&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;nv&#34;&gt;$rand_num&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;mt_rand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$pro_sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rand_num&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;nv&#34;&gt;$result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;nv&#34;&gt;$pro_sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;weight&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 说明没有抽到，减去权重,继续来
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql筛选重复数据</title>
+      <link>https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/</link>
+      <pubDate>Sat, 17 Mar 2018 18:57:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/</guid>
+      <description>&lt;p&gt;有个需求：选出表里重复的数据，只保留一个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-ccb979fb5bdc40be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;需要处理的数据&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;having&lt;/code&gt;是在分组之后，对组内数据进行筛选，&lt;code&gt;where&lt;/code&gt; 就不多说了，在分组前添加条件的&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SELECT id,name,count(name) FROM idiom group by name HAVING count(name)&amp;gt;=2&lt;/code&gt; 可以看出大概519个数据都是有重复的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql添加用户来操作指定数据库</title>
+      <link>https://idsze.cn/2018/03/mysql-add-user-to-operate-the-specified-database/</link>
+      <pubDate>Tue, 13 Mar 2018 19:23:32 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/03/mysql-add-user-to-operate-the-specified-database/</guid>
+      <description>&lt;h3 id=&#34;创建授权&#34;&gt;创建授权&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;先创用户再授权&lt;br&gt;
+新建用户：&lt;code&gt;create user &#39;username&#39;@&#39;host&#39; identified by &#39;password&#39;;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;username&lt;/code&gt; 为用户名&lt;br&gt;
+&lt;code&gt;password&lt;/code&gt; 为密码&lt;br&gt;
+&lt;code&gt;host&lt;/code&gt; 如果为&lt;code&gt;localhost&lt;/code&gt;则只能本地登录，使用&lt;code&gt;%&lt;/code&gt;为不限制&lt;br&gt;
+授权： &lt;code&gt;grant privileges on databasename.tablename to &#39;username&#39;@&#39;host&#39;;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;privileges&lt;/code&gt; 为用户的操作权限，可以是 insert,update等等，&lt;a href=&#34;%5Bhttp://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html%5D(http://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html)&#34;&gt;官方权限列表&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Yii2使用adminLTE的时候添加左侧菜单树上badge</title>
+      <link>https://idsze.cn/2017/11/adminlet-left-menu-tree-add-badge/</link>
+      <pubDate>Tue, 14 Nov 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/11/adminlet-left-menu-tree-add-badge/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-ef8eb1826d4ba51c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;添加之前.png&#34;&gt;
+&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-5f81e4e0ad0ae656.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;添加之后.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;更改：&lt;code&gt;vendor\dmstr\yii2-adminlte-asset\widgets\Menu.php&lt;/code&gt;这个文件大概70行左右，有一个&lt;code&gt;renderItem($item)&lt;/code&gt;的函数&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Onclick属性值函数的参数问题</title>
+      <link>https://idsze.cn/2017/09/onclick-attribute-function-params/</link>
+      <pubDate>Wed, 20 Sep 2017 15:31:23 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/09/onclick-attribute-function-params/</guid>
+      <description>&lt;p&gt;踩坑之前的代码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;// HTML
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;javascript:;&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onclick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;follow(123)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;btn btn-warning btn-sm btn-flat&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;OK&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+// JS
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;follow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;success&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 这个success是添加不上去的
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;填坑：&lt;strong&gt;如果&lt;code&gt;onclick&lt;/code&gt;属性没有传入&lt;code&gt;this&lt;/code&gt;对象，则在函数定义中不能使用&lt;code&gt;$(this)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xunsearch安装</title>
+      <link>https://idsze.cn/2017/09/install-xunsearch/</link>
+      <pubDate>Mon, 18 Sep 2017 13:52:48 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/09/install-xunsearch/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装库
+&lt;code&gt;yum -y install make gcc gcc-c++ libtool autoconf automake&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装软件（先下载软件包，解压到单独目录）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /software
+wget http://www.xunsearch.com/download/xunsearch-full-latest.tar.bz2
+tar -xjf xunsearch-full-latest.tar.bz2
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; xunsearch-full-1.3.0/
+sh setup.sh
+//选择安装路径在/software/xunsearch
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; xunsearch
+bin/xs-ctl.sh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;添加到开机启动命令
+&lt;code&gt;vi /etc/rc.local&lt;/code&gt;
+ 在文件最后加一句&lt;code&gt;cd /software/xunsearch ; bin/xs-ctl.sh restart&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Yii2笔记</title>
+      <link>https://idsze.cn/2017/08/note-for-yii2/</link>
+      <pubDate>Thu, 31 Aug 2017 07:48:02 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/note-for-yii2/</guid>
+      <description>Yii 维护页面 网站维护，入口文件index.php 直接echo 在应用的配置文件（man.php）中加入以下代码： &amp;lt;?php &amp;#39;catchAll&amp;#39; =&amp;gt; [ //打开之后所有页面进入</description>
+    </item>
+    
+    <item>
+      <title>Php中三元运算符和合并操作符的区别</title>
+      <link>https://idsze.cn/2017/08/difference-between-ternary-and-null-coalescing-operator/</link>
+      <pubDate>Fri, 25 Aug 2017 22:51:39 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/difference-between-ternary-and-null-coalescing-operator/</guid>
+      <description>&lt;p&gt;基本的&lt;code&gt;(expr1) ? (expr2) : (expr3)&lt;/code&gt; 就不说了。&lt;br&gt;
+&lt;code&gt;?:&lt;/code&gt;  左边表达式成立就返回左边，不成立，返回右边&lt;br&gt;
+&lt;code&gt;??&lt;/code&gt; 相当于：&lt;code&gt;isset(expr1) ? expr1 : expr2&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也就是说 &lt;code&gt;??&lt;/code&gt; 只是说明如果左侧设置了并且不为null才返回左侧，如果左侧设置了但是为空字符串，也同样返回左侧的空字符串。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Yii2安装前端资源包</title>
+      <link>https://idsze.cn/2017/08/install-front-end-resource-pack-in-yii2/</link>
+      <pubDate>Thu, 24 Aug 2017 15:08:34 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/install-front-end-resource-pack-in-yii2/</guid>
+      <description>&lt;p&gt;官方文档也有介绍：http://www.yiichina.com/doc/guide/2.0/structure-assets#bower-npm-assets&lt;/p&gt;
+&lt;h2 id=&#34;安装-izitoast&#34;&gt;安装 &lt;code&gt;iziToast&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;a href=&#34;http://izitoast.marcelodolce.com/&#34;&gt;iziToast.js&lt;/a&gt; 这个前端资源 &lt;code&gt;composer require bower-asset/izitoast&lt;/code&gt; 或者添加&lt;code&gt;composer.json&lt;/code&gt;然后 update：&lt;code&gt;&amp;quot;bower-asset/izitoast&amp;quot;: &amp;quot;^1.1&amp;quot;&lt;/code&gt;，安装之后大概目录结构如下:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-727f5fd7ef1b0228.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;iziToast&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>配置easywecaht碰到的坑</title>
+      <link>https://idsze.cn/2017/08/bugs-encountered-in-easywechat-development/</link>
+      <pubDate>Mon, 14 Aug 2017 11:26:28 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/bugs-encountered-in-easywechat-development/</guid>
+      <description>&lt;h2 id=&#34;版本问题&#34;&gt;版本问题&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;url访问微信校验：&lt;code&gt;/valid?signature=xxx&amp;amp;echostr=xxx&amp;amp;timestamp=1502621836&amp;amp;nonce=xxx&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt;依赖 &lt;code&gt;doctrine/cache&lt;/code&gt; ，而这个&lt;code&gt;doctrine/cache&lt;/code&gt;最新版必须&lt;code&gt;php 7.1&lt;/code&gt;以上，&lt;code&gt;7.0.x&lt;/code&gt;的只能更改&lt;code&gt;composer.json&lt;/code&gt;中这个玩意的版本， 最大1.6.2&lt;/li&gt;
+&lt;li&gt;权限问题：&lt;code&gt;wechat.log&lt;/code&gt; 可写权限&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt; 需要用到 &lt;code&gt;curl&lt;/code&gt; 函数，提先安装&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid&lt;/code&gt;的请求方式是&lt;strong&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;回复消息的请求方式是 &lt;code&gt;POST&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql中int和bigint以及smallint和tinyint的区别</title>
+      <link>https://idsze.cn/2017/08/difference-between-int-bigint-smallint-tinyint-in-mysql/</link>
+      <pubDate>Wed, 02 Aug 2017 12:55:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/difference-between-int-bigint-smallint-tinyint-in-mysql/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;无符号的最大值就是二进制最大位数锁代表的数值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;有符号&lt;/th&gt;
+&lt;th&gt;无符号&lt;/th&gt;
+&lt;th&gt;存储大小&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^31 (-2,147,483,648) 到 2^31 – 1 (2,147,483,647)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到4294967295 (2^32)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4字节(也就是32位)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;bigint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^63 (-9223372036854775808) 到 2^63-1 (9223372036854775807)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到18446744073709551615 (2^64)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;8字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mediumint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^23 (-8388608) 到 2^23-1 (8388607)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到16777215 (2^24)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;smallint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-2^15 (-32,768) 到 2^15 – 1 (32,767) &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到65535 (2^16)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;2字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tinyint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-128 到 127&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0到255 (2^8)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;int(10),括号里的这个10 所代表的含义：10是一个显示宽度，和当前int大小没有任何关系，这个10是没有任何操作的，除非int的属性选择为&lt;code&gt;UNSIGNED ZEROFILL&lt;/code&gt;，即&lt;code&gt;填充0&lt;/code&gt;，此时也不可能有负数，当位数(长度)不够括号里的数值的时候，会自动补0，超过没有操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Yii2中引用vendor中的js和css</title>
-      <link>https://idsze.cn/post/history/use-js-and-css-in-vendor-floder/</link>
+      <link>https://idsze.cn/2017/06/use-js-and-css-in-vendor-floder/</link>
       <pubDate>Mon, 26 Jun 2017 17:19:40 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/use-js-and-css-in-vendor-floder/</guid>
+      <guid>https://idsze.cn/2017/06/use-js-and-css-in-vendor-floder/</guid>
       <description>&lt;p&gt;以AdminLte为例，register.html在使用的时候无法显示单选框，查看元素发现少了&lt;code&gt;iCkeck.js&lt;/code&gt;文件&lt;/p&gt;
-
 &lt;p&gt;直接使用Yii2的资源管理包：
 assets目录下新建一个Asset文件（&lt;code&gt;AdminLtePluginAsset.php&lt;/code&gt;）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace app\assets;
-use yii\web\AssetBundle;
-class AdminLtePluginAsset extends AssetBundle
-{
-    public $sourcePath = &amp;#39;@vendor/almasaeed2010/adminlte/plugins&amp;#39;;
-    public $js = [
-        &amp;#39;iCheck/icheck.min.js&amp;#39;
-        // more plugin Js here
-    ];
-    public $css = [
-        &amp;#39;iCheck/all.css&amp;#39;
-        // more plugin CSS here
-    ];
-    public $depends = [
-        // 注明依赖关系
-        &amp;#39;dmstr\web\AdminLteAsset&amp;#39;,
-    ];
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;app\assets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yii\web\AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;AdminLtePluginAsset&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;AssetBundle&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$sourcePath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;@vendor/almasaeed2010/adminlte/plugins&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$js&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;s1&#34;&gt;&amp;#39;iCheck/icheck.min.js&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// more plugin Js here
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$css&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;s1&#34;&gt;&amp;#39;iCheck/all.css&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// more plugin CSS here
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$depends&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 注明依赖关系
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;dmstr\web\AdminLteAsset&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>Js学习笔记</title>
-      <link>https://idsze.cn/post/history/javascript-study-notes/</link>
+      <link>https://idsze.cn/2017/06/javascript-study-notes/</link>
       <pubDate>Wed, 07 Jun 2017 19:04:47 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/javascript-study-notes/</guid>
+      <guid>https://idsze.cn/2017/06/javascript-study-notes/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;语句还是要以分号结尾，规范一些&lt;/li&gt;
 &lt;li&gt;变量名是大小写英文、数字、&lt;code&gt;$&lt;/code&gt;和&lt;code&gt;_&lt;/code&gt;的组合，且不能用数字开头&lt;/li&gt;
-&lt;li&gt;&lt;u&gt;变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;建议使用严格模式 &lt;code&gt;use strict&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;也是弱类型语言 （比较的时候类型自动转换）&lt;/li&gt;
 &lt;li&gt;严格区分大小写&lt;/li&gt;
@@ -112,14 +365,14 @@ class AdminLtePluginAsset extends AssetBundle
     
     <item>
       <title>Js中的数组函数和php中数组函数的对比</title>
-      <link>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</link>
+      <link>https://idsze.cn/2017/06/comparison-of-array-functions-in-php-and-js/</link>
       <pubDate>Wed, 07 Jun 2017 17:04:41 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/comparison-of-array-functions-in-php-and-js/</guid>
-      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// js
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
-&lt;span style=&#34;color:#75715e&#34;&gt;// php
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;$arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;];
+      <guid>https://idsze.cn/2017/06/comparison-of-array-functions-in-php-and-js/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// js
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// php
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     

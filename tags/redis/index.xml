@@ -13,17 +13,14 @@
     
     <item>
       <title>Redis安装相关</title>
-      <link>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</link>
+      <link>https://idsze.cn/2018/05/install-redis-in-linux-and-windows/</link>
       <pubDate>Sat, 26 May 2018 18:23:34 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/install-redis-in-linux-and-windows/</guid>
+      <guid>https://idsze.cn/2018/05/install-redis-in-linux-and-windows/</guid>
       <description>&lt;h1 id=&#34;linux进入redis服务&#34;&gt;linux进入redis服务&lt;/h1&gt;
-
 &lt;p&gt;直接&lt;code&gt;redis-cli&lt;/code&gt;
-&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;redis&#34; /&gt;&lt;/p&gt;
-
+&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;redis&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;查看redis进程&#34;&gt;查看redis进程&lt;/h1&gt;
-
 &lt;p&gt;&lt;code&gt;service redis status&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     

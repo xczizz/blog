@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Js学习笔记 - My Hugo Site</title>
+    <meta name="keywords" content="js,">
+    
+    
+    <meta property="og:title" content="Js学习笔记">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="baidu-site-verification" content="3QjhF2nVG2" />
+    <meta name="title" content="Js学习笔记 - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2017/06/javascript-study-notes/" itemprop="url">
+        Js学习笔记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-06-07">
+    2017-06-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">532 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <ul>
+<li>语句还是要以分号结尾，规范一些</li>
+<li>变量名是大小写英文、数字、<code>$</code>和<code>_</code>的组合，且不能用数字开头</li>
+<li><!-- raw HTML omitted -->变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错<!-- raw HTML omitted --></li>
+<li>建议使用严格模式 <code>use strict</code></li>
+<li>也是弱类型语言 （比较的时候类型自动转换）</li>
+<li>严格区分大小写</li>
+</ul>
+<ul>
+<li>数据类型：
+<ul>
+<li>number（包括了整数和浮点）</li>
+<li>string</li>
+<li>boolean</li>
+<li>null和undefined</li>
+<li>Array</li>
+<li>Object （<code>var person = {name: 'Bob', age: 20, zipcode: null};</code>）</li>
+<li>Map和Set（ES6新增的数据类型）</li>
+</ul>
+</li>
+<li>一切皆对象，函数也是对象
+<ul>
+<li>数组对象</li>
+<li>字符串对象</li>
+<li>Math对象</li>
+<li>Number对象</li>
+<li>RegExp对象</li>
+</ul>
+</li>
+<li>ES6新增反引号表示多行字符串，字符串模板连接变量
+<img src="http://upload-images.jianshu.io/upload_images/2001662-ffc54aac10c073c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">
+<img src="http://upload-images.jianshu.io/upload_images/2001662-fc5f38827b05bf40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li>ES6新增的iterable类型包括Array,Map,Set.</li>
+<li>抽象是数学中非常常见的概念。举个例子：计算数列的和，比如：1 + 2 + 3 + &hellip; + 100，写起来十分不方便，于是数学家发明了求和符号∑，可以把1 + 2 + 3 + &hellip; + 100记作：
+<img src="http://upload-images.jianshu.io/upload_images/2001662-6effe2f4cc49865e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">
+可见，借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。
+写计算机程序也是一样，函数就是最基本的一种代码抽象的方式。</li>
+<li>JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量实际上被绑定到<code>window</code>的一个属性<code>var course = 'Learn JavaScript';alert(window.course)</code></li>
+</ul>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/js" rel="tag" title="js">#js#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2017/06/the-difference-between-composer-install-and-composer-update/" rel="next" title="Composer Install和composer Update的区别">
+        <i class="fa fa-chevron-left"></i> Composer Install和composer Update的区别
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://idsze.cn/2017/06/comparison-of-array-functions-in-php-and-js/" rel="prev" title="Js中的数组函数和php中数组函数的对比">
+        Js中的数组函数和php中数组函数的对比 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">4</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">20</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

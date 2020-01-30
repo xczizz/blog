@@ -156,59 +156,62 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <ol>
-<li><p>安装库
-<code>yum -y install make gcc gcc-c++ libtool autoconf automake</code></p></li>
-
-<li><p>安装软件（先下载软件包，解压到单独目录）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd /software
+<li>
+<p>安装库
+<code>yum -y install make gcc gcc-c++ libtool autoconf automake</code></p>
+</li>
+<li>
+<p>安装软件（先下载软件包，解压到单独目录）</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd /software
 wget http://www.xunsearch.com/download/xunsearch-full-latest.tar.bz2
 tar -xjf xunsearch-full-latest.tar.bz2
 cd xunsearch-full-1.3.0/
 sh setup.sh
 //选择安装路径在/software/xunsearch
 cd xunsearch
-bin/xs-ctl.sh start</pre></div></li>
-
-<li><p>添加到开机启动命令
+bin/xs-ctl.sh start
+</code></pre></div><ol start="3">
+<li>添加到开机启动命令
 <code>vi /etc/rc.local</code>
- 在文件最后加一句<code>cd /software/xunsearch ; bin/xs-ctl.sh restart</code></p></li>
+ 在文件最后加一句<code>cd /software/xunsearch ; bin/xs-ctl.sh restart</code></li>
 </ol>
-
-<ol>
+<ol start="4">
 <li>构建索引
-<code>util/Indexer.php --rebuild --source=mysql://你的数据库用户名:你的数据库密码@你的数据库IP/你的数据库名 --sql=&quot;你要执行的SQL语句&quot; --filter=debug --project=你的项目名 &gt;日志文件名</code>
+<code> util/Indexer.php --rebuild --source=mysql://你的数据库用户名:你的数据库密码@你的数据库IP/你的数据库名 --sql=&quot;你要执行的SQL语句&quot; --filter=debug --project=你的项目名 &gt;日志文件名</code>
 本次使用的search.ini配置文件放在了项目的配置文件下
 使用（在<code>yii</code>根目录下）：
 <code>php vendor/hightman/xunsearch/util/Indexer.php --rebuild --source=mysql://root:000@localhost/yii --sql=&quot;SELECT id,title,content,created_at status FROM yii_blog WHERE user_id=2&quot;  --project=blogapp/config/blogsearch.ini</code></li>
 <li>尝试搜索一下
-<code>php vendor/hightman/xunsearch/util/Quest.php -p blogapp/config/blogsearch.ini '比较'</code>
+<code>php vendor/hightman/xunsearch/util/Quest.php -p blogapp/config/blogsearch.ini '比较'</code> 
 会出现搜索结果</li>
-
-<li><p>在windows上进行测试配置（<a href="https://getyii.com/topic/61">下载好vendor并配置好配置文件</a>）：<br />
+<li>在windows上进行测试配置（<a href="https://getyii.com/topic/61">下载好vendor并配置好配置文件</a>）：<br>
 <strong>首先要修改linux上8383和8384对外可访问的端口（默认这两个端口只对可访问）</strong>
-linux上配置如下(xunsearch目录下)：<br />
-①<strong><u>先关闭已经占用的这两个端口(这真是一个头疼的问题，一开始没有关闭，就直接用命令更改，一直改不出来，后来无意间发现要先关闭再使用-b来启动)：<code>bin/xs-ctl.sh stop</code></u></strong><br />
-②<strong><u>使用-b启动服务：<code>bin/xs-ctl.sh -b inet start</code></u></strong><br />
-③配置防火墙可以对外访问：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-linux" data-lang="linux">vi /etc/sysconfig/iptables
+linux上配置如下(xunsearch目录下)：<br>
+①<strong><!-- raw HTML omitted -->先关闭已经占用的这两个端口(这真是一个头疼的问题，一开始没有关闭，就直接用命令更改，一直改不出来，后来无意间发现要先关闭再使用-b来启动)：<code>bin/xs-ctl.sh stop</code><!-- raw HTML omitted --></strong><br>
+②<strong><!-- raw HTML omitted -->使用-b启动服务：<code>bin/xs-ctl.sh -b inet start </code><!-- raw HTML omitted --></strong><br>
+③配置防火墙可以对外访问：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">vi /etc/sysconfig/iptables
 添加如下内容
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 8383 -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 8384 -j ACCEPT
 之后保存重启
 service iptables save 
-service iptables restart</code></pre></div>
-<p>④ <code>netstat -antp</code>出现神奇的一幕：
-<img src="http://of8c68i6e.bkt.clouddn.com//blog/linux-port-20170110162455.png" alt="端口前边是0表示可以对外访问" /></p></li>
-
-<li><p>撤回只允许本访问：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-command" data-lang="command">bin/xs-ctl.sh -b inet stop  // 以-b 启动的，也要以 -b 结束
-bin/xs-ctl.sh start</code></pre></div></li>
-
-<li><p>删除索引（字段结构发生变化）
+service iptables restart
+</code></pre></div><p>④ <code>netstat -antp</code>出现神奇的一幕：
+<img src="http://of8c68i6e.bkt.clouddn.com//blog/linux-port-20170110162455.png" alt="端口前边是0表示可以对外访问"></p>
+<ol start="7">
+<li>撤回只允许本访问：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">bin/xs-ctl.sh -b inet stop  // 以-b 启动的，也要以 -b 结束
+bin/xs-ctl.sh start
+</code></pre></div><ol start="8">
+<li>删除索引（字段结构发生变化）
 yii根目录下进行：
-<code>vendor/hightman/xunsearch/util/Indexer.php --clean bogapp/config/blogsearch.ini
-</code>
-&ndash;clean 后面跟上配置文件的路径</p></li>
+<code> vendor/hightman/xunsearch/util/Indexer.php --clean bogapp/config/blogsearch.ini</code>
+&ndash;clean 后面跟上配置文件的路径</li>
 </ol>
     </div>
     <footer class="post-footer">
@@ -284,7 +287,7 @@ yii根目录下进行：
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -301,7 +304,7 @@ yii根目录下进行：
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -337,7 +340,7 @@ yii根目录下进行：
     
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
-        <div class="post-toc-content"></div>
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
     </div>
 </section>
 
@@ -356,7 +359,7 @@ yii根目录下进行：
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

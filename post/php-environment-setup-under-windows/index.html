@@ -156,47 +156,42 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="apache">Apache</h2>
-
 <p>直接在<a href="http://httpd.apache.org/download.cgi">官网下载</a>。解压之后有个<code>readme_first.html</code>就有使用说明。先更改<code>ServerRoot</code>为绝对路径（注意路径写正斜杠），就可以跑起来。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">这个是 apache conf 的内容
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">这个是 apache conf 的内容
 
 # NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &#34;c:/apache&#34; instead of &#34;c:\apache&#34;).</pre></div>
-<p>简单记几个命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">安装服务（需要用管理员权限）:  httpd -k install
+# instead of backslashes (e.g., &#34;c:/apache&#34; instead of &#34;c:\apache&#34;).
+</code></pre></div><p>简单记几个命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">安装服务（需要用管理员权限）:  httpd -k install
 卸载服务   httpd -k uninstall
 启动服务   httpd -k start
 停止服务   httpd -k stop
 重启服务   httpd -k restart
 查看版本   httpd -V
-查看支持的命令 httpd -h</pre></div>
-<p>可以在 windwos 服务中设为开机自启。</p>
-
+查看支持的命令 httpd -h
+</code></pre></div><p>可以在 windwos 服务中设为开机自启。</p>
 <p>安装是时候似乎出现一个错误<code>Errors reported here must be corrected before the service can be started.</code>，这不是错误，而是提示，如果此处有错误必须先解决 :joy:
-<img src="https://i.loli.net/2020/01/10/vrenXfuo5bGk7OD.png" alt="apache.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/vrenXfuo5bGk7OD.png" alt="apache.png"></p>
 <h3 id="配置-apache-支持-php">配置 Apache 支持 PHP</h3>
-
 <ol>
-<li><p>配置 php 模块</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># php7 support
+<li>配置 php 模块</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># php7 support
 LoadModule php7_module &#34;C:/php/php740/php7apache2_4.dll&#34;
 AddType application/x-httpd-php .php .html .htm
 # configure the path to php.ini
-PHPIniDir &#34;C:/php/php740&#34;</pre></div></li>
-
-<li><p>配置 web 根目录，可以重新设置一个 webRoot</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># customize web root
+PHPIniDir &#34;C:/php/php740&#34;
+</code></pre></div><ol start="2">
+<li>配置 web 根目录，可以重新设置一个 webRoot</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># customize web root
 Define WEBROOT &#34;D:/PhpWorkspace/www&#34;
 DocumentRoot &#34;${WEBROOT}&#34;
-&lt;Directory &#34;${WEBROOT}&#34;&gt; </pre></div></li>
-</ol>
-
-<h2 id="mysql">Mysql</h2>
-
-<p>下载链接：<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip">https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip</a>
+&lt;Directory &#34;${WEBROOT}&#34;&gt; 
+</code></pre></div><h2 id="mysql">Mysql</h2>
+<p>下载链接：https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
 这个版本没有配置文件，需手动增加一个：<code>my.ini</code>，先上最简单的配置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[client]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[client]
 #password = 
 port = 3306
 #socket = /tmp/mysql.sock
@@ -217,51 +212,40 @@ default-storage-engine=INNODB
 #开启查询缓存
 explicit_defaults_for_timestamp = true
 #设置加密方式为原生加密方式吗，解决无法登陆 phpmyadmin 的问题
-default_authentication_plugin=mysql_native_password</pre></div>
-<p>初始化之后会给一个root用户和默认密码：<code>mysqld --initialize --console</code><br />
-<img src="https://i.loli.net/2020/01/10/n2y5SwMf39RhWoY.png" alt="mysql1.png" /></p>
-
-<p>安装服务：<code>.\bin\mysqld --install</code><br />
-启动服务：<code>net start mysql</code><br />
-<img src="https://i.loli.net/2020/01/10/6WBK5ZczSJOhQEo.png" alt="mysql2.png" /></p>
-
+default_authentication_plugin=mysql_native_password
+</code></pre></div><p>初始化之后会给一个root用户和默认密码：<code>mysqld --initialize --console</code><br>
+<img src="https://i.loli.net/2020/01/10/n2y5SwMf39RhWoY.png" alt="mysql1.png"></p>
+<p>安装服务：<code>.\bin\mysqld --install</code><br>
+启动服务：<code>net start mysql</code><br>
+<img src="https://i.loli.net/2020/01/10/6WBK5ZczSJOhQEo.png" alt="mysql2.png"></p>
 <p>第一次进入之后会让更改密码：<code>alter user root@localhost identified by &quot;password&quot;</code>
-<img src="https://i.loli.net/2020/01/10/JVwjgWMuQGplUNK.png" alt="mysql3.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/JVwjgWMuQGplUNK.png" alt="mysql3.png"></p>
 <h2 id="php">PHP</h2>
-
-<p>下载地址：<a href="https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip">https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip</a> ，php主要就是一堆的配置。
+<p>下载地址：https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip ，php主要就是一堆的配置。
 复制<code>php.ini-development</code>为<code>php.ini</code>，放几个常用配置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">short_open_tag = On
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">short_open_tag = On
 post_max_size = 20M
 upload_max_filesize = 50M
 On windows:
 extension_dir = &#34;ext&#34;
-按需开启相对应扩展</pre></div>
-<h3 id="phpmyadmin-安装">phpmyadmin 安装</h3>
-
+按需开启相对应扩展
+</code></pre></div><h3 id="phpmyadmin-安装">phpmyadmin 安装</h3>
 <p><a href="https://www.phpmyadmin.net/">官网下载</a> phpMyadmin，解压到上边配好的 webroot 目录下，打开，看到熟悉的页面。尝试登陆一下，发现报错<code>mysqli::real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]</code>
-<img src="https://i.loli.net/2020/01/10/8gcbjSpFTBXqayC.png" alt="errormysql.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/8gcbjSpFTBXqayC.png" alt="errormysql.png"></p>
 <p>去<a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password">mysql官网</a>看一下解释
-<img src="https://i.loli.net/2020/01/10/kvfZpGwXAg98diC.png" alt="mysql8.png" /></p>
-
+<img src="https://i.loli.net/2020/01/10/kvfZpGwXAg98diC.png" alt="mysql8.png"></p>
 <p>大致意思就是 mysql8.0 之后有了更安全的加密方式且被设置为默认的加密方式，而当前登录暂时不支持该方式，解决方法是设置加密方式为之前的<code>default_authentication_plugin=mysql_native_password</code>，然后命令行进入 mysql 设置 <code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';</code>，再刷新一下 <code>FLUSH PRIVILEGES;</code>，除此之外似乎也没找到更好的解决方式，只能等待 phpmyadmin 支持新的加密方式了。
-<img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&gt; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;;  
-&gt; FLUSH PRIVILEGES;</pre></div>
-<p>修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 <code>配置文件现在需要一个短语密码。</code> 解决方法：</p>
-
+<img src="https://i.loli.net/2020/01/10/wBSlfy28AnuKG4t.png" alt="官方提供的临时解决方式.png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;;  
+&gt; FLUSH PRIVILEGES;
+</code></pre></div><p>修改完成之后顺利进入 phpmyadmin，页面下边出现一个新的错误 <code>配置文件现在需要一个短语密码。</code> 解决方法：</p>
 <p>1、在 <code>phpMyAdmin/libraries/config.default.php</code> 中把 <code>$cfg['blowfish_secret']</code>给一个值</p>
-
 <p>2、在 <code>phpMyAdmin/config.sample.inc.php</code> 中的 <code>$cfg['blowfish_secret']</code> 也给一个值</p>
-
 <blockquote>
-<p>官方给的注释：<br />
-<code>This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.</code><br />
+<p>官方给的注释：<br>
+<code>This is needed for cookie based authentication to encrypt password in cookie. Needs to be 32 chars long.</code><br>
 <code>$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */</code></p>
 </blockquote>
-
 <p>字面意思是用来 cookie 加密，防止混淆。</p>
     </div>
     <footer class="post-footer">
@@ -341,7 +325,7 @@ extension_dir = &#34;ext&#34;
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -358,7 +342,7 @@ extension_dir = &#34;ext&#34;
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -395,20 +379,19 @@ extension_dir = &#34;ext&#34;
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
         <div class="post-toc-content"><nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#apache">Apache</a>
-<ul>
-<li><a href="#配置-apache-支持-php">配置 Apache 支持 PHP</a></li>
-</ul></li>
-<li><a href="#mysql">Mysql</a></li>
-<li><a href="#php">PHP</a>
-<ul>
-<li><a href="#phpmyadmin-安装">phpmyadmin 安装</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#apache">Apache</a>
+      <ul>
+        <li><a href="#配置-apache-支持-php">配置 Apache 支持 PHP</a></li>
+      </ul>
+    </li>
+    <li><a href="#mysql">Mysql</a></li>
+    <li><a href="#php">PHP</a>
+      <ul>
+        <li><a href="#phpmyadmin-安装">phpmyadmin 安装</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav></div>
     </div>
 </section>
@@ -428,7 +411,7 @@ extension_dir = &#34;ext&#34;
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

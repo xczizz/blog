@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.59.1" />
+	<meta name="generator" content="Hugo 0.63.2" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
@@ -67,6 +67,12 @@
         </li>
       
         <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
           <a href="https://idsze.cn/categories/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
           </a>
@@ -113,7 +119,67 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/upgrade-hugo-version/" itemprop="url">
+        升级hugo版本
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-01-29">
+    2020-01-29
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
+        <span itemprop="name">瞎折腾</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">116 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>hugo 0.6 版本移除了<code>Pygments</code>作为代码高亮的选项，而我当前使用的 0.59 版本，想着升级一下，一直找不到 hugo 自带的升级命令，比如<code>hugo upgrade</code>之类的。<br>
+回来突然看到<code>scoop</code>，想起之前 windows 安装 hugo 就是用的 <code>scoop</code> ，尝试使用 <code>scoop update hugo</code>,升级成功。</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2020/01/upgrade-hugo-version/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/" itemprop="url">
         git push的时候提示HEAD detached from origin/master
         </a>
       </h1>
@@ -137,8 +203,8 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/git" itemprop="url" rel="index">
-        <span itemprop="name">git</span>
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
       </a>
       &nbsp; 
     </span>
@@ -152,21 +218,23 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">131 字 ~1分钟</span>
+<span class="leancloud-visitors-count">126 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>本地分支从主分支分离出来了，解决方式：<br />
-1. 拉出临时分支 <code>git branch temp  b57d3f2</code><br />
-2. 切换到主分支 <code>git checkout master</code><br />
-3. 合并临时分支 <code>git merge temp</code><br />
-4. 推送主分支   <code>git push origin master</code><br />
-5. 删除临时分支 <code>git branch -d temp</code></p>
+    <p>本地分支从主分支分离出来了，解决方式：</p>
+<ol>
+<li>拉出临时分支 <code>git branch temp  b57d3f2</code></li>
+<li>切换到主分支 <code>git checkout master</code></li>
+<li>合并临时分支 <code>git merge temp</code></li>
+<li>推送主分支   <code>git push origin master</code></li>
+<li>删除临时分支 <code>git branch -d temp</code></li>
+</ol>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/get-tips-head-detached-from-master-when-git-push/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/get-tips-head-detached-from-master-when-git-push/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -177,7 +245,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/pictures-can-not-be-loaded-on-github/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/" itemprop="url">
         github上的图片加载不出来
         </a>
       </h1>
@@ -204,13 +272,14 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <p>从<a href="https://www.ipaddress.com/">这个站点</a>查看下列三个站点的 IP 地址，然后添加到 <code>hosts</code> 里:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">192.30.253.112      raw.githubusercontent.com
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">192.30.253.112      raw.githubusercontent.com
 185.199.109.153     assets-cdn.github.com
-199.232.5.194       github.global.ssl.fastly.net</pre></div>
+199.232.5.194       github.global.ssl.fastly.net
+</code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/pictures-can-not-be-loaded-on-github/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -221,7 +290,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/vscode-markdown-snippet-config/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/vscode-markdown-snippet-config/" itemprop="url">
         vscode中配置markdown的代码片段不生效
         </a>
       </h1>
@@ -266,20 +335,21 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <p>vscode 中设置了markdown的一个<code>more</code>的代码段，但在 <code>.md</code> 文件中并没有生效，解决方式：在 setting.json 中添加如下信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;[markdown]&#34;: {
-        &#34;editor.formatOnSave&#34;: true,
-        &#34;editor.renderWhitespace&#34;: &#34;all&#34;,
-        &#34;editor.quickSuggestions&#34;: {
-            &#34;other&#34;: true,
-            &#34;comments&#34;: true,
-            &#34;strings&#34;: true
-        },
-        &#34;editor.acceptSuggestionOnEnter&#34;: &#34;on&#34;
-    }</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="s2">&#34;[markdown]&#34;</span>: <span class="o">{</span>
+        <span class="s2">&#34;editor.formatOnSave&#34;</span>: true,
+        <span class="s2">&#34;editor.renderWhitespace&#34;</span>: <span class="s2">&#34;all&#34;</span>,
+        <span class="s2">&#34;editor.quickSuggestions&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;other&#34;</span>: true,
+            <span class="s2">&#34;comments&#34;</span>: true,
+            <span class="s2">&#34;strings&#34;</span>: <span class="nb">true</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;editor.acceptSuggestionOnEnter&#34;</span>: <span class="s2">&#34;on&#34;</span>
+    <span class="o">}</span>
+</code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/vscode-markdown-snippet-config/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/vscode-markdown-snippet-config/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -290,7 +360,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/customize-the-sorting-of-folders/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/customize-the-sorting-of-folders/" itemprop="url">
         自定义文件夹排序
         </a>
       </h1>
@@ -329,14 +399,14 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">567 字 ~2分钟</span>
+<span class="leancloud-visitors-count">566 字 ~2分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加<code>desktop.ini</code>配置文件来给子文件夹增加“备注”属性，以便可以排序。<br />
+    <p>D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加<code>desktop.ini</code>配置文件来给子文件夹增加“备注”属性，以便可以排序。<br>
 大体的目录结构如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">├── D                                           // D盘
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">├── D                                           // D盘
 ├── firstFolder                                 // 需要排序的第一个文件夹
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
@@ -347,11 +417,12 @@
 │   ├── subFolder                               // 子文件夹或者其他
 │   ├── Desktop.ini                             // desktop 配置文件
 ├── otherFolder                                 // 其他文件夹
-├── otherFolder                                 // 其他文件夹</pre></div>
+├── otherFolder                                 // 其他文件夹
+</code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/customize-the-sorting-of-folders/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/customize-the-sorting-of-folders/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -362,7 +433,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" itemprop="url">
         更改nodejs的全局包的默认安装位置
         </a>
       </h1>
@@ -406,13 +477,13 @@
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>默认情况下，位置应该在<code>C:/users/xx/AppData/Roaming/node</code>下，现在更改到<code>D盘</code>。<br />
-查看位置：<code>npm config ls</code><br />
+    <p>默认情况下，位置应该在<code>C:/users/xx/AppData/Roaming/node</code>下，现在更改到<code>D盘</code>。<br>
+查看位置：<code>npm config ls</code><br>
 更改位置：<code>npm config set prefix &quot;D:\node_global_modules&quot;</code></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/change-default-installation-location-of-nodejs-global-modules-/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -423,7 +494,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/" itemprop="url">
         Git Subtree Push 报错 Assertion Failed
         </a>
       </h1>
@@ -447,15 +518,8 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
-        <span itemprop="name">小技巧</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/git" itemprop="url" rel="index">
-        <span itemprop="name">git</span>
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
       </a>
       &nbsp; 
     </span>
@@ -474,13 +538,12 @@
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>今天使用<code>git subtree push xxx</code>的时候竟然爆了一个错误：<code>Assertion failed xxx</code> 和 <code>No new revisions were found</code> ，查了半天愣是没找到任何解决方式。</p>
-
-<p><img src="https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png" alt="报错的地方.png" /></p>
+    <p>今天使用<code>git subtree push xxx</code>的时候竟然爆了一个错误：<code>Assertion failed xxx </code> 和 <code>No new revisions were found</code> ，查了半天愣是没找到任何解决方式。</p>
+<p><img src="https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png" alt="报错的地方.png"></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/assertion-failed-when-use-git-subtree-push-/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -491,7 +554,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/coding-pages-ssl-error/" itemprop="url">
+        <a class="post-title-link" href="https://idsze.cn/2019/12/coding-pages-ssl-error/" itemprop="url">
         codingPages中申请ssl报错
         </a>
       </h1>
@@ -503,65 +566,6 @@
 <span class="post-meta-item-text">时间：</span>
 <time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2019-12-12">
     2019-12-12
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/ssl" itemprop="url" rel="index">
-        <span itemprop="name">ssl</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">185 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>错误码：<code>urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n &lt;head&gt;\n &lt;meta http-equiv=\&quot;Content-type\&quot; content=\&quot;text/html; charset=utf-8\&quot;&gt;\n &lt;meta http-equiv=\&quot;Co&quot;</code></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/coding-pages-ssl-error/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/post/php-environment-setup-under-windows/" itemprop="url">
-        windows下的php环境安装
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2019-12-01">
-    2019-12-01
 </time>
 </span> 
       
@@ -589,30 +593,16 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1221 字 ~3分钟</span>
+<span class="leancloud-visitors-count">185 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <h2 id="apache">Apache</h2>
-
-<p>直接在<a href="http://httpd.apache.org/download.cgi">官网下载</a>。解压之后有个<code>readme_first.html</code>就有使用说明。先更改<code>ServerRoot</code>为绝对路径（注意路径写正斜杠），就可以跑起来。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">这个是 apache conf 的内容
-
-# NOTE: Where filenames are specified, you must use forward slashes
-# instead of backslashes (e.g., &#34;c:/apache&#34; instead of &#34;c:\apache&#34;).</pre></div>
-<p>简单记几个命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">安装服务（需要用管理员权限）:  httpd -k install
-卸载服务   httpd -k uninstall
-启动服务   httpd -k start
-停止服务   httpd -k stop
-重启服务   httpd -k restart
-查看版本   httpd -V
-查看支持的命令 httpd -h</pre></div>
+    <p>错误码：<code>urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n &lt;head&gt;\n &lt;meta http-equiv=\&quot;Content-type\&quot; content=\&quot;text/html; charset=utf-8\&quot;&gt;\n &lt;meta http-equiv=\&quot;Co&quot;</code></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/post/php-environment-setup-under-windows/" rel="contents">
+    <a class="btn" href="https://idsze.cn/2019/12/coding-pages-ssl-error/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -664,6 +654,18 @@
         
         
     
+        
+        
+          <a class="page-number" href="https://idsze.cn/p/4/">4</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="https://idsze.cn/p/5/">5</a>
+        
+        
+    
     <a class="extend next" rel="next" href="https://idsze.cn/p/2/"><i class="fa fa-angle-right"></i></a>
 </nav>
 
@@ -694,14 +696,14 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="https://idsze.cn/categories/">      
          
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">4</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -711,7 +713,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">20</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -767,7 +769,7 @@
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

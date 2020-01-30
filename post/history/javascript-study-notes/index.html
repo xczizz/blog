@@ -158,15 +158,13 @@
     <ul>
 <li>语句还是要以分号结尾，规范一些</li>
 <li>变量名是大小写英文、数字、<code>$</code>和<code>_</code>的组合，且不能用数字开头</li>
-<li><u>变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错</u></li>
+<li><!-- raw HTML omitted -->变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错<!-- raw HTML omitted --></li>
 <li>建议使用严格模式 <code>use strict</code></li>
 <li>也是弱类型语言 （比较的时候类型自动转换）</li>
 <li>严格区分大小写</li>
 </ul>
-
 <ul>
 <li>数据类型：
-
 <ul>
 <li>number（包括了整数和浮点）</li>
 <li>string</li>
@@ -175,22 +173,23 @@
 <li>Array</li>
 <li>Object （<code>var person = {name: 'Bob', age: 20, zipcode: null};</code>）</li>
 <li>Map和Set（ES6新增的数据类型）</li>
-</ul></li>
+</ul>
+</li>
 <li>一切皆对象，函数也是对象
-
 <ul>
 <li>数组对象</li>
 <li>字符串对象</li>
 <li>Math对象</li>
 <li>Number对象</li>
 <li>RegExp对象</li>
-</ul></li>
+</ul>
+</li>
 <li>ES6新增反引号表示多行字符串，字符串模板连接变量
-<img src="http://upload-images.jianshu.io/upload_images/2001662-ffc54aac10c073c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" />
-<img src="http://upload-images.jianshu.io/upload_images/2001662-fc5f38827b05bf40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></li>
+<img src="http://upload-images.jianshu.io/upload_images/2001662-ffc54aac10c073c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">
+<img src="http://upload-images.jianshu.io/upload_images/2001662-fc5f38827b05bf40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
 <li>ES6新增的iterable类型包括Array,Map,Set.</li>
 <li>抽象是数学中非常常见的概念。举个例子：计算数列的和，比如：1 + 2 + 3 + &hellip; + 100，写起来十分不方便，于是数学家发明了求和符号∑，可以把1 + 2 + 3 + &hellip; + 100记作：
-<img src="http://upload-images.jianshu.io/upload_images/2001662-6effe2f4cc49865e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" />
+<img src="http://upload-images.jianshu.io/upload_images/2001662-6effe2f4cc49865e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">
 可见，借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。
 写计算机程序也是一样，函数就是最基本的一种代码抽象的方式。</li>
 <li>JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量实际上被绑定到<code>window</code>的一个属性<code>var course = 'Learn JavaScript';alert(window.course)</code></li>
@@ -269,7 +268,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -286,7 +285,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -322,7 +321,7 @@
     
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
-        <div class="post-toc-content"></div>
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
     </div>
 </section>
 
@@ -341,7 +340,7 @@
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

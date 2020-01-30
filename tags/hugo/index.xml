@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on My Hugo Site</title>
+    <link>https://idsze.cn/tags/hugo/</link>
+    <description>Recent content in hugo on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 29 Jan 2020 19:51:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>升级hugo版本</title>
+      <link>https://idsze.cn/2020/01/upgrade-hugo-version/</link>
+      <pubDate>Wed, 29 Jan 2020 19:51:10 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2020/01/upgrade-hugo-version/</guid>
+      <description>&lt;p&gt;hugo 0.6 版本移除了&lt;code&gt;Pygments&lt;/code&gt;作为代码高亮的选项，而我当前使用的 0.59 版本，想着升级一下，一直找不到 hugo 自带的升级命令，比如&lt;code&gt;hugo upgrade&lt;/code&gt;之类的。&lt;br&gt;
+回来突然看到&lt;code&gt;scoop&lt;/code&gt;，想起之前 windows 安装 hugo 就是用的 &lt;code&gt;scoop&lt;/code&gt; ，尝试使用 &lt;code&gt;scoop update hugo&lt;/code&gt;,升级成功。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

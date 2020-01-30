@@ -6,10 +6,19 @@
     <description>Recent content in Tags on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 14 Jan 2020 20:35:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2020 19:51:10 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://idsze.cn/tags/hugo/</link>
+      <pubDate>Wed, 29 Jan 2020 19:51:10 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>git</title>
@@ -57,6 +66,15 @@
     </item>
     
     <item>
+      <title>ssl</title>
+      <link>https://idsze.cn/tags/ssl/</link>
+      <pubDate>Thu, 12 Dec 2019 21:46:03 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>apache</title>
       <link>https://idsze.cn/tags/apache/</link>
       <pubDate>Sun, 01 Dec 2019 19:28:38 +0800</pubDate>
@@ -84,6 +102,24 @@
     </item>
     
     <item>
+      <title>bootstrap</title>
+      <link>https://idsze.cn/tags/bootstrap/</link>
+      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://idsze.cn/tags/html/</link>
+      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>redis</title>
       <link>https://idsze.cn/tags/redis/</link>
       <pubDate>Sat, 26 May 2018 18:23:34 +0800</pubDate>
@@ -102,6 +138,33 @@
     </item>
     
     <item>
+      <title>算法</title>
+      <link>https://idsze.cn/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 18 Mar 2018 23:00:59 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yii2</title>
+      <link>https://idsze.cn/tags/yii2/</link>
+      <pubDate>Tue, 14 Nov 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/yii2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://idsze.cn/tags/js/</link>
+      <pubDate>Wed, 20 Sep 2017 15:31:23 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>xunsearch</title>
       <link>https://idsze.cn/tags/xunsearch/</link>
       <pubDate>Mon, 18 Sep 2017 13:52:48 +0800</pubDate>
@@ -111,29 +174,11 @@
     </item>
     
     <item>
-      <title>算法</title>
-      <link>https://idsze.cn/tags/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Wed, 02 Aug 2017 18:27:09 +0800</pubDate>
+      <title>easywechat</title>
+      <link>https://idsze.cn/tags/easywechat/</link>
+      <pubDate>Mon, 14 Aug 2017 11:26:28 +0800</pubDate>
       
-      <guid>https://idsze.cn/tags/%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>yii2</title>
-      <link>https://idsze.cn/tags/yii2/</link>
-      <pubDate>Tue, 11 Jul 2017 14:11:28 +0800</pubDate>
-      
-      <guid>https://idsze.cn/tags/yii2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://idsze.cn/tags/html/</link>
-      <pubDate>Mon, 10 Jul 2017 12:24:02 +0800</pubDate>
-      
-      <guid>https://idsze.cn/tags/html/</guid>
+      <guid>https://idsze.cn/tags/easywechat/</guid>
       <description></description>
     </item>
     
@@ -143,15 +188,6 @@
       <pubDate>Fri, 16 Jun 2017 15:42:17 +0800</pubDate>
       
       <guid>https://idsze.cn/tags/composer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://idsze.cn/tags/js/</link>
-      <pubDate>Wed, 07 Jun 2017 19:04:47 +0800</pubDate>
-      
-      <guid>https://idsze.cn/tags/js/</guid>
       <description></description>
     </item>
     

@@ -156,9 +156,8 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <p>将数组转为字符串，<code>serialize</code>比<code>json_encode</code>效率高很多。</p>
-
 <p>PHP 7.1.5下测试：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">// 数据较多的情况下
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// 数据较多的情况下
 $target = array (
     &#39;battle_id&#39;=&gt; 257
 ,&#39;user_id&#39;=&gt; 41248
@@ -634,16 +633,16 @@ for ($i = 0; $i &lt; 10000; $i ++) {
 }
 $etime = microtime(true);
 
-echo &#34;unserialize :&#34;, ($etime - $stime),PHP_EOL;</pre></div>
-<p>测试结果：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">json :5350
+echo &#34;unserialize :&#34;, ($etime - $stime),PHP_EOL;
+</code></pre></div><p>测试结果：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">json :5350
 serialize :8590
 json_encode :0.33600091934204
 json_decode :1.3156130313873
 serialize :0.26520109176636
-unserialize :0.49200201034546</pre></div>
-<p>继续测试小数据</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">// 少量数据的情况
+unserialize :0.49200201034546
+</code></pre></div><p>继续测试小数据</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// 少量数据的情况
 $target = array (
     &#39;battle_id&#39;=&gt; 257
 ,&#39;user_id&#39;=&gt; 41248
@@ -704,14 +703,15 @@ for ($i = 0; $i &lt; 10000; $i ++) {
 }
 $etime = microtime(true);
 
-echo &#34;unserialize :&#34;, ($etime - $stime),PHP_EOL;  </pre></div>
-<p>测试结果：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">json :156
+echo &#34;unserialize :&#34;, ($etime - $stime),PHP_EOL;  
+</code></pre></div><p>测试结果：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">json :156
 serialize :222
 json_encode :0
 json_decode :0.046799898147583
 serialize :0
-unserialize :0.015599966049194</pre></div>
+unserialize :0.015599966049194
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
@@ -786,7 +786,7 @@ unserialize :0.015599966049194</pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -803,7 +803,7 @@ unserialize :0.015599966049194</pre></div>
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -839,7 +839,7 @@ unserialize :0.015599966049194</pre></div>
     
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
-        <div class="post-toc-content"></div>
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
     </div>
 </section>
 
@@ -858,7 +858,7 @@ unserialize :0.015599966049194</pre></div>
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

@@ -150,132 +150,103 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">3341 字 ~7分钟</span>
+<span class="leancloud-visitors-count">3333 字 ~7分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>一般来说著名的linux系统基本上分两大类：<br />
-1. RedHat系列：Redhat、Centos、Fedora等<br />
-2. Debian系列：Debian、Ubuntu等 </p>
-
-<h2 id="redhat-系列">RedHat 系列 </h2>
-
+    <p>一般来说著名的linux系统基本上分两大类：</p>
 <ol>
-<li>常见的安装包格式 rpm 包,安装 rpm 包的命令是<code>rpm -参数</code><br /></li>
-<li>包管理工具 yum <br />
+<li>RedHat系列：Redhat、Centos、Fedora等</li>
+<li>Debian系列：Debian、Ubuntu等 </li>
+</ol>
+<h2 id="redhat-系列">RedHat 系列 </h2>
+<ol>
+<li>常见的安装包格式 rpm 包,安装 rpm 包的命令是<code>rpm -参数</code></li>
+<li>包管理工具 yum <br>
 <strong>rpm软件包是为了简化安装的复杂度，而yum仓库是为了解决软件包之间的依赖关系。</strong></li>
 </ol>
-
 <h2 id="debian系列">Debian系列 </h2>
-
 <ol>
 <li>常见的安装包格式 deb 包,安装 de b包的命令是<code>dpkg -参数</code></li>
 <li>包管理工具 apt-get </li>
 </ol>
-
-<p>系统装完之后，可以一一键安装开发编译的工具包:<br />
-Debian 上可以使用 <code>apt-get install build-essential</code><br />
+<p>系统装完之后，可以一一键安装开发编译的工具包:<br>
+Debian 上可以使用 <code>apt-get install build-essential</code><br>
 CentOS 上使用 <code>yum groupinstall &quot;Development Tools&quot;</code></p>
-
-<hr />
-
+<hr>
 <h3 id="查看文本的方式">查看文本的方式</h3>
-
-<p><code>cat</code>： 用于将一个文件的内容连续输出在屏幕上<br />
-    其命令格式：
-        <code>cat [-option]  文件名</code><br />
-    常用参数：<br />
-        <code>-n: 将行号一起显示在屏幕上</code><br />
-        <code>-b：将行号一起显示在屏幕上,但空行不算</code></p>
-
-<p><code>more</code>：同样用于显示文件内容，会在显示完一屏内容后停下，可以下翻。<br />
-    其命令格式为： <code>more 文件名</code><br />
-    回车键可以单行下翻， Ctrl+f可以整页下翻，若需退出按q键。</p>
-
+<p><code>cat</code>： 用于将一个文件的内容连续输出在屏幕上<br>
+其命令格式：
+<code>cat [-option]  文件名</code><br>
+常用参数：<br>
+<code>-n: 将行号一起显示在屏幕上</code><br>
+<code>-b：将行号一起显示在屏幕上,但空行不算</code></p>
+<p><code>more</code>：同样用于显示文件内容，会在显示完一屏内容后停下，可以下翻。<br>
+其命令格式为： <code>more 文件名</code><br>
+回车键可以单行下翻， Ctrl+f可以整页下翻，若需退出按q键。</p>
 <p><code>less</code>: 和 more 一样，唯一区别就是可以使用 pagedown 和 pageup 进行上翻和下翻，方便一些。
-    其命令格式为： <code>less 文件名</code></p>
-
+其命令格式为： <code>less 文件名</code></p>
 <p><code>head</code>: 默认情况下，用于显示文件内容的前10行
-    其命令格式为： <code>head 文件名</code><br />
-    常用参数：
-        <code>-n :指定显示的行数</code></p>
-
+其命令格式为： <code>head 文件名</code><br>
+常用参数：
+<code>-n :指定显示的行数   </code></p>
 <p><code>tail</code>: 与 head 相反，默认情况下显示文件内容的后10行
-    其命令格式为：<code>tail 文件名</code><br />
-    常用参数：
-       <code>-n :指定显示的行数</code></p>
-
+其命令格式为：<code> tail 文件名</code><br>
+常用参数：
+<code> -n :指定显示的行数</code></p>
 <h4 id="跳到指定行">跳到指定行</h4>
-
 <p><code>200gg</code> 跳到第二百行行首，<code>200G</code>是行尾</p>
-
 <h4 id="显示行号">显示行号</h4>
-
 <ul>
 <li><code>crtl+g</code>可以显示当前光标从所在位置（第几行第几列以及所在位置的百分比）</li>
 <li><code>:set nu</code>可以设置全部显示行号 ，<code>:nu</code> 跟crtl+g 一样的效果。</li>
 </ul>
-
-<h4 id="添加到组-附加组">添加到组(附加组)</h4>
-
-<p><code>usermod -g groupname username</code><br />
-<code>usermod -G groupname username</code><br />
-eg:<code>usermod -g root doze</code> 将<code>doze</code>加入到<code>root</code>
+<h4 id="添加到组附加组">添加到组(附加组)</h4>
+<p><code>usermod -g groupname username</code><br>
+<code>usermod -G groupname username</code><br>
+eg:<code> usermod -g root doze</code> 将<code>doze</code>加入到<code>root</code>
 大写G 是将用户添加到附加组，小写g 是更改用户组</p>
-
 <h4 id="查看用户所属组">查看用户所属组</h4>
-
 <p><code>groups username</code> 或者 <code>id username</code> 或者 <code>more | /etc/group</code></p>
-
 <h4 id="删除用户">删除用户</h4>
-
 <p><code>userdel wang</code>注：删除用户wang，但不删除其家目录(在<code>/var</code>中)及文件；
 <code>userdel -r wang</code>注：删除用户wang，其家目录及文件一并删除；</p>
-
 <h4 id="查看所有用户">查看所有用户</h4>
-
-<p><code>cat /etc/passwd</code><br />
+<p><code>cat /etc/passwd</code><br>
 <code>cat /etc/passwd|grep 用户名</code>
-结果显示：<code>strawberry: x:502:0::/home/strawberry:/bin/bash</code><br />
+结果显示：<code>strawberry: x:502:0::/home/strawberry:/bin/bash</code><br>
 结果描述：<code>用户名:密码:ID:组ID:备注:根目录:shell所在目录</code></p>
-
 <h4 id="修改密码">修改密码</h4>
-
 <p>普通用户：<code>passwd</code>，需要旧密码
 root用户：<code>passwd username</code></p>
-
 <h4 id="查看在线用户">查看在线用户</h4>
-
 <p><code>who</code></p>
-
 <h4 id="踢用户下线">踢用户下线</h4>
-
 <p>root用户才可以使用：
 <code> pkill -kill -t pts/0</code></p>
-
 <h4 id="修改文件或者目录权限">修改文件或者目录权限</h4>
-
 <p><code>d rwx  rwx  r-x</code>
 <code>目录 主用户 组 其他</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">- 常规文件
 d 目录
 b 块设备特殊（磁盘） 
 c 字符特殊设备（终端） 
-s 信号灯 </code></pre></div>
-<ol>
-<li><p>使用文字
+s 信号灯 
+</code></pre></div><ol>
+<li>使用文字
 <code>chmod ［who］ ［+ | - | =］ ［mode］ 文件名</code>
-操作对象<code>who</code>可是下述字母中的任一个或者它们的组合：</p>
+操作对象<code>who</code>可是下述字母中的任一个或者它们的组合：</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">u 表示“用户（user）”，即文件或目录的所有者。
 g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。
 o 表示“其他（others）用户”。
-a 表示“所有（all）用户”。它是系统默认值。</code></pre></div>
-<p>1.1. 操作符号可以是：</p>
+a 表示“所有（all）用户”。它是系统默认值。
+</code></pre></div><p>1.1. 操作符号可以是：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">+ 添加某个权限。
 - 取消某个权限。
-= 赋予给定权限并取消其他所有权限（如果有的话）</code></pre></div>
-<p>1.2. 设置<code>mode</code>所表示的权限可用下述字母的任意组合：</p>
+= 赋予给定权限并取消其他所有权限（如果有的话）
+</code></pre></div><p>1.2. 设置<code>mode</code>所表示的权限可用下述字母的任意组合：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">r 可读
 w 可写
 x 可执行
@@ -284,30 +255,25 @@ s 在文件执行时把进程的属主或组ID置为该文件的文件属主
 t 保存程序的文本到交换设备上
 u 与文件属主拥有一样的权限
 g 与和文件属主同组的用户拥有一样的权限
-o 与其他用户拥有一样的权限。</code></pre></div>
-<p>例：<code>chmod g+r，o+r example</code> 使同组和其他用户对文件example 有读权限。</p></li>
-
-<li><p>使用数字
+o 与其他用户拥有一样的权限。
+</code></pre></div><p>例：<code>chmod g+r，o+r example</code> 使同组和其他用户对文件example 有读权限。
+2. 使用数字
 <code>chmod ［mode］ 文件名</code>
 <code>0表示没有权限，1表示可执行权限，2表示可写权限，4表示可读权限</code>
-例： <code>chmod 644 mm.txt</code></p></li>
-</ol>
-
-<hr />
-
+例： <code>chmod 644 mm.txt</code></p>
+<hr>
 <h4 id="使用ssh密钥登录">使用ssh密钥登录</h4>
-
 <p>安全设置：在配置文件中，禁止root登录，禁止密码登录，</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">PasswordAuthentication  no //禁止密码
-PermitRootLogin no  //禁止root</code></pre></div>
-<ol>
+PermitRootLogin no  //禁止root
+</code></pre></div><ol>
 <li>生成密钥：doze用户（<code>su doze</code>）下，进入根目录（<code>/home/doze/</code>）
 <code>ssh-keygen -t rsa</code> 中间有提示可以输入密钥的密码</li>
 <li>将密钥添加到授权文件中（在.ssh目录下操作）
 <code>cat id_dsa.pub &gt; authorized_keys</code>
 此时<code>.ssh</code>下的文件有<code>id_dsa</code>，<code>id_dsa.pub</code>，<code>authorized_keys</code></li>
 <li>设置权限
-<code>chmod 600 authorized_keys </code>
+<code> chmod 600 authorized_keys </code>
 <code>chmod 700  .ssh</code>
 4.允许用户可以使用ssh密钥登录
 <code>sudo vim /etc/ssh/sshd_config</code> 将用户添加到<code>AllowUsers</code> 后边
@@ -315,9 +281,8 @@ PermitRootLogin no  //禁止root</code></pre></div>
 <li>将<code>id_dsa</code>传到本地windows上，使用putty生成<code>ppk</code>文件(可以省略，如果使用Xshell登录的话)
 然后就可以正常使用密钥登录了。</li>
 </ol>
-
 <h4 id="防火墙的一些含义">防火墙的一些含义</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-linux" data-lang="linux">:INPUT ACCEPT [0:0]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">:INPUT ACCEPT [0:0]
 # 该规则表示INPUT表默认策略是ACCEPT
 :FORWARD ACCEPT [0:0]
 # 该规则表示FORWARD表默认策略是ACCEPT
@@ -327,38 +292,28 @@ PermitRootLogin no  //禁止root</code></pre></div>
 # 意思是允许进入的数据包只能是刚刚我发出去的数据包的回应，ESTABLISHED：已建立的链接状态。RELATED：该数据包与本机发出的数据包有关。
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 -A FORWARD -j REJECT --reject-with icmp-host-prohibited
-# 这两条的意思是在INPUT表和FORWARD表中拒绝所有其他不符合上述任何一条规则的数据包。并且发送一条host prohibited的消息给被拒绝的主机。</code></pre></div>
-<h4 id="查看磁盘容量-查看文件大小">查看磁盘容量，查看文件大小</h4>
-
+# 这两条的意思是在INPUT表和FORWARD表中拒绝所有其他不符合上述任何一条规则的数据包。并且发送一条host prohibited的消息给被拒绝的主机。
+</code></pre></div><h4 id="查看磁盘容量查看文件大小">查看磁盘容量，查看文件大小</h4>
 <p>df命令是<a href="http://lib.csdn.net/base/linux">Linux</a>系统以磁盘分区为单位查看文件系统，可以加上参数查看磁盘剩余空间信息，命令格式：
 <code>df -hl</code>
 显示格式为：　</p>
-
 <p><code>文件系统 容量 已用 可用 已用% 挂载点　</code></p>
-
 <p>查看文件大小：使用<code>du -a -h</code>
 -a参数显示子目录和文件大小  -h 带单位显示</p>
-
 <h4 id="find命令参数">find命令参数</h4>
-
 <p><a href="http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html">http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html</a></p>
-
 <h4 id="查看文件修改时间">查看文件修改时间</h4>
-
 <p>查看文件时间戳命令：<code>stat awk.txt</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-command" data-lang="command">File: `awk.txt&#39;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">File: `awk.txt&#39;
 Size: 20  Blocks: 8  IO Block: 4096  regular file
 Device: 801h/2049d  Inode: 380730  Links: 1
 Access: (0644/-rw-r--r--) Uid: (  0/  root)  Gid: (  0/  root)
 Access: 2008-04-26 01:50:44.000000000 +0800
 Modify: 2008-04-26 01:48:18.000000000 +0800
-Change: 2008-04-26 01:48:18.000000000 +0800</code></pre></div>
-<p>说明：Access访问时间。Modify修改时间。Change状态改变时间。可以<code>stat *</code>查看这个目录所有文件的状态</p>
-
+Change: 2008-04-26 01:48:18.000000000 +0800
+</code></pre></div><p>说明：Access访问时间。Modify修改时间。Change状态改变时间。可以<code>stat *</code>查看这个目录所有文件的状态</p>
 <h4 id="压缩以及解压">压缩以及解压</h4>
-
 <p>tar 使用</p>
-
 <p><strong>-c: 压缩</strong>
 <strong>-x：解压</strong>
 -t：查看内容
@@ -369,11 +324,8 @@ Change: 2008-04-26 01:48:18.000000000 +0800</code></pre></div>
 -Z：有compress属性的
 <strong>-v：显示所有过程</strong>
 -O：将文件解开到标准输出</p>
-
 <p><strong>-f</strong> 的参数是必须的，且必须是最后一个，后面跟目标文件名</p>
-
 <p>gzip 使用</p>
-
 <p><strong>-c：将输出写到标准输出上，并保留原有文件。</strong>
 <strong>-d ：将压缩文件解压。</strong>
 -l ：对每个压缩文件，显示下列字段： 压缩文件的大小 未压缩文件的大小 压缩比 未压缩文件的名字
@@ -383,9 +335,8 @@ Change: 2008-04-26 01:48:18.000000000 +0800</code></pre></div>
 -num： 用指定的数字num调整压缩的速度，
 -1或&ndash;fast：表示最快压缩方法（低压缩比），
 -9或&ndash;bes：t表示最慢压缩方法（高压缩比）。系统缺省值为6。</p>
-
 <p>写几个例子：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-command" data-lang="command">tar压缩：
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">tar压缩：
 tar –cvf jpg.tar *.jpg //将目录里所有jpg文件打包成tar.jpg
 tar –czf jpg.tar.gz *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz
 tar –cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2
@@ -399,28 +350,23 @@ gzip压缩就比较简单：
 gzip‍ -c src &gt; dst.gz //src压缩之后还保留源文件
 gzip解压：
 gzip -d  aaa.gz
-gunzip aaa.gz</code></pre></div>
-<h4 id="查看linux-启动的服务">查看linux 启动的服务</h4>
-
+gunzip aaa.gz
+</code></pre></div><h4 id="查看linux-启动的服务">查看linux 启动的服务</h4>
 <p><code>chkconfig --list</code></p>
-
-<h4 id="查看linux版本-适用于redhat和centos系列">查看linux版本(适用于redhat和centos系列)</h4>
-
-<p><code>cat /etc/redhat-release</code>
+<h4 id="查看linux版本适用于redhat和centos系列">查看linux版本(适用于redhat和centos系列)</h4>
+<p><code> cat /etc/redhat-release</code>
 返回类似<code>CentOS release 6.8 (Final)</code></p>
-
 <h4 id="后台运行神器screen命令的使用">后台运行神器screen命令的使用</h4>
-
 <p>直接使用<code>screen</code>相当于打开一个新的窗口，在窗口里可以执行任意的命令。
-也可以在<code>screen</code> 命令后跟上需要执行的命令，但是这样如果命令包含了 <code>&gt;</code> 这种写入上操作，是不会生效的。<br />
-- 退出|<code>screen</code> : ctrl + 小写a + 小写d，Screen会给出<code>detached</code>提示<br />
-- 查看 screen 有哪些任务 <code>screen -ls</code>，可以看出任务的pid<br />
-- 连接 screen 的具体某一个任务： <code>screen -r pid</code>,这儿的pid指的是process id<br />
-- 结束某一个任务：<code>kill -9 pid</code>，pid同上，这样会把该任务设为 dead 状态<br />
-- 清空所有不工作的任务： <code>screen -wipe</code>,会清除掉所有的 dead 状态的任务</p>
-
+也可以在<code>screen</code> 命令后跟上需要执行的命令，但是这样如果命令包含了 <code>&gt;</code> 这种写入上操作，是不会生效的。</p>
+<ul>
+<li>退出|<code>screen</code> : ctrl + 小写a + 小写d，Screen会给出<code>detached</code>提示</li>
+<li>查看 screen 有哪些任务 <code>screen -ls</code>，可以看出任务的pid</li>
+<li>连接 screen 的具体某一个任务： <code>screen -r pid</code>,这儿的pid指的是process id</li>
+<li>结束某一个任务：<code>kill -9 pid</code>，pid同上，这样会把该任务设为 dead 状态</li>
+<li>清空所有不工作的任务： <code>screen -wipe</code>,会清除掉所有的 dead 状态的任务</li>
+</ul>
 <h4 id="文件上传下载">文件上传下载</h4>
-
 <p><code>rz</code> 弹出个框框，进行上传
 <code>sz filename</code>下载</p>
     </div>
@@ -497,7 +443,7 @@ gunzip aaa.gz</code></pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -514,7 +460,7 @@ gunzip aaa.gz</code></pre></div>
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -551,38 +497,14 @@ gunzip aaa.gz</code></pre></div>
 <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
     <div class="post-toc">
         <div class="post-toc-content"><nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#redhat-系列">RedHat 系列 </a></li>
-<li><a href="#debian系列">Debian系列 </a>
-<ul>
-<li><a href="#查看文本的方式">查看文本的方式</a>
-<ul>
-<li><a href="#跳到指定行">跳到指定行</a></li>
-<li><a href="#显示行号">显示行号</a></li>
-<li><a href="#添加到组-附加组">添加到组(附加组)</a></li>
-<li><a href="#查看用户所属组">查看用户所属组</a></li>
-<li><a href="#删除用户">删除用户</a></li>
-<li><a href="#查看所有用户">查看所有用户</a></li>
-<li><a href="#修改密码">修改密码</a></li>
-<li><a href="#查看在线用户">查看在线用户</a></li>
-<li><a href="#踢用户下线">踢用户下线</a></li>
-<li><a href="#修改文件或者目录权限">修改文件或者目录权限</a></li>
-<li><a href="#使用ssh密钥登录">使用ssh密钥登录</a></li>
-<li><a href="#防火墙的一些含义">防火墙的一些含义</a></li>
-<li><a href="#查看磁盘容量-查看文件大小">查看磁盘容量，查看文件大小</a></li>
-<li><a href="#find命令参数">find命令参数</a></li>
-<li><a href="#查看文件修改时间">查看文件修改时间</a></li>
-<li><a href="#压缩以及解压">压缩以及解压</a></li>
-<li><a href="#查看linux-启动的服务">查看linux 启动的服务</a></li>
-<li><a href="#查看linux版本-适用于redhat和centos系列">查看linux版本(适用于redhat和centos系列)</a></li>
-<li><a href="#后台运行神器screen命令的使用">后台运行神器screen命令的使用</a></li>
-<li><a href="#文件上传下载">文件上传下载</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#redhat-系列">RedHat 系列 </a></li>
+    <li><a href="#debian系列">Debian系列 </a>
+      <ul>
+        <li><a href="#查看文本的方式">查看文本的方式</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav></div>
     </div>
 </section>
@@ -602,7 +524,7 @@ gunzip aaa.gz</code></pre></div>
   <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.1</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

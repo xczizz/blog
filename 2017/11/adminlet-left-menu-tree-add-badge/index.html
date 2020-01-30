@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Yii2使用adminLTE的时候添加左侧菜单树上badge - My Hugo Site</title>
+    <meta name="keywords" content="adminLTE,yii2,badge,">
+    
+    
+    <meta property="og:title" content="Yii2使用adminLTE的时候添加左侧菜单树上badge">
+    <meta property="og:site_name" content="My Hugo Site">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
+    <meta name="baidu-site-verification" content="3QjhF2nVG2" />
+    <meta name="title" content="Yii2使用adminLTE的时候添加左侧菜单树上badge - My Hugo Site" />
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
+    <link href="https://idsze.cn/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="https://idsze.cn/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://idsze.cn/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: false 
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://idsze.cn"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">My Hugo Site</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">All life is a game of luck.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://idsze.cn/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2017/11/adminlet-left-menu-tree-add-badge/" itemprop="url">
+        Yii2使用adminLTE的时候添加左侧菜单树上badge
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-11-14">
+    2017-11-14
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">264 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><img src="http://upload-images.jianshu.io/upload_images/2001662-ef8eb1826d4ba51c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加之前.png">
+<img src="http://upload-images.jianshu.io/upload_images/2001662-5f81e4e0ad0ae656.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加之后.png"></p>
+<p>更改：<code>vendor\dmstr\yii2-adminlte-asset\widgets\Menu.php</code>这个文件大概70行左右，有一个<code>renderItem($item)</code>的函数</p>
+<p>更改之前是这样的：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">protected</span> <span class="k">function</span> <span class="nf">renderItem</span><span class="p">(</span><span class="nv">$item</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nv">$labelTemplate</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#34;{url}&#34;&gt;{icon} {label} &lt;span class=&#34;pull-right-container&#34;&gt;&lt;i class=&#34;fa fa-angle-left pull-right&#34;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&#39;</span><span class="p">;</span>
+            <span class="nv">$linkTemplate</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#34;{url}&#34;&gt;{icon} {label} &lt;span class=&#34;pull-right-container&#34;&gt;&lt;i class=&#34;fa fa-angle-left pull-right&#34;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nv">$labelTemplate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">labelTemplate</span><span class="p">;</span>
+            <span class="nv">$linkTemplate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">linkTemplate</span><span class="p">;</span>
+        <span class="p">}</span>
+  <span class="c1">// ... 之后的不变
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>更改为：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">protected</span> <span class="k">function</span> <span class="nf">renderItem</span><span class="p">(</span><span class="nv">$item</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nv">$labelTemplate</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#34;{url}&#34;&gt;{icon} {label} &lt;span class=&#34;pull-right-container&#34;&gt;&lt;i class=&#34;fa fa-angle-left pull-right&#34;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&#39;</span><span class="p">;</span>
+            <span class="nv">$linkTemplate</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#34;{url}&#34;&gt;{icon} {label} &lt;span class=&#34;pull-right-container&#34;&gt;&lt;i class=&#34;fa fa-angle-left pull-right&#34;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;badges&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;badges&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nv">$right_container</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;badges&#39;</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$badge</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span> <span class="o">||</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]))</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]))</span> <span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;primary&#39;</span><span class="p">;</span>
+                <span class="nv">$right_container</span> <span class="o">.=</span> <span class="s1">&#39;&lt;small class=&#34;label pull-right bg-&#39;</span><span class="o">.</span> <span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">.</span><span class="s1">&#39;&#34;&gt;&#39;</span><span class="o">.</span> <span class="nv">$badge</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">.</span><span class="s1">&#39;&lt;/small&gt;&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nv">$labelTemplate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">labelTemplate</span><span class="p">;</span>
+            <span class="nv">$linkTemplate</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&#34;{url}&#34;&gt;{icon} {label} &lt;span class=&#34;pull-right-container&#34;&gt;&#39;</span><span class="o">.</span> <span class="nv">$right_container</span> <span class="o">.</span><span class="s1">&#39;&lt;/span&gt;&lt;/a&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nv">$labelTemplate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">labelTemplate</span><span class="p">;</span>
+            <span class="nv">$linkTemplate</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">linkTemplate</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div><p>使用方法：
+<img src="http://upload-images.jianshu.io/upload_images/2001662-3a88bb1da29b48ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="使用方法.png"></p>
+<p>总得来说，就是多写一个判断，来添加badge的颜色和文字</p>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://idsze.cn/tags/yii2" rel="tag" title="yii2">#yii2#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2018/03/mysql-add-user-to-operate-the-specified-database/" rel="next" title="Mysql添加用户来操作指定数据库">
+        <i class="fa fa-chevron-left"></i> Mysql添加用户来操作指定数据库
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://idsze.cn/2017/09/onclick-attribute-function-params/" rel="prev" title="Onclick属性值函数的参数问题">
+        Onclick属性值函数的参数问题 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
+        alt="xczizz" />
+    <p class="site-author-name" itemprop="name">xczizz</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Network Engineering</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://idsze.cn/post/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://idsze.cn/categories/">      
+         
+        <span class="site-state-item-count">4</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://idsze.cn/tags/">
+         
+        <span class="site-state-item-count">20</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/xczizz" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://weibo.com/maodoze" target="_blank" title="微博">
+            <i class="fa fa-fw fa-weibo"></i>
+            微博
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+
+
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2017 - 2020</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">My Hugo Site</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+<div class="icp">
+  <a href='http://www.beian.miit.gov.cn'>京ICP备17047455号</a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://idsze.cn/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://idsze.cn/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://idsze.cn/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/utils.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/motion.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
+<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

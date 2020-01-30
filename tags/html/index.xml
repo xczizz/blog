@@ -6,22 +6,54 @@
     <description>Recent content in html on My Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 10 Jul 2017 12:24:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 09:52:27 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>动态添加的html无法使用bootstrap的tooltip</title>
+      <link>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</link>
+      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/</guid>
+      <description>&lt;p&gt;经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 &lt;code&gt;append&lt;/code&gt; 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过&lt;code&gt;$(&#39;body&#39;).on(&#39;&#39;click&#39;&#39;,xxxx,function(){})&lt;/code&gt;来解决部分（比如click）事件，但碰到 tooltip 怎么解决&lt;/p&gt;
+&lt;p&gt;bootstrap 中的 tooltip 调用方式为：&lt;code&gt;$(&#39;[data-toggle=&amp;quot;tooltip&amp;quot;]&#39;).tooltip()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;解决方式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tooltip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;[data-toggle=&amp;#34;tooltip&amp;#34;]&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Onclick属性值函数的参数问题</title>
+      <link>https://idsze.cn/2017/09/onclick-attribute-function-params/</link>
+      <pubDate>Wed, 20 Sep 2017 15:31:23 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/09/onclick-attribute-function-params/</guid>
+      <description>&lt;p&gt;踩坑之前的代码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;// HTML
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;javascript:;&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onclick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;follow(123)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;btn btn-warning btn-sm btn-flat&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;OK&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+// JS
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;follow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;success&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 这个success是添加不上去的
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;填坑：&lt;strong&gt;如果&lt;code&gt;onclick&lt;/code&gt;属性没有传入&lt;code&gt;this&lt;/code&gt;对象，则在函数定义中不能使用&lt;code&gt;$(this)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Html中的input File在Chrome中弹出缓慢</title>
-      <link>https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/</link>
+      <link>https://idsze.cn/2017/07/html-input-file-pops-very-slowly-in-chrome/</link>
       <pubDate>Mon, 10 Jul 2017 12:24:02 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/history/html-input-file-pops-very-slowly-in-chrome/</guid>
-      <description>&lt;p&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot; accept=&amp;quot;image/*&amp;quot;&amp;gt;&lt;/code&gt;  改为如下:&lt;br /&gt;
+      <guid>https://idsze.cn/2017/07/html-input-file-pops-very-slowly-in-chrome/</guid>
+      <description>&lt;p&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot; accept=&amp;quot;image/*&amp;quot;&amp;gt;&lt;/code&gt;  改为如下:&lt;br&gt;
 &lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot; accept=&amp;quot;image/gif,image/jpeg,image/jpg,image/png&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;accept=&amp;quot;image/*&amp;quot;&lt;/code&gt;属性会对每一个文件都遍历一次所有的&lt;code&gt;&amp;quot;image/*&amp;quot;&lt;/code&gt;文件类型，当文件较多时，文件的检验时间较长。&lt;/p&gt;
-
 &lt;p&gt;如果是&lt;code&gt;accept=&amp;quot;audio/*&amp;quot;&lt;/code&gt;和&lt;code&gt;accept=&amp;quot;video/*&amp;quot;&lt;/code&gt;，同样指明所需文件的类型MIME类型&lt;/p&gt;</description>
     </item>
     

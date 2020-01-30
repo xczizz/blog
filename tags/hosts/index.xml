@@ -13,14 +13,15 @@
     
     <item>
       <title>github上的图片加载不出来</title>
-      <link>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</link>
+      <link>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</link>
       <pubDate>Mon, 13 Jan 2020 18:57:53 +0800</pubDate>
       
-      <guid>https://idsze.cn/post/pictures-can-not-be-loaded-on-github/</guid>
+      <guid>https://idsze.cn/2020/01/pictures-can-not-be-loaded-on-github/</guid>
       <description>&lt;p&gt;从&lt;a href=&#34;https://www.ipaddress.com/&#34;&gt;这个站点&lt;/a&gt;查看下列三个站点的 IP 地址，然后添加到 &lt;code&gt;hosts&lt;/code&gt; 里:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;192.30.253.112      raw.githubusercontent.com
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;192.30.253.112      raw.githubusercontent.com
 185.199.109.153     assets-cdn.github.com
-199.232.5.194       github.global.ssl.fastly.net&lt;/pre&gt;&lt;/div&gt;</description>
+199.232.5.194       github.global.ssl.fastly.net
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

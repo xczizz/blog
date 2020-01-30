@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>easywechat on My Hugo Site</title>
+    <link>https://idsze.cn/tags/easywechat/</link>
+    <description>Recent content in easywechat on My Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 14 Aug 2017 11:26:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://idsze.cn/tags/easywechat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>配置easywecaht碰到的坑</title>
+      <link>https://idsze.cn/2017/08/bugs-encountered-in-easywechat-development/</link>
+      <pubDate>Mon, 14 Aug 2017 11:26:28 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2017/08/bugs-encountered-in-easywechat-development/</guid>
+      <description>&lt;h2 id=&#34;版本问题&#34;&gt;版本问题&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;url访问微信校验：&lt;code&gt;/valid?signature=xxx&amp;amp;echostr=xxx&amp;amp;timestamp=1502621836&amp;amp;nonce=xxx&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt;依赖 &lt;code&gt;doctrine/cache&lt;/code&gt; ，而这个&lt;code&gt;doctrine/cache&lt;/code&gt;最新版必须&lt;code&gt;php 7.1&lt;/code&gt;以上，&lt;code&gt;7.0.x&lt;/code&gt;的只能更改&lt;code&gt;composer.json&lt;/code&gt;中这个玩意的版本， 最大1.6.2&lt;/li&gt;
+&lt;li&gt;权限问题：&lt;code&gt;wechat.log&lt;/code&gt; 可写权限&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt; 需要用到 &lt;code&gt;curl&lt;/code&gt; 函数，提先安装&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid&lt;/code&gt;的请求方式是&lt;strong&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;回复消息的请求方式是 &lt;code&gt;POST&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
