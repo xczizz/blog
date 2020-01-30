@@ -1028,7 +1028,6 @@ pre .javascript .function {
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
 }
-.post-body .image-caption,
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
@@ -1036,6 +1035,18 @@ pre .javascript .function {
   color: #999;
   font-weight: bold;
   line-height: 1;
+}
+.post-body .image-caption {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.2;
+}
+.post-body .image-caption-border {
+  text-align: center;
 }
 .post-sticky-flag {
   display: inline-block;
