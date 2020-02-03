@@ -69,9 +69,9 @@
         <content type="html"> D盘里有一堆文件夹，想给自定义排个序，却找不到合适的排序方法，但是系统自带的排序里有一个“备注”的选项，可以通过增加desktop.ini配置文件来给子文件夹增加“备注”属性，以便可以排序。
 大体的目录结构如下：
 ├── D // D盘├── firstFolder // 需要排序的第一个文件夹│ ├── subFolder // 子文件夹或者其他│ ├── Desktop.ini // desktop 配置文件├── secondFolder // 需要排序的第二个文件夹│ ├── subFolder // 子文件夹或者其他│ ├── Desktop.ini // desktop 配置文件├── thirdFolder // 需要排序的第三个文件夹│ ├── subFolder // 子文件夹或者其他│ ├── Desktop.ini // desktop 配置文件├── otherFolder // 其他文件夹├── otherFolder // 其他文件夹 使用 markdown 编写如上的文件目录，使用的符号：├  │ ─，也不知道这是怎么搞出来的，复制的别人 = =
- desktop的内容 [.ShellClassInfo]InfoTip=3这里的 InfoTip 即为备注信息，直接写为数字可以排序。 在 powershell 命令行使用attrb &#43;H &#43;S Desktop.ini可以将该文件设置为系统属性和隐藏属性，下次使用需要在文件夹选项中将这个显示出来。使用之后，desktop 的内容自动改变:
+ desktop的内容 [.ShellClassInfo]InfoTip=3这里的 InfoTip 即为备注信息，直接写为数字可以排序。 在 powershell 命令行使用attrib &#43;H &#43;S Desktop.ini可以将该文件设置为系统属性和隐藏属性，下次使用需要在文件夹选项中将这个显示出来。使用之后，desktop 的内容自动改变:
 [.ShellClassInfo]InfoTip=3[ViewState]Mode=Vid=FolderType=Generic完事之后需要刷新文件夹才可立即生效，怎么刷新文件夹，暂时没研究清楚，有一个曲线救国的方式：随便更改一下文件夹的图标（可以更改为一模一样的），就能立即生效。
-attrb 可使用 attrb /? 来查看用法。
+attrib 可使用 attrib /? 来查看用法。
 更多配置信息：https://hwiegman.home.xs4all.nl/desktopini.html
 </content>
     </entry>
