@@ -13,7 +13,7 @@
     <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
     <meta name="baidu-site-verification" content="3QjhF2nVG2" />
     <meta name="title" content="xczizz hugo site - xczizz hugo site" />
-    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang | xczizz的个人主页"> 
     <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
     <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
@@ -117,6 +117,65 @@
             
     
  <section id="posts" class="posts-expand">
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/" itemprop="url">
+        解决微博爬虫碰到的不可见字符
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-02-07">
+    2020-02-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
+        <span itemprop="name">小技巧</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">227 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有<code>???</code>结尾，查看源码发现是<code>&amp;#8203;</code>这个鬼东西再做怪，百度搜到说这个是<strong>零宽字符</strong>，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用<code>/u200b</code>，测试了一下果然不错。</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -553,65 +612,6 @@
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2019/12/coding-pages-ssl-error/" itemprop="url">
-        codingPages中申请ssl报错
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2019-12-12">
-    2019-12-12
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
-        <span itemprop="name">瞎折腾</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">185 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>错误码：<code>urn:acme:error:unauthorized: Invalid response from http://idsze.cn/.well-known/acme-challenge/a_Dj4u6BkPX20lK8mGqlAHWHgoxT0YkqfVAzsrGS2TQ [185.199.108.153]: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n &lt;head&gt;\n &lt;meta http-equiv=\&quot;Content-type\&quot; content=\&quot;text/html; charset=utf-8\&quot;&gt;\n &lt;meta http-equiv=\&quot;Co&quot;</code></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/2019/12/coding-pages-ssl-error/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -698,7 +698,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -715,7 +715,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

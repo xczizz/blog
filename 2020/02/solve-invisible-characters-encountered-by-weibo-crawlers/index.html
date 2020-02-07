@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-    <title>Redis安装相关 - xczizz hugo site</title>
-    <meta name="keywords" content="redis,">
+    <title>解决微博爬虫碰到的不可见字符 - xczizz hugo site</title>
+    <meta name="keywords" content="8203,不可见字符,微博爬虫,">
     
     
-    <meta property="og:title" content="Redis安装相关">
+    <meta property="og:title" content="解决微博爬虫碰到的不可见字符">
     <meta property="og:site_name" content="xczizz hugo site">
     <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
     <meta name="baidu-site-verification" content="3QjhF2nVG2" />
-    <meta name="title" content="Redis安装相关 - xczizz hugo site" />
-    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang | xczizz的个人主页"> 
+    <meta name="title" content="解决微博爬虫碰到的不可见字符 - xczizz hugo site" />
+    <meta name="description" content="html的文本中夹杂着&amp;#8203;但是页面看不到，使用正则替换掉" />
+     
     <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
     <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
@@ -119,8 +120,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" itemprop="url">
-        Redis安装相关
+        <a class="post-title-link" href="https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/" itemprop="url">
+        解决微博爬虫碰到的不可见字符
         </a>
       </h1>
       <div class="post-meta">
@@ -129,8 +130,8 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-05-26">
-    2018-05-26
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-02-07">
+    2020-02-07
 </time>
 </span> 
       
@@ -143,8 +144,8 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
-        <span itemprop="name">笔记</span>
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
+        <span itemprop="name">小技巧</span>
       </a>
       &nbsp; 
     </span>
@@ -158,29 +159,32 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">143 字 ~1分钟</span>
+<span class="leancloud-visitors-count">227 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <h1 id="linux进入redis服务">linux进入redis服务</h1>
-<p>直接<code>redis-cli</code>
-<img src="http://upload-images.jianshu.io/upload_images/2001662-4df762aea8e105b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="redis"></p>
-<h1 id="查看redis进程">查看redis进程</h1>
-<p><code>service redis status</code></p>
-<h1 id="windows安装redis服务">windows安装redis服务</h1>
-<p><code>redis-server --service-install redis.windows-service.conf --loglevel verbose</code></p>
-<h1 id="windows安装redis扩展">windows安装redis扩展</h1>
-<p>查看php的版本，架构以及线程是否为安全：
-<img src="http://upload-images.jianshu.io/upload_images/2001662-3d9442278de8ce20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="phpinfo">
-<a href="https://pecl.php.net/package/redis/3.1.5/windows">然后在扩展包里选择和是的redis版本</a>，解压后将php_reids.dll放入php扩展文件夹里</p>
+    <p>因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有<code>???</code>结尾，查看源码发现是<code>&amp;#8203;</code>这个鬼东西再做怪，百度搜到说这个是<strong>零宽字符</strong>，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用<code>/u200b</code>，测试了一下果然不错。</p>
+<blockquote>
+<p>不可见字符”/u200b”为 Unicode Character ‘ZERO WIDTH SPACE’ (U+200B)，可用于内容标识，不占位数。
+附上控制台处理微博内容中的<code>&amp;#8203;</code>代码：</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&#34;WB_text W_f14&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">index</span><span class="o">++</span><span class="p">)</span><span class="p">{</span>
+    <span class="nx">c</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">c</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\u200B/g</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
  
 <div class="post-tags">     
      
-    <a href="https://idsze.cn/tags/redis" rel="tag" title="redis">#redis#</a>
+    <a href="https://idsze.cn/tags/js" rel="tag" title="js">#js#</a>
+    
+    <a href="https://idsze.cn/tags/html" rel="tag" title="html">#html#</a>
+    
+    <a href="https://idsze.cn/tags/%e6%ad%a3%e5%88%99" rel="tag" title="正则">#正则#</a>
     
 </div>
 
@@ -189,16 +193,12 @@
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/" rel="next" title="本地环境伪造ssl证书">
-        <i class="fa fa-chevron-left"></i> 本地环境伪造ssl证书
-        </a>
-    
     </div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="https://idsze.cn/2018/05/linux-study-notes/" rel="prev" title="Linux知识小记">
-        Linux知识小记 <i class="fa fa-chevron-right"></i>
+        <a href="https://idsze.cn/2020/01/upgrade-hugo-version/" rel="prev" title="升级hugo版本">
+        升级hugo版本 <i class="fa fa-chevron-right"></i>
         </a>
     
     </div>

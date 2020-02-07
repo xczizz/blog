@@ -6,10 +6,19 @@
     <description>Recent content in Categories on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jan 2020 19:51:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 22:30:06 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>小技巧</title>
+      <link>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Fri, 07 Feb 2020 22:30:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>瞎折腾</title>
@@ -26,15 +35,6 @@
       <pubDate>Tue, 14 Jan 2020 20:35:03 +0800</pubDate>
       
       <guid>https://idsze.cn/categories/%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>小技巧</title>
-      <link>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
-      <pubDate>Fri, 10 Jan 2020 22:26:57 +0800</pubDate>
-      
-      <guid>https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
       <description></description>
     </item>
     

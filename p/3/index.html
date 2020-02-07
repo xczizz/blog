@@ -13,7 +13,7 @@
     <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
     <meta name="baidu-site-verification" content="3QjhF2nVG2" />
     <meta name="title" content="xczizz hugo site - xczizz hugo site" />
-    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang"> 
+    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang | xczizz的个人主页"> 
     <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
     <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
@@ -117,6 +117,68 @@
             
     
  <section id="posts" class="posts-expand">
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/" itemprop="url">
+        Mysql筛选重复数据
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-03-17">
+    2018-03-17
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">292 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>有个需求：选出表里重复的数据，只保留一个</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001662-ccb979fb5bdc40be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="需要处理的数据"></p>
+<p><code>having</code>是在分组之后，对组内数据进行筛选，<code>where</code> 就不多说了，在分组前添加条件的</p>
+<p><code>SELECT id,name,count(name) FROM idiom group by name HAVING count(name)&gt;=2</code> 可以看出大概519个数据都是有重复的</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2018/03/filter-duplicate-data-in-mysql/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -586,70 +648,6 @@ bin/xs-ctl.sh start
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2017/08/install-front-end-resource-pack-in-yii2/" itemprop="url">
-        Yii2安装前端资源包
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-08-24">
-    2017-08-24
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
-        <span itemprop="name">笔记</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">467 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>官方文档也有介绍：http://www.yiichina.com/doc/guide/2.0/structure-assets#bower-npm-assets</p>
-<h2 id="安装-izitoast">安装 <code>iziToast</code></h2>
-<ol>
-<li>安装 <a href="http://izitoast.marcelodolce.com/">iziToast.js</a> 这个前端资源 <code>composer require bower-asset/izitoast</code> 或者添加<code>composer.json</code>然后 update：<code>&quot;bower-asset/izitoast&quot;: &quot;^1.1&quot;</code>，安装之后大概目录结构如下:</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2001662-727f5fd7ef1b0228.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iziToast"></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/2017/08/install-front-end-resource-pack-in-yii2/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -736,7 +734,7 @@ bin/xs-ctl.sh start
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -753,7 +751,7 @@ bin/xs-ctl.sh start
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

@@ -6,10 +6,37 @@
     <description>Recent content in Tags on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jan 2020 19:51:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 22:30:06 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>html</title>
+      <link>https://idsze.cn/tags/html/</link>
+      <pubDate>Fri, 07 Feb 2020 22:30:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://idsze.cn/tags/js/</link>
+      <pubDate>Fri, 07 Feb 2020 22:30:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>正则</title>
+      <link>https://idsze.cn/tags/%E6%AD%A3%E5%88%99/</link>
+      <pubDate>Fri, 07 Feb 2020 22:30:06 +0800</pubDate>
+      
+      <guid>https://idsze.cn/tags/%E6%AD%A3%E5%88%99/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
@@ -111,15 +138,6 @@
     </item>
     
     <item>
-      <title>html</title>
-      <link>https://idsze.cn/tags/html/</link>
-      <pubDate>Thu, 13 Sep 2018 09:52:27 +0800</pubDate>
-      
-      <guid>https://idsze.cn/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>redis</title>
       <link>https://idsze.cn/tags/redis/</link>
       <pubDate>Sat, 26 May 2018 18:23:34 +0800</pubDate>
@@ -152,15 +170,6 @@
       <pubDate>Tue, 14 Nov 2017 23:00:00 +0800</pubDate>
       
       <guid>https://idsze.cn/tags/yii2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://idsze.cn/tags/js/</link>
-      <pubDate>Wed, 20 Sep 2017 15:31:23 +0800</pubDate>
-      
-      <guid>https://idsze.cn/tags/js/</guid>
       <description></description>
     </item>
     
