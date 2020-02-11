@@ -17,7 +17,7 @@
       <pubDate>Fri, 07 Feb 2020 22:30:06 +0800</pubDate>
       
       <guid>https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/</guid>
-      <description>&lt;p&gt;因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有&lt;code&gt;???&lt;/code&gt;结尾，查看源码发现是&lt;code&gt;&amp;amp;#8203;&lt;/code&gt;这个鬼东西再做怪，百度搜到说这个是&lt;strong&gt;零宽字符&lt;/strong&gt;，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用&lt;code&gt;/u200b&lt;/code&gt;，测试了一下果然不错。&lt;/p&gt;</description>
+      <description>&lt;p&gt;因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有 &lt;code&gt;???&lt;/code&gt; 结尾，查看源码发现是 &lt;code&gt;&amp;amp;#8203;&lt;/code&gt; 这个鬼东西再做怪，百度搜到说这个是&lt;strong&gt;零宽字符&lt;/strong&gt;，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用 &lt;code&gt;/u200b&lt;/code&gt; ，测试了一下果然不错。&lt;/p&gt;</description>
     </item>
     
     <item>

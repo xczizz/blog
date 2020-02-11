@@ -9,9 +9,10 @@
         <tags>
           <tag>js</tag><tag>html</tag><tag>正则</tag>
         </tags>
-        <content type="html"> 因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有???结尾，查看源码发现是&amp;amp;#8203;这个鬼东西再做怪，百度搜到说这个是零宽字符，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用/u200b，测试了一下果然不错。
- 不可见字符”/u200b”为 Unicode Character ‘ZERO WIDTH SPACE’ (U&#43;200B)，可用于内容标识，不占位数。 附上控制台处理微博内容中的&amp;amp;#8203;代码：
- var c = document.getElementsByClassName(&amp;#34;WB_text W_f14&amp;#34;);for(var index = 0;index &amp;lt; c.length;index&#43;&#43;){c[index].innerHTML = c[index].innerHTML.replace(/\u200B/g,&amp;#34;&amp;#34;)}</content>
+        <content type="html"> 因为要把微博上个别的内容捣腾出来，复制的时候发现粘贴过来的内容总是有 ??? 结尾，查看源码发现是 &amp;amp;#8203; 这个鬼东西再做怪，百度搜到说这个是零宽字符，一开始在控制台使用正则去除前后空格，发现并没有什么用，再查了一下，说是需要用 /u200b ，测试了一下果然不错。
+ 不可见字符”/u200b”为 Unicode Character ‘ZERO WIDTH SPACE’ (U&#43;200B)，可用于内容标识，不占位数。
+ 附上控制台处理微博内容中的 &amp;amp;#8203; 代码：
+var c = document.getElementsByClassName(&amp;#34;WB_text W_f14&amp;#34;);for (var index = 0; index &amp;lt; c.length; index&#43;&#43;) {c[index].innerHTML = c[index].innerHTML.replace(/\u200B/g, &amp;#34;&amp;#34;)}</content>
     </entry>
     
      <entry>
