@@ -6,10 +6,22 @@
     <description>Recent content in Posts on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Feb 2020 22:30:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 18:52:44 +0800</lastBuildDate>
     
 	<atom:link href="https://idsze.cn/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sqlserver中一次简单的存储过程</title>
+      <link>https://idsze.cn/2020/07/sqlserver-stored-procedure/</link>
+      <pubDate>Mon, 27 Jul 2020 18:52:44 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2020/07/sqlserver-stored-procedure/</guid>
+      <description>&lt;p&gt;前提需求： 公司有一个数据库每个月自动生成一张表，表名是动态变化的格式类似&lt;code&gt;xxx202007&lt;/code&gt;，现在每天查询当天的数据，即找到对应的表的里对应日期的数据，并根据&lt;code&gt;in&lt;/code&gt;里的数据顺序来排序。使用简单的存储过程来解决。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;declare&lt;/code&gt; 来声明变量， &lt;code&gt;@&lt;/code&gt; 符号来定义变量名， &lt;code&gt;set&lt;/code&gt; 来设置变量值。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;convert&lt;/code&gt; 函数可以将其他格式转为字符串格式。 &lt;code&gt;charindex&lt;/code&gt;用法百度吧。&lt;/p&gt;
+&lt;p&gt;单引号的转义直接在单引号前再加一个单引号，下边的&lt;code&gt;charindex&lt;/code&gt;转义前为：&lt;code&gt;charindex(&#39;,&#39;+convert(varchar,COUNTER序号)+&#39;,0,1,4,6,265,241,2,&#39;)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>解决微博爬虫碰到的不可见字符</title>

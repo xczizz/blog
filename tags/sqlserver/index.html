@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-    <title>本地环境伪造ssl证书 - xczizz hugo site</title>
-    <meta name="keywords" content="ssl,">
+    <title>sqlserver - xczizz hugo site</title>
+    <meta name="keywords" content="xczizz,Golang,php">
     
-    
-    <meta property="og:title" content="本地环境伪造ssl证书">
+    <meta property="og:title" content="sqlserver">
     <meta property="og:site_name" content="xczizz hugo site">
     <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
     <meta name="baidu-site-verification" content="3QjhF2nVG2" />
-    <meta name="title" content="本地环境伪造ssl证书 - xczizz hugo site" />
+    <meta name="title" content="sqlserver - xczizz hugo site" />
     <meta name="description" content="xczizz | 博客 | 网工 | php | Golang | xczizz的个人主页"> 
     <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
     <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
@@ -34,7 +33,7 @@
     </script>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-<div class="container one-collumn sidebar-position-left page-home  ">
+<div class="container one-collumn sidebar-position-left   ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -115,104 +114,71 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-<section id="posts" class="posts-expand">
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+<section id="posts" class="posts-collapse">
+<div class="collection-title">
+    <h2 >sqlserver
+    <small>标签</small>
+    </h2>
+</div>
+
+<div class="collection-title">
+  <h2 class="archive-year motion-element" id="archive-year-2020">2020</h2>
+</div>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/" itemprop="url">
-        本地环境伪造ssl证书
+      <h1 class="post-title">
+        <a class="post-title-link" href="https://idsze.cn/2020/07/sqlserver-stored-procedure/" itemprop="url">
+            <span itemprop="name">Sqlserver中一次简单的存储过程</span>
         </a>
       </h1>
+
       <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-06-08">
-    2018-06-08
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
-        <span itemprop="name">瞎折腾</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">95 字 ~1分钟</span>
-</span>
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-07-27"
+              content="07-27" >
+          07-27
+        </time>
       </div>
     </header>
-    <div class="post-body" itemprop="articleBody">
-    <ol>
-<li>看到报错：<code>curl: (60) SSL certificate problem: unable to get local issuer certificate</code></li>
-<li>下载证书 <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> ，一般放在<code>D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem</code></li>
-<li>配置php.ini</li>
-</ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl.cainfo <span class="o">=</span> <span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span><span class="sb">`</span>
-openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span>
-</code></pre></div><ol start="4">
-<li>重启服务</li>
-</ol>
-    </div>
-    <footer class="post-footer">
-     
- 
-<div class="post-tags">     
-     
-    <a href="https://idsze.cn/tags/ssl" rel="tag" title="ssl">#ssl#</a>
-    
-</div>
-
-
-
-     <div class="post-nav">
-    <div class="post-nav-next post-nav-item">
-    
-        <a href="https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/" rel="next" title="动态添加的html无法使用bootstrap的tooltip">
-        <i class="fa fa-chevron-left"></i> 动态添加的html无法使用bootstrap的tooltip
-        </a>
-    
-    </div>
-
-    <div class="post-nav-prev post-nav-item">
-    
-        <a href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" rel="prev" title="Redis安装相关">
-        Redis安装相关 <i class="fa fa-chevron-right"></i>
-        </a>
-    
-    </div>
-</div>
-      
-     
-     
-     
-
-
-
-
-    </footer>
   </article>
-</section>
+
+
+ </section>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+
+
+
+<nav class="pagination">
+    
+    
+        
+        
+          <span class="page-number current">1</span>
+        
+        
+    
+    
+</nav>
+
 
           </div>
         </div>
@@ -226,16 +192,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
 <aside id="sidebar" class="sidebar">
   <div class="sidebar-inner">
 
-  <ul class="sidebar-nav motion-element">
-    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-      文章目录
-    </li>
-    <li class="sidebar-nav-overview" data-target="site-overview">
-      站点概览
-    </li>
-  </ul>
-
-    <section class="site-overview sidebar-panel ">
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
         src="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"
@@ -271,6 +228,13 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
     </div>
 </nav>
       
+<div class="feed-link motion-element">
+<a href="https://idsze.cn/tags/sqlserver/index.xml" rel="alternate" type="application/rss+xml" target="_blank">
+    <i class="fa fa-rss"></i>
+    RSS 订阅
+</a>
+</div>
+
       
 <div class="links-of-author motion-element">
     
@@ -298,12 +262,6 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
 
     </section>
     
-<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-    <div class="post-toc">
-        <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
-    </div>
-</section>
-
   </div>
 </aside>
 
@@ -358,11 +316,11 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
 <script type="text/javascript" src="https://idsze.cn/js/affix.js"></script>
 <script type="text/javascript" src="https://idsze.cn/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="https://idsze.cn/js/scrollspy.js"></script>
-<script type="text/javascript" src="https://idsze.cn/js/post-details.js"></script>
-<script type="text/javascript" src="https://idsze.cn/js/toc.js"></script>
-
 <script type="text/javascript" src="https://idsze.cn/js/bootstrap.js"></script>
+
+<script type="text/javascript" id="motion.page.archive">
+  $('.archive-year').velocity('transition.slideLeftIn');
+</script>
 
 <script type="text/javascript" src="https://idsze.cn/js/search.js"></script>
 <script type="text/x-mathjax-config">

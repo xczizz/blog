@@ -121,6 +121,66 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/" itemprop="url">
+        Git Subtree Push 报错 Assertion Failed
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-01-09">
+    2020-01-09
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">179 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>今天使用<code>git subtree push xxx</code>的时候竟然爆了一个错误：<code>Assertion failed xxx </code> 和 <code>No new revisions were found</code> ，查了半天愣是没找到任何解决方式。</p>
+<p><img src="https://i.loli.net/2020/01/09/Er68QLIODBK1hXu.png" alt="报错的地方.png"></p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2020/01/assertion-failed-when-use-git-subtree-push/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://idsze.cn/2019/12/coding-pages-ssl-error/" itemprop="url">
         codingPages中申请ssl报错
         </a>
@@ -563,94 +623,6 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2018/03/a-simple-lottey-use-php/" itemprop="url">
-        Php写一个简单的抽奖功能
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-03-18">
-    2018-03-18
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
-        <span itemprop="name">笔记</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">521 字 ~2分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h3 id="可重复的抽奖">可重复的抽奖</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="nv">$prize_arr</span> <span class="o">=</span> <span class="p">[</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;500金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;免禁buff48小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;防偷buff48小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;免禁buff24小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;防偷buff24小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;100金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;50金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">],</span>
-	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;5金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">],</span>
-<span class="p">];</span>
-
-<span class="k">function</span> <span class="nf">getRand</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nv">$result</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 默认数组最后用一个
-</span><span class="c1"></span>	<span class="nv">$pro_sum</span> <span class="o">=</span> <span class="nx">array_sum</span><span class="p">(</span><span class="nx">array_map</span><span class="p">(</span><span class="s1">&#39;array_pop&#39;</span><span class="p">,</span> <span class="nv">$prize_arr</span><span class="p">));</span> <span class="c1">// 拿到总数
-</span><span class="c1"></span>	<span class="c1">// $pro_sum = array_sum(array_column($prize_arr, &#39;weight&#39;));  // 两个方法都ok
-</span><span class="c1"></span>
-	<span class="k">foreach</span> <span class="p">(</span><span class="nv">$prize_arr</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nv">$rand_num</span> <span class="o">=</span> <span class="nx">mt_rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">$pro_sum</span><span class="p">);</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nv">$rand_num</span> <span class="o">&lt;=</span> <span class="nv">$value</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">])</span> <span class="p">{</span>
-			<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$key</span><span class="p">;</span>
-			<span class="k">break</span><span class="p">;</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="nv">$pro_sum</span> <span class="o">-=</span> <span class="nv">$value</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">];</span> <span class="c1">// 说明没有抽到，减去权重,继续来
-</span><span class="c1"></span>		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/2018/03/a-simple-lottey-use-php/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -737,7 +709,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -754,7 +726,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

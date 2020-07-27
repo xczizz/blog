@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-    <title>本地环境伪造ssl证书 - xczizz hugo site</title>
-    <meta name="keywords" content="ssl,">
+    <title>Sqlserver中一次简单的存储过程 - xczizz hugo site</title>
+    <meta name="keywords" content="存储过程,排序,">
     
     
-    <meta property="og:title" content="本地环境伪造ssl证书">
+    <meta property="og:title" content="Sqlserver中一次简单的存储过程">
     <meta property="og:site_name" content="xczizz hugo site">
     <meta property="og:image" content="https://www.gravatar.com/avatar/a6e17f7c9fd7fea6412b24bedba47145?s=110"> 
     <meta name="baidu-site-verification" content="3QjhF2nVG2" />
-    <meta name="title" content="本地环境伪造ssl证书 - xczizz hugo site" />
-    <meta name="description" content="xczizz | 博客 | 网工 | php | Golang | xczizz的个人主页"> 
+    <meta name="title" content="Sqlserver中一次简单的存储过程 - xczizz hugo site" />
+    <meta name="description" content="sqlserver使用简单的存储过程，根据in条件来进行排序" />
+     
     <link rel="shortcut icon" href="https://idsze.cn/favicon.ico" />
     <link rel="apple-touch-icon" href="https://idsze.cn/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="https://idsze.cn/img/apple-touch-icon.png" />
@@ -119,8 +120,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2018/06/forged-ssl-certificate-in-local-environment/" itemprop="url">
-        本地环境伪造ssl证书
+        <a class="post-title-link" href="https://idsze.cn/2020/07/sqlserver-stored-procedure/" itemprop="url">
+        Sqlserver中一次简单的存储过程
         </a>
       </h1>
       <div class="post-meta">
@@ -129,8 +130,8 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-06-08">
-    2018-06-08
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-07-27">
+    2020-07-27
 </time>
 </span> 
       
@@ -143,8 +144,8 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%9E%8E%E6%8A%98%E8%85%BE" itemprop="url" rel="index">
-        <span itemprop="name">瞎折腾</span>
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
+        <span itemprop="name">小技巧</span>
       </a>
       &nbsp; 
     </span>
@@ -158,28 +159,28 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">95 字 ~1分钟</span>
+<span class="leancloud-visitors-count">378 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <ol>
-<li>看到报错：<code>curl: (60) SSL certificate problem: unable to get local issuer certificate</code></li>
-<li>下载证书 <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> ，一般放在<code>D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem</code></li>
-<li>配置php.ini</li>
-</ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl.cainfo <span class="o">=</span> <span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span><span class="sb">`</span>
-openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/php7.1.9/extras/ssl/cacert.pem&#34;</span>
-</code></pre></div><ol start="4">
-<li>重启服务</li>
-</ol>
+    <p>前提需求： 公司有一个数据库每个月自动生成一张表，表名是动态变化的格式类似<code>xxx202007</code>，现在每天查询当天的数据，即找到对应的表的里对应日期的数据，并根据<code>in</code>里的数据顺序来排序。使用简单的存储过程来解决。</p>
+<p><code>declare</code> 来声明变量， <code>@</code> 符号来定义变量名， <code>set</code> 来设置变量值。</p>
+<p><code>convert</code> 函数可以将其他格式转为字符串格式。 <code>charindex</code>用法百度吧。</p>
+<p>单引号的转义直接在单引号前再加一个单引号，下边的<code>charindex</code>转义前为：<code>charindex(','+convert(varchar,COUNTER序号)+',0,1,4,6,265,241,2,')</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span> <span class="n">History</span><span class="p">;</span> 
+<span class="k">declare</span> <span class="o">@</span><span class="n">tableName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="p">,</span> <span class="o">@</span><span class="k">day</span> <span class="nb">int</span>
+<span class="k">set</span> <span class="o">@</span><span class="n">tableName</span>  <span class="o">=</span> <span class="s1">&#39;</span><span class="s1">dbo.Counter</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="k">convert</span><span class="p">(</span><span class="nb">char</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="p">,</span> <span class="n">getdate</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="mi">112</span><span class="p">)</span>
+<span class="k">set</span> <span class="o">@</span><span class="k">day</span> <span class="o">=</span> <span class="n">datename</span><span class="p">(</span><span class="k">day</span><span class="p">,</span> <span class="n">getdate</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+<span class="k">exec</span><span class="p">(</span><span class="s1">&#39;</span><span class="s1">select COUNTER名称,日，cast(round(实时值00_00, 2) as numeric(15,2)) as &#34;00:00&#34; from </span><span class="s1">&#39;</span> <span class="o">+</span> <span class="o">@</span><span class="n">tableName</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="s1"> where 日=</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="o">@</span><span class="k">day</span> <span class="o">+</span><span class="s1">&#39;</span><span class="s1"> and COUNTER序号 in (0,1,4,6,265,241,2) order by charindex(</span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1"> + convert(varchar,COUNTER序号) + </span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1">,0,1,4,6,265,241,2,</span><span class="s1">&#39;&#39;</span><span class="s1">)</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
  
 <div class="post-tags">     
      
-    <a href="https://idsze.cn/tags/ssl" rel="tag" title="ssl">#ssl#</a>
+    <a href="https://idsze.cn/tags/sqlserver" rel="tag" title="sqlserver">#sqlserver#</a>
     
 </div>
 
@@ -188,16 +189,12 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="https://idsze.cn/2018/09/cannot-trigger-bootstraps-tooltip-when-dynamically-added-html/" rel="next" title="动态添加的html无法使用bootstrap的tooltip">
-        <i class="fa fa-chevron-left"></i> 动态添加的html无法使用bootstrap的tooltip
-        </a>
-    
     </div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="https://idsze.cn/2018/05/install-redis-in-linux-and-windows/" rel="prev" title="Redis安装相关">
-        Redis安装相关 <i class="fa fa-chevron-right"></i>
+        <a href="https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/" rel="prev" title="解决微博爬虫碰到的不可见字符">
+        解决微博爬虫碰到的不可见字符 <i class="fa fa-chevron-right"></i>
         </a>
     
     </div>

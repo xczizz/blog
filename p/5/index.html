@@ -121,6 +121,87 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2017/06/use-js-and-css-in-vendor-floder/" itemprop="url">
+        Yii2中引用vendor中的js和css
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-06-26">
+    2017-06-26
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">303 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>以AdminLte为例，register.html在使用的时候无法显示单选框，查看元素发现少了<code>iCkeck.js</code>文件</p>
+<p>直接使用Yii2的资源管理包：
+assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">app\assets</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">yii\web\AssetBundle</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">AdminLtePluginAsset</span> <span class="k">extends</span> <span class="nx">AssetBundle</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$sourcePath</span> <span class="o">=</span> <span class="s1">&#39;@vendor/almasaeed2010/adminlte/plugins&#39;</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nv">$js</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;iCheck/icheck.min.js&#39;</span>
+        <span class="c1">// more plugin Js here
+</span><span class="c1"></span>    <span class="p">];</span>
+    <span class="k">public</span> <span class="nv">$css</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;iCheck/all.css&#39;</span>
+        <span class="c1">// more plugin CSS here
+</span><span class="c1"></span>    <span class="p">];</span>
+    <span class="k">public</span> <span class="nv">$depends</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="c1">// 注明依赖关系
+</span><span class="c1"></span>        <span class="s1">&#39;dmstr\web\AdminLteAsset&#39;</span><span class="p">,</span>
+    <span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2017/06/use-js-and-css-in-vendor-floder/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://idsze.cn/2017/06/the-difference-between-composer-install-and-composer-update/" itemprop="url">
         Composer Install和composer Update的区别
         </a>
@@ -384,7 +465,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -401,7 +482,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

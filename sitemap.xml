@@ -1,6 +1,22 @@
 <search>
     
      <entry>
+        <title>Sqlserver中一次简单的存储过程</title>
+        <url>https://idsze.cn/2020/07/sqlserver-stored-procedure/</url>
+        <categories>
+          <category>小技巧</category>
+        </categories>
+        <tags>
+          <tag>sqlserver</tag>
+        </tags>
+        <content type="html"> 前提需求： 公司有一个数据库每个月自动生成一张表，表名是动态变化的格式类似xxx202007，现在每天查询当天的数据，即找到对应的表的里对应日期的数据，并根据in里的数据顺序来排序。使用简单的存储过程来解决。
+declare 来声明变量， @ 符号来定义变量名， set 来设置变量值。
+convert 函数可以将其他格式转为字符串格式。 charindex用法百度吧。
+单引号的转义直接在单引号前再加一个单引号，下边的charindex转义前为：charindex(&#39;,&#39;&#43;convert(varchar,COUNTER序号)&#43;&#39;,0,1,4,6,265,241,2,&#39;)
+use History; declare @tableName varchar(25), @day int set @tableName = &amp;#39;dbo.Counter&amp;#39; &#43; convert(char(6), getdate(), 112) set @day = datename(day, getdate()) exec(&amp;#39;select COUNTER名称,日，cast(round(实时值00_00, 2) as numeric(15,2)) as &amp;#34;00:00&amp;#34; from &amp;#39; &#43; @tableName &#43; &amp;#39;where 日=&amp;#39; &#43; @day &#43;&amp;#39;and COUNTER序号 in (0,1,4,6,265,241,2) order by charindex(&amp;#39;&amp;#39;,&amp;#39;&amp;#39;&#43; convert(varchar,COUNTER序号) &#43; &amp;#39;&amp;#39;,&amp;#39;&amp;#39;,&amp;#39;&amp;#39;,0,1,4,6,265,241,2,&amp;#39;&amp;#39;)&amp;#39;); </content>
+    </entry>
+    
+     <entry>
         <title>解决微博爬虫碰到的不可见字符</title>
         <url>https://idsze.cn/2020/02/solve-invisible-characters-encountered-by-weibo-crawlers/</url>
         <categories>
