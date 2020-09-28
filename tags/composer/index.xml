@@ -6,11 +6,7 @@
     <description>Recent content in composer on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Jun 2017 15:42:17 +0800</lastBuildDate>
-    
-	<atom:link href="https://idsze.cn/tags/composer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 16 Jun 2017 15:42:17 +0800</lastBuildDate><atom:link href="https://idsze.cn/tags/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Composer Install和composer Update的区别</title>
       <link>https://idsze.cn/2017/06/the-difference-between-composer-install-and-composer-update/</link>

@@ -236,34 +236,34 @@ root用户：<code>passwd username</code></p>
 <h4 id="修改文件或者目录权限">修改文件或者目录权限</h4>
 <p><code>d rwx  rwx  r-x</code>
 <code>目录 主用户 组 其他</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">- 常规文件
-d 目录
-b 块设备特殊（磁盘） 
-c 字符特殊设备（终端） 
-s 信号灯 
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">-</span> <span class="nx">常规文件</span>
+<span class="nx">d</span> <span class="nx">目录</span>
+<span class="nx">b</span> <span class="nx">块设备特殊（磁盘） </span>
+<span class="nx">c</span> <span class="nx">字符特殊设备（终端） </span>
+<span class="nx">s</span> <span class="nx">信号灯 </span>
 </code></pre></div><ol>
 <li>使用文字
 <code>chmod ［who］ ［+ | - | =］ ［mode］ 文件名</code>
 操作对象<code>who</code>可是下述字母中的任一个或者它们的组合：</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">u 表示“用户（user）”，即文件或目录的所有者。
-g 表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。
-o 表示“其他（others）用户”。
-a 表示“所有（all）用户”。它是系统默认值。
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">u</span> <span class="nx">表示“用户（user）”，即文件或目录的所有者。</span>
+<span class="nx">g</span> <span class="nx">表示“同组（group）用户”，即与文件属主有相同组ID的所有用户。</span>
+<span class="nx">o</span> <span class="nx">表示“其他（others）用户”。</span>
+<span class="nx">a</span> <span class="nx">表示“所有（all）用户”。它是系统默认值。</span>
 </code></pre></div><p>1.1. 操作符号可以是：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">+ 添加某个权限。
-- 取消某个权限。
-= 赋予给定权限并取消其他所有权限（如果有的话）
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">+</span> <span class="nx">添加某个权限。</span>
+<span class="o">-</span> <span class="nx">取消某个权限。</span>
+<span class="o">=</span> <span class="nx">赋予给定权限并取消其他所有权限（如果有的话）</span>
 </code></pre></div><p>1.2. 设置<code>mode</code>所表示的权限可用下述字母的任意组合：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">r 可读
-w 可写
-x 可执行
-X 只有目标文件对某些用户是可执行的或该目标文件是目录时才追加x 属性
-s 在文件执行时把进程的属主或组ID置为该文件的文件属主
-t 保存程序的文本到交换设备上
-u 与文件属主拥有一样的权限
-g 与和文件属主同组的用户拥有一样的权限
-o 与其他用户拥有一样的权限。
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">r</span> <span class="nx">可读</span>
+<span class="nx">w</span> <span class="nx">可写</span>
+<span class="nx">x</span> <span class="nx">可执行</span>
+<span class="nx">X</span> <span class="nx">只有目标文件对某些用户是可执行的或该目标文件是目录时才追加x</span> <span class="nx">属性</span>
+<span class="nx">s</span> <span class="nx">在文件执行时把进程的属主或组ID置为该文件的文件属主</span>
+<span class="nx">t</span> <span class="nx">保存程序的文本到交换设备上</span>
+<span class="nx">u</span> <span class="nx">与文件属主拥有一样的权限</span>
+<span class="nx">g</span> <span class="nx">与和文件属主同组的用户拥有一样的权限</span>
+<span class="nx">o</span> <span class="nx">与其他用户拥有一样的权限。</span>
 </code></pre></div><p>例：<code>chmod g+r，o+r example</code> 使同组和其他用户对文件example 有读权限。
 2. 使用数字
 <code>chmod ［mode］ 文件名</code>
@@ -272,9 +272,9 @@ o 与其他用户拥有一样的权限。
 <hr>
 <h4 id="使用ssh密钥登录">使用ssh密钥登录</h4>
 <p>安全设置：在配置文件中，禁止root登录，禁止密码登录，</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">PasswordAuthentication  no //禁止密码
-PermitRootLogin no  //禁止root
-</code></pre></div><ol>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">PasswordAuthentication</span>  <span class="nx">no</span> <span class="c1">//禁止密码
+</span><span class="c1"></span><span class="nx">PermitRootLogin</span> <span class="nx">no</span>  <span class="c1">//禁止root
+</span></code></pre></div><ol>
 <li>生成密钥：doze用户（<code>su doze</code>）下，进入根目录（<code>/home/doze/</code>）
 <code>ssh-keygen -t rsa</code> 中间有提示可以输入密钥的密码</li>
 <li>将密钥添加到授权文件中（在.ssh目录下操作）
@@ -451,7 +451,7 @@ gunzip aaa.gz
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -468,7 +468,7 @@ gunzip aaa.gz
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -532,7 +532,7 @@ gunzip aaa.gz
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

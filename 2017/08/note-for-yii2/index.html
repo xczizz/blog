@@ -158,7 +158,7 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">3833 字 ~8分钟</span>
+<span class="leancloud-visitors-count">3854 字 ~8分钟</span>
 </span>
       </div>
     </header>
@@ -169,23 +169,23 @@
 <li>网站维护，入口文件index.php  直接echo</li>
 <li>在应用的配置文件（<code>man.php</code>）中加入以下代码：</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="s1">&#39;catchAll&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>             <span class="c1">//打开之后所有页面进入维护模式
 </span><span class="c1"></span>        <span class="s1">&#39;site/maintenance&#39;</span><span class="p">,</span>    <span class="c1">//维护页面控制器
 </span><span class="c1"></span>        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;网站维护&#39;</span><span class="p">,</span>  <span class="c1">//参数（可有可无）
 </span><span class="c1"></span>     <span class="p">],</span>      
 </code></pre></div><hr>
 <h3 id="registerjsfile">registerJsFile()</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">registerJsFile</span><span class="p">(</span><span class="s1">&#39;@web/js/about.js&#39;</span><span class="p">,[</span><span class="s1">&#39;depends&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;yii\web\YiiAsset&#39;</span><span class="p">,</span><span class="s1">&#39;position&#39;</span><span class="o">=&gt;</span><span class="nx">\yii\web\View</span><span class="o">::</span><span class="na">POS_END</span><span class="p">]);</span>
 </code></pre></div><p><img src="http://upload-images.jianshu.io/upload_images/2001662-db3845f37a81ea06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参数说明"></p>
 <hr>
 <h3 id="注册用户当输入用户名的时候直接判断是否存在而不是提交再判断">注册用户，当输入用户名的时候，直接判断是否存在，而不是提交再判断</h3>
 <p>那么这种做法是，开启<code>ActiveForm</code>的<code>enableAjaxValidation</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> 
-<span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span><span class="cp">?&gt;</span>
-</code></pre></div><p>然后在<code>controller</code>里添加一个<code>ajax</code>验证字段</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span> 
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span><span class="cp">?&gt;</span><span class="err">
+</span></code></pre></div><p>然后在<code>controller</code>里添加一个<code>ajax</code>验证字段</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$model</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SignupForm</span><span class="p">();</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$model</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">()))</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">isAjax</span><span class="p">)</span> <span class="p">{</span>
@@ -216,7 +216,7 @@
 <li>根目录下Copy一份<strong>backend</strong> 应用改名为<strong>blogapp</strong></li>
 <li>打开<strong>environments/index.php</strong> 增加其初始化工作。（开发环境和生产环境里面配置如下</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">return</span> <span class="p">[</span>  
     <span class="s1">&#39;Development&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>  
         <span class="s1">&#39;path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;dev&#39;</span><span class="p">,</span>  
@@ -271,7 +271,7 @@
 <ol>
 <li>Form表单(<code>frontend/models/SignupForm</code>):</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">SignupForm</span> <span class="k">extends</span> <span class="nx">Model</span><span class="p">{</span>
   <span class="k">public</span> <span class="nv">$username</span><span class="p">;</span>
     <span class="k">public</span> <span class="nv">$email</span><span class="p">;</span>
@@ -304,7 +304,7 @@
 </code></pre></div><ol start="2">
 <li>控制器（如果上面没有指定captchaAction，可以在这块位置来定义,现在定义在<code>SiteController</code>）</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">actions</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="p">[</span>
@@ -336,25 +336,25 @@
 </code></pre></div><ol start="3">
 <li>视图页面（<code>view/site/signup</code>）:</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">use</span> <span class="nx">yii\bootstrap\ActiveForm</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">yii\captcha\Captcha</span><span class="p">;</span>
- <span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span> <span class="cp">?&gt;</span>
-        <span class="err">&lt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">textInput</span><span class="p">([</span><span class="s1">&#39;autofocus&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">])</span> <span class="cp">?&gt;</span>
-
-                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-
-                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">passwordInput</span><span class="p">()</span> <span class="cp">?&gt;</span>
-
-                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;repassword&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">passwordInput</span><span class="p">()</span> <span class="cp">?&gt;</span>
-
-                <span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span> <span class="s1">&#39;verifyCode&#39;</span><span class="p">,[</span><span class="s1">&#39;enableAjaxValidation&#39;</span><span class="o">=&gt;</span><span class="k">false</span><span class="p">,</span><span class="s1">&#39;enableClientValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="nx">Captcha</span><span class="o">::</span><span class="na">className</span><span class="p">(),</span> <span class="p">[</span>
-                    <span class="s1">&#39;template&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-lg-3&#34;&gt;{image}&lt;/div&gt;&lt;div class=&#34;col-lg-6&#34;&gt;{input}&lt;/div&gt;&lt;/div&gt;&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;captchaAction&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;site/captcha&#39;</span><span class="p">,</span> <span class="c1">//注意，这里要跟form里的一样，要不然会报错
-</span><span class="c1"></span>                    <span class="s1">&#39;imageOptions&#39;</span><span class="o">=&gt;</span><span class="p">[</span><span class="s1">&#39;alt&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;点击换图&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;点击换图&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;cursor:pointer&#39;</span><span class="p">],</span>
-                <span class="p">])</span> <span class="cp">?&gt;</span>
-<span class="cp">&lt;?php</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">end</span><span class="p">();</span> <span class="cp">?&gt;</span>
-</code></pre></div><ol start="4">
+ <span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$form</span> <span class="o">=</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">begin</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-signup&#39;</span><span class="p">,</span><span class="s1">&#39;enableAjaxValidation&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="err">
+</span><span class="err">        &lt;&lt;?= $form-&gt;field($model, &#39;username&#39;)-&gt;textInput([&#39;autofocus&#39; =&gt; true]) ?&gt;
+</span><span class="err">
+</span><span class="err">                &lt;?= $form-&gt;field($model, &#39;email&#39;) ?&gt;
+</span><span class="err">
+</span><span class="err">                &lt;?= $form-&gt;field($model, &#39;password&#39;,[&#39;enableAjaxValidation&#39;=&gt;false])-&gt;passwordInput() ?&gt;
+</span><span class="err">
+</span><span class="err">                &lt;?= $form-&gt;field($model, &#39;repassword&#39;,[&#39;enableAjaxValidation&#39;=&gt;false])-&gt;passwordInput() ?&gt;
+</span><span class="err">
+</span><span class="err">                &lt;?= $form-&gt;field($model, &#39;verifyCode&#39;,[&#39;enableAjaxValidation&#39;=&gt;false,&#39;enableClientValidation&#39; =&gt; true])-&gt;widget(Captcha::className(), [
+</span><span class="err">                    &#39;template&#39; =&gt; &#39;&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-lg-3&#34;&gt;{image}&lt;/div&gt;&lt;div class=&#34;col-lg-6&#34;&gt;{input}&lt;/div&gt;&lt;/div&gt;&#39;,
+</span><span class="err">                    &#39;captchaAction&#39;=&gt;&#39;site/captcha&#39;, //注意，这里要跟form里的一样，要不然会报错
+</span><span class="err">                    &#39;imageOptions&#39;=&gt;[&#39;alt&#39;=&gt;&#39;点击换图&#39;,&#39;title&#39;=&gt;&#39;点击换图&#39;, &#39;style&#39;=&gt;&#39;cursor:pointer&#39;],
+</span><span class="err">                ]) ?&gt;
+</span><span class="err">&lt;?php ActiveForm::end(); ?&gt;
+</span></code></pre></div><ol start="4">
 <li>验证码总是不正确：<br>
 <code>testLimit</code>含义：<strong>相同验证码出现的次数。默认为3。（小于等于0的值意味着不限制）为1，或小于3，这种情况下，相同的验证码只能出现一次，而用户如果开启了ajax验证的话，填写的时候ajax验证一次已达到上限1次，提交的时候再验证一次，他会判断是否大于了testLimit的值，第二次验证testLimit会加1，显然大于了1，这时会重新生成验证码，从而出现验证码老是不正确</strong></li>
 </ol>
@@ -363,18 +363,18 @@
 ① 点击提交 
 ② 开启了<code>enableAjaxValidation </code>（不开启就不会报错）的时候会带着整个表单进行验证 
 ③ <code>controller</code>中有一句话</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">isAjax</span><span class="p">)</span> <span class="p">{</span>
                     <span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">response</span><span class="o">-&gt;</span><span class="na">format</span> <span class="o">=</span> <span class="nx">Response</span><span class="o">::</span><span class="na">FORMAT_JSON</span><span class="p">;</span>
                     <span class="k">return</span> <span class="nx">ActiveForm</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="nv">$model</span><span class="p">);</span><span class="c1">//在这儿第一次验证，成功了，所以已经刷新了
 </span><span class="c1"></span>            <span class="p">}</span>
 </code></pre></div><p>④ 这个位置因为验证成功不会报错，所以又继续进行<code>$model-&gt;signup</code>.然而，在这个函数中，有这么一句话</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//这儿进行第二次验证，因为码已经刷新，所以报错
 </span><span class="c1"></span>            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
         <span class="p">}</span>
 </code></pre></div><p>⑤ 只需要吧最后一步的验证中的验证码验证取消即可</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="s1">&#39;password&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="s1">&#39;repassword&#39;</span><span class="p">]))</span> <span class="p">{</span>
             <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
         <span class="p">}</span>
@@ -382,7 +382,7 @@
 <blockquote>
 <p>附上验证码的验证过程</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">CaptchaAction</span> <span class="k">extends</span> <span class="nx">Action</span><span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="nv">$caseSensitive</span><span class="p">)</span>
     <span class="p">{</span>
@@ -420,19 +420,19 @@
   <span class="p">}</span>
 </code></pre></div><h4 id="checkbox默认选中">checkbox默认选中</h4>
 <p>假设<code>status</code>要显示成复选框，在controller层：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">status</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="p">[</span>
                 <span class="s1">&#39;model&#39;</span> <span class="o">=&gt;</span> <span class="nv">$model</span><span class="p">,</span>
             <span class="p">]);</span>
 </code></pre></div><p>view层：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&#34;col-md-1 checkbox&#34;</span><span class="o">&gt;</span>
-	<span class="o">&lt;?=</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span><span class="s1">&#39;status&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">checkbox</span><span class="p">([</span><span class="s1">&#39;label&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;原创&#39;</span><span class="p">,</span><span class="s1">&#39;style&#39;</span><span class="o">=&gt;</span><span class="p">[</span><span class="s1">&#39;zoom&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;150%&#39;</span><span class="p">,</span><span class="s1">&#39;margin-top&#39;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">]])</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="cp">?&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>这样默认就会选中，在<code>checkedbox</code>的参数中添加<code>'checked'=&gt;true</code>是<strong>无效</strong>的</p>
+	<span class="o">&lt;?=</span><span class="nv">$form</span><span class="o">-&gt;</span><span class="na">field</span><span class="p">(</span><span class="nv">$model</span><span class="p">,</span><span class="s1">&#39;status&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">checkbox</span><span class="p">([</span><span class="s1">&#39;label&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;原创&#39;</span><span class="p">,</span><span class="s1">&#39;style&#39;</span><span class="o">=&gt;</span><span class="p">[</span><span class="s1">&#39;zoom&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;150%&#39;</span><span class="p">,</span><span class="s1">&#39;margin-top&#39;</span><span class="o">=&gt;</span><span class="mi">0</span><span class="p">]])</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="cp">?&gt;</span><span class="err">
+</span><span class="err">&lt;/div&gt;
+</span></code></pre></div><p>这样默认就会选中，在<code>checkedbox</code>的参数中添加<code>'checked'=&gt;true</code>是<strong>无效</strong>的</p>
 <h4 id="控制台带选项带参数写法">控制台带选项带参数写法</h4>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">namespace</span> <span class="nx">console\controllers</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">yii\console\Controller</span><span class="p">;</span>
@@ -468,7 +468,7 @@
 执行：<code>yii migrate/up</code></p>
 <h3 id="批量插入">批量插入</h3>
 <p>是批量插入，不是多次插入</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">[</span><span class="s1">&#39;user1&#39;</span><span class="p">,</span><span class="s1">&#39;goods1&#39;</span><span class="p">],</span>
   <span class="p">[</span><span class="s1">&#39;user2&#39;</span><span class="p">,</span><span class="s1">&#39;goods2&#39;</span><span class="p">]</span>
@@ -482,7 +482,7 @@
 <p><code>composer config -g 全局命令 设置</code></p>
 <h3 id="ar模型中的with">AR模型中的with</h3>
 <p>查询多个数据，建议使用with，比如</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// SQL executed: SELECT * FROM customer LIMIT 100
 </span><span class="c1"></span><span class="nv">$customers</span> <span class="o">=</span> <span class="nx">Customer</span><span class="o">::</span><span class="na">find</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">();</span>
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$customers</span> <span class="k">as</span> <span class="nv">$customer</span><span class="p">)</span> <span class="p">{</span>
@@ -491,7 +491,7 @@
     <span class="c1">// ...处理 $orders...
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><p>以上代码将执行101 条SQL，第一条 SQL 查询语句取回100个客户，然后， 每个客户要执行一条 SQL 查询语句以取回该客户的所有订单。如果使用了with,只需要两条sql语句:</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// SQL executed: SELECT * FROM customer LIMIT 100;
 </span><span class="c1">//               SELECT * FROM orders WHERE customer_id IN (1,2,...)
 </span><span class="c1"></span><span class="nv">$customers</span> <span class="o">=</span> <span class="nx">Customer</span><span class="o">::</span><span class="na">find</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -577,7 +577,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -594,7 +594,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -668,7 +668,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

@@ -210,24 +210,24 @@
 </table>
 <p>int(10),括号里的这个10 所代表的含义：10是一个显示宽度，和当前int大小没有任何关系，这个10是没有任何操作的，除非int的属性选择为<code>UNSIGNED ZEROFILL</code>，即<code>填充0</code>，此时也不可能有负数，当位数(长度)不够括号里的数值的时候，会自动补0，超过没有操作。</p>
 <div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">zerofill_demo</span><span class="err">（</span>
-	<span class="n">id</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="err">，</span>
-    <span class="n">a</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
-	<span class="n">b</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">UNSIGNED</span> <span class="k">ZEROFILL</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
-	<span class="n">c</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">5</span><span class="err">）</span><span class="k">DEFAULT</span> <span class="no">NULL</span><span class="err">，</span>
-	<span class="n">d</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">5</span><span class="err">）</span><span class="k">UNSIGNED</span> <span class="k">ZEROFILL</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
-	<span class="n">e</span> <span class="kt">INT</span><span class="p"></span><span class="err">（</span><span class="mi">15</span><span class="err">）</span><span class="k">DEFAULT</span> <span class="no">NULL</span><span class="err">，</span>
+	<span class="n">id</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">NOT</span> <span class="no">NULL</span> <span class="kp">AUTO_INCREMENT</span><span class="err">，</span>
+    <span class="n">a</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
+	<span class="n">b</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">11</span><span class="err">）</span><span class="k">UNSIGNED</span> <span class="k">ZEROFILL</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
+	<span class="n">c</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">5</span><span class="err">）</span><span class="k">DEFAULT</span> <span class="no">NULL</span><span class="err">，</span>
+	<span class="n">d</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">5</span><span class="err">）</span><span class="k">UNSIGNED</span> <span class="k">ZEROFILL</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="err">，</span>
+	<span class="n">e</span> <span class="kt">INT</span><span class="err">（</span><span class="mi">15</span><span class="err">）</span><span class="k">DEFAULT</span> <span class="no">NULL</span><span class="err">，</span>
 	<span class="k">PRIMARY</span> <span class="k">KEY</span><span class="err">（</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="err">）</span>
 <span class="err">）</span>
 <span class="c1"># 插入数据
 </span><span class="c1"></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">zerofill_demo</span><span class="err">（</span><span class="n">a</span><span class="err">，</span><span class="n">b</span><span class="err">，</span><span class="n">c</span><span class="err">，</span><span class="n">d</span><span class="err">，</span><span class="n">e</span><span class="err">）</span><span class="k">VALUES</span><span class="err">（</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="err">）</span><span class="p">;</span>
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">zerofill_demo</span><span class="err">（</span><span class="n">a</span><span class="err">，</span><span class="n">b</span><span class="err">，</span><span class="n">c</span><span class="err">，</span><span class="n">d</span><span class="err">，</span><span class="n">e</span><span class="err">）</span><span class="k">VALUES</span><span class="err">（</span><span class="mi">1234567890</span><span class="err">，</span><span class="mi">1234567890</span><span class="err">，</span><span class="mi">1234567890</span><span class="err">，</span><span class="mi">1234567890</span><span class="err">，</span><span class="mi">1234567890</span><span class="err">）</span><span class="p">;</span>
 <span class="c1"># 最终结果
-</span><span class="c1"></span><span class="o">+</span> <span class="o">-</span><span class="o">-</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
+</span><span class="c1"></span><span class="o">+</span> <span class="o">--</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
 </span><span class="c1"></span><span class="o">|</span> <span class="n">id</span> <span class="o">|</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span> <span class="o">|</span> <span class="n">c</span> <span class="o">|</span> <span class="n">d</span> <span class="o">|</span> <span class="n">e</span> <span class="o">|</span>
-<span class="o">+</span> <span class="o">-</span><span class="o">-</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
+<span class="o">+</span> <span class="o">--</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
 </span><span class="c1"></span><span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">00000000001</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">00001</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span>
 <span class="o">|</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">1234567890</span> <span class="o">|</span> <span class="mi">01234567890</span> <span class="o">|</span> <span class="mi">1234567890</span> <span class="o">|</span> <span class="mi">1234567890</span> <span class="o">|</span> <span class="mi">1234567890</span> <span class="o">|</span>
-<span class="o">+</span> <span class="o">-</span><span class="o">-</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
+<span class="o">+</span> <span class="o">--</span><span class="c1">-- + ------------ + ------------- + ------------ + ---- -------- + ------------ +
 </span></code></pre></div>
     </div>
     <footer class="post-footer">
@@ -303,7 +303,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -320,7 +320,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -375,7 +375,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

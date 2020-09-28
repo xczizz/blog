@@ -181,9 +181,9 @@
 <div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span>
     <span class="k">SELECT</span> <span class="n">x</span><span class="p">.</span><span class="n">id</span> <span class="k">FROM</span>
     	<span class="p">(</span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span><span class="n">name</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">WHERE</span> <span class="n">name</span> <span class="k">IN</span> <span class="p">(</span>
-            <span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">HAVING</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">&gt;</span><span class="o">=</span><span class="mi">2</span>
+            <span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">HAVING</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span>
         <span class="p">)</span><span class="k">AND</span> <span class="n">id</span> <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span>
-             <span class="k">SELECT</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">HAVING</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">&gt;</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+             <span class="k">SELECT</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">idiom</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">HAVING</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">)</span>
         <span class="p">)</span> <span class="n">x</span>
 <span class="p">)</span>
 </code></pre></div><p><img src="http://upload-images.jianshu.io/upload_images/2001662-7245d5aff2e467c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除成功，不要在意idiom_backup_1这个名字"></p>
@@ -261,7 +261,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -278,7 +278,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -333,7 +333,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

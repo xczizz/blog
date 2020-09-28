@@ -166,7 +166,7 @@
     <p>以AdminLte为例，register.html在使用的时候无法显示单选框，查看元素发现少了<code>iCkeck.js</code>文件</p>
 <p>直接使用Yii2的资源管理包：
 assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">namespace</span> <span class="nx">app\assets</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">yii\web\AssetBundle</span><span class="p">;</span>
 <span class="k">class</span> <span class="nc">AdminLtePluginAsset</span> <span class="k">extends</span> <span class="nx">AssetBundle</span>
@@ -187,7 +187,7 @@ assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）
 <span class="p">}</span>
 </code></pre></div><p>使用：
 更改<code>main.php</code> 或者 <code>main-login.php</code>(主要看在那个页面使用)</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">Yii</span><span class="o">::</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">controller</span><span class="o">-&gt;</span><span class="na">action</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">===</span> <span class="s1">&#39;signup&#39;</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// AdminLtePluginAsset是依赖于AdminLteAsset的，所以可以取消AdminLteAsset的注册
 </span><span class="c1"></span>    <span class="nx">app\assets\AdminLtePluginAsset</span><span class="o">::</span><span class="na">register</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
@@ -269,7 +269,7 @@ assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -286,7 +286,7 @@ assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -341,7 +341,7 @@ assets目录下新建一个Asset文件（<code>AdminLtePluginAsset.php</code>）
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

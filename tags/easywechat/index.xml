@@ -6,11 +6,7 @@
     <description>Recent content in easywechat on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Aug 2017 11:26:28 +0800</lastBuildDate>
-    
-	<atom:link href="https://idsze.cn/tags/easywechat/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 14 Aug 2017 11:26:28 +0800</lastBuildDate><atom:link href="https://idsze.cn/tags/easywechat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>配置easywecaht碰到的坑</title>
       <link>https://idsze.cn/2017/08/bugs-encountered-in-easywechat-development/</link>
@@ -25,7 +21,7 @@
 &lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt;依赖 &lt;code&gt;doctrine/cache&lt;/code&gt; ，而这个&lt;code&gt;doctrine/cache&lt;/code&gt;最新版必须&lt;code&gt;php 7.1&lt;/code&gt;以上，&lt;code&gt;7.0.x&lt;/code&gt;的只能更改&lt;code&gt;composer.json&lt;/code&gt;中这个玩意的版本， 最大1.6.2&lt;/li&gt;
 &lt;li&gt;权限问题：&lt;code&gt;wechat.log&lt;/code&gt; 可写权限&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;overtrue/wechat&lt;/code&gt; 需要用到 &lt;code&gt;curl&lt;/code&gt; 函数，提先安装&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;valid&lt;/code&gt;的请求方式是&lt;strong&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid&lt;/code&gt;的请求方式是**&lt;code&gt;GET&lt;/code&gt;**&lt;/li&gt;
 &lt;li&gt;回复消息的请求方式是 &lt;code&gt;POST&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

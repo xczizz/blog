@@ -158,7 +158,7 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">354 字 ~1分钟</span>
+<span class="leancloud-visitors-count">358 字 ~1分钟</span>
 </span>
       </div>
     </header>
@@ -171,12 +171,12 @@
 <li><code>overtrue/wechat</code>依赖 <code>doctrine/cache</code> ，而这个<code>doctrine/cache</code>最新版必须<code>php 7.1</code>以上，<code>7.0.x</code>的只能更改<code>composer.json</code>中这个玩意的版本， 最大1.6.2</li>
 <li>权限问题：<code>wechat.log</code> 可写权限</li>
 <li><code>overtrue/wechat</code> 需要用到 <code>curl</code> 函数，提先安装</li>
-<li><code>valid</code>的请求方式是<strong><code>GET</code></strong></li>
+<li><code>valid</code>的请求方式是**<code>GET</code>**</li>
 <li>回复消息的请求方式是 <code>POST</code></li>
 </ul>
 <p>配置路由rule如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">GET wechat/valid =&gt; wechat/wechat/valid // 实际路由再调
-POST wechat/valid =&gt; wechat/wecaht/index
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">GET</span> <span class="nx">wechat</span><span class="o">/</span><span class="nx">valid</span> <span class="o">=&gt;</span> <span class="nx">wechat</span><span class="o">/</span><span class="nx">wechat</span><span class="o">/</span><span class="nx">valid</span> <span class="c1">// 实际路由再调
+</span><span class="c1"></span><span class="nx">POST</span> <span class="nx">wechat</span><span class="o">/</span><span class="nx">valid</span> <span class="o">=&gt;</span> <span class="nx">wechat</span><span class="o">/</span><span class="nx">wecaht</span><span class="o">/</span><span class="nx">index</span>
 </code></pre></div><h2 id="微信支付">微信支付</h2>
 <ul>
 <li>
@@ -263,7 +263,7 @@ POST wechat/valid =&gt; wechat/wecaht/index
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -280,7 +280,7 @@ POST wechat/valid =&gt; wechat/wecaht/index
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -340,7 +340,7 @@ POST wechat/valid =&gt; wechat/wecaht/index
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

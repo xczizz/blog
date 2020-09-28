@@ -159,7 +159,7 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">378 字 ~1分钟</span>
+<span class="leancloud-visitors-count">381 字 ~1分钟</span>
 </span>
       </div>
     </header>
@@ -169,10 +169,10 @@
 <p><code>convert</code> 函数可以将其他格式转为字符串格式。 <code>charindex</code>用法百度吧。</p>
 <p>单引号的转义直接在单引号前再加一个单引号，下边的<code>charindex</code>转义前为：<code>charindex(','+convert(varchar,COUNTER序号)+',0,1,4,6,265,241,2,')</code></p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span> <span class="n">History</span><span class="p">;</span> 
-<span class="k">declare</span> <span class="o">@</span><span class="n">tableName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="p">,</span> <span class="o">@</span><span class="k">day</span> <span class="nb">int</span>
-<span class="k">set</span> <span class="o">@</span><span class="n">tableName</span>  <span class="o">=</span> <span class="s1">&#39;</span><span class="s1">dbo.Counter</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="k">convert</span><span class="p">(</span><span class="nb">char</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="p">,</span> <span class="n">getdate</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="mi">112</span><span class="p">)</span>
-<span class="k">set</span> <span class="o">@</span><span class="k">day</span> <span class="o">=</span> <span class="n">datename</span><span class="p">(</span><span class="k">day</span><span class="p">,</span> <span class="n">getdate</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
-<span class="k">exec</span><span class="p">(</span><span class="s1">&#39;</span><span class="s1">select COUNTER名称,日，cast(round(实时值00_00, 2) as numeric(15,2)) as &#34;00:00&#34; from </span><span class="s1">&#39;</span> <span class="o">+</span> <span class="o">@</span><span class="n">tableName</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="s1"> where 日=</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="o">@</span><span class="k">day</span> <span class="o">+</span><span class="s1">&#39;</span><span class="s1"> and COUNTER序号 in (0,1,4,6,265,241,2) order by charindex(</span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1"> + convert(varchar,COUNTER序号) + </span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1">,</span><span class="s1">&#39;&#39;</span><span class="s1">,0,1,4,6,265,241,2,</span><span class="s1">&#39;&#39;</span><span class="s1">)</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">;</span>
+<span class="k">declare</span> <span class="o">@</span><span class="n">tableName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">),</span> <span class="o">@</span><span class="k">day</span> <span class="nb">int</span>
+<span class="k">set</span> <span class="o">@</span><span class="n">tableName</span>  <span class="o">=</span> <span class="s1">&#39;dbo.Counter&#39;</span> <span class="o">+</span> <span class="k">convert</span><span class="p">(</span><span class="nb">char</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">getdate</span><span class="p">(),</span> <span class="mi">112</span><span class="p">)</span>
+<span class="k">set</span> <span class="o">@</span><span class="k">day</span> <span class="o">=</span> <span class="n">datename</span><span class="p">(</span><span class="k">day</span><span class="p">,</span> <span class="n">getdate</span><span class="p">())</span>
+<span class="k">exec</span><span class="p">(</span><span class="s1">&#39;select COUNTER名称,日，cast(round(实时值00_00, 2) as numeric(15,2)) as &#34;00:00&#34; from &#39;</span> <span class="o">+</span> <span class="o">@</span><span class="n">tableName</span> <span class="o">+</span> <span class="s1">&#39; where 日=&#39;</span> <span class="o">+</span> <span class="o">@</span><span class="k">day</span> <span class="o">+</span><span class="s1">&#39; and COUNTER序号 in (0,1,4,6,265,241,2) order by charindex(&#39;&#39;,&#39;&#39; + convert(varchar,COUNTER序号) + &#39;&#39;,&#39;&#39;,&#39;&#39;,0,1,4,6,265,241,2,&#39;&#39;)&#39;</span><span class="p">);</span>
 </code></pre></div>
     </div>
     <footer class="post-footer">
@@ -188,6 +188,10 @@
 
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
+    
+        <a href="https://idsze.cn/2020/09/pyinstaller-compilation-includes-the-problem-of-pymssql-package-error/" rel="next" title="Pyinstaller打包32位exe使用mssql出错">
+        <i class="fa fa-chevron-left"></i> Pyinstaller打包32位exe使用mssql出错
+        </a>
     
     </div>
 
@@ -244,7 +248,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -261,7 +265,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -316,7 +320,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

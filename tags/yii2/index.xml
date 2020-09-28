@@ -6,11 +6,7 @@
     <description>Recent content in yii2 on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 14 Nov 2017 23:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://idsze.cn/tags/yii2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 14 Nov 2017 23:00:00 +0800</lastBuildDate><atom:link href="https://idsze.cn/tags/yii2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yii2使用adminLTE的时候添加左侧菜单树上badge</title>
       <link>https://idsze.cn/2017/11/adminlet-left-menu-tree-add-badge/</link>
@@ -64,7 +60,7 @@
       <description>&lt;p&gt;以AdminLte为例，register.html在使用的时候无法显示单选框，查看元素发现少了&lt;code&gt;iCkeck.js&lt;/code&gt;文件&lt;/p&gt;
 &lt;p&gt;直接使用Yii2的资源管理包：
 assets目录下新建一个Asset文件（&lt;code&gt;AdminLtePluginAsset.php&lt;/code&gt;）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;php&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;app\assets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yii\web\AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;AdminLtePluginAsset&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;AssetBundle&lt;/span&gt;

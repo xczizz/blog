@@ -166,9 +166,9 @@
     <p>经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 <code>append</code> 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过<code>$('body').on(''click'',xxxx,function(){})</code>来解决部分（比如click）事件，但碰到 tooltip 怎么解决</p>
 <p>bootstrap 中的 tooltip 调用方式为：<code>$('[data-toggle=&quot;tooltip&quot;]').tooltip()</code></p>
 <p>解决方式：</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;body&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">(</span><span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;body&#34;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
     <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[data-toggle=&#34;tooltip&#34;]&#39;</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div><p>原文：<a href="https://stackoverflow.com/questions/9958825/how-do-i-bind-twitter-bootstrap-tooltips-to-dynamically-created-elements">https://stackoverflow.com/questions/9958825/how-do-i-bind-twitter-bootstrap-tooltips-to-dynamically-created-elements</a></p>
     </div>
     <footer class="post-footer">
@@ -246,7 +246,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -263,7 +263,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -318,7 +318,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

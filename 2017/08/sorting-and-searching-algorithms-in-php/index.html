@@ -163,7 +163,7 @@
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
 </span><span class="c1">// 循环
 </span><span class="c1"></span><span class="k">function</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="nv">$numbers</span><span class="p">)</span> <span class="p">{</span>
@@ -182,7 +182,7 @@
  
 <span class="nv">$num</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="nx">var_dump</span><span class="p">(</span><span class="nx">bubbleSort</span><span class="p">(</span><span class="nv">$num</span><span class="p">));</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// 快速，循环小的放左边，大的放右边，然后递归
 </span><span class="c1"></span><span class="k">function</span> <span class="nf">quickSort</span><span class="p">(</span><span class="nv">$array</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">count</span><span class="p">(</span><span class="nv">$array</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nv">$array</span><span class="p">;</span>
@@ -199,7 +199,7 @@
     <span class="nv">$right_arr</span> <span class="o">=</span> <span class="nx">quickSort</span><span class="p">(</span><span class="nv">$right_arr</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">array_merge</span><span class="p">(</span><span class="nv">$left_arr</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$key</span><span class="p">),</span> <span class="nv">$right_arr</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// 顺序查找，不知道有啥意义,明明可以用array_search($value, $array)或者in_array($search, $array, $type)
 </span><span class="c1"></span><span class="k">function</span> <span class="nf">query_search</span><span class="p">(</span><span class="nv">$val</span><span class="p">)</span>
  <span class="p">{</span>
@@ -210,7 +210,7 @@
   <span class="p">}</span>
 <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// 二分查找
 </span><span class="c1"></span><span class="k">function</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$arr</span><span class="p">,</span><span class="nv">$low</span><span class="p">,</span><span class="nv">$top</span><span class="p">,</span><span class="nv">$target</span><span class="p">){</span>
         <span class="k">if</span><span class="p">(</span><span class="nv">$low</span><span class="o">&lt;=</span><span class="nv">$top</span><span class="p">){</span>
@@ -305,7 +305,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -322,7 +322,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -377,7 +377,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

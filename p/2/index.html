@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.63.2" />
+	<meta name="generator" content="Hugo 0.75.1" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
@@ -117,6 +117,67 @@
             
     
  <section id="posts" class="posts-expand">
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" itemprop="url">
+        更改nodejs的全局包的默认安装位置
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-01-09">
+    2020-01-09
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
+        <span itemprop="name">小技巧</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">264 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>默认情况下，位置应该在<code>C:/users/xx/AppData/Roaming/node</code>下，现在更改到<code>D盘</code>。<br>
+查看位置：<code>npm config ls</code><br>
+更改位置：<code>npm config set prefix &quot;D:\node_global_modules&quot;</code></p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -420,9 +481,9 @@
     <p>经常有一些数据是通过 ajax 获取的，然后渲染到页面上，通过 <code>append</code> 或者其他方式把 html 加载到 DOM 页面，但这个时候无法使用 js 中的一些事件，可以通过<code>$('body').on(''click'',xxxx,function(){})</code>来解决部分（比如click）事件，但碰到 tooltip 怎么解决</p>
 <p>bootstrap 中的 tooltip 调用方式为：<code>$('[data-toggle=&quot;tooltip&quot;]').tooltip()</code></p>
 <p>解决方式：</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;body&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">(</span><span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&#34;body&#34;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
     <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[data-toggle=&#34;tooltip&#34;]&#39;</span>
-<span class="p">}</span><span class="p">)</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div>
     </div>
     
@@ -560,69 +621,6 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2018/05/linux-study-notes/" itemprop="url">
-        Linux知识小记
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-05-14">
-    2018-05-14
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
-        <span itemprop="name">笔记</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">3333 字 ~7分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>一般来说著名的linux系统基本上分两大类：</p>
-<ol>
-<li>RedHat系列：Redhat、Centos、Fedora等</li>
-<li>Debian系列：Debian、Ubuntu等 </li>
-</ol>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/2018/05/linux-study-notes/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -709,7 +707,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -726,7 +724,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -782,7 +780,7 @@ openssl.capath<span class="o">=</span><span class="s2">&#34;D:/wamp64/bin/php/ph
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

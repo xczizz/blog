@@ -6,11 +6,7 @@
     <description>Recent content in vscode on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Jan 2020 22:26:57 +0800</lastBuildDate>
-    
-	<atom:link href="https://idsze.cn/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Jan 2020 22:26:57 +0800</lastBuildDate><atom:link href="https://idsze.cn/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vscode中配置markdown的代码片段不生效</title>
       <link>https://idsze.cn/2020/01/vscode-markdown-snippet-config/</link>

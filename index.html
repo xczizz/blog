@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.63.2" />
+	<meta name="generator" content="Hugo 0.75.1" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
@@ -121,6 +121,79 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://idsze.cn/2020/09/pyinstaller-compilation-includes-the-problem-of-pymssql-package-error/" itemprop="url">
+        Pyinstaller打包32位exe使用mssql出错
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-09-28">
+    2020-09-28
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://idsze.cn/categories/%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+        <span itemprop="name">笔记</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">226 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>使用 pyinstaller 打包 32 位软件，结果总是一闪而过，而之前同样的程序打包了 64 位exe，一点问题都没有。</p>
+<p>(直接在cmd中运行exe)错误信息如下:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">(py32) D:\PythonWorkspace\report_forms&gt;.\dist\main.exe
+Traceback (most recent call last):
+  File &#34;main.py&#34;, line 1, in &lt;module&gt;
+    import pymssql
+  File &#34;src\pymssql.pyx&#34;, line 1, in init pymssql
+  File &#34;src\_mssql.pyx&#34;, line 57, in init _mssql
+ModuleNotFoundError: No module named &#39;decimal&#39;
+[5136] Failed to execute script main
+</code></pre></div><p>可以看到报错的是没有找到 <code>decimal</code>模块，也是参考网上解决办法</p>
+<blockquote>
+<p>Just as a suggestion, put an import decimal at the top of your program. It looks ike _mssql might be doing dynamic imports in __load method which will &ldquo;confuse&rdquo; py2exe because it can&rsquo;t know about dynamic imports which happen at runtime.<br>
+打包程序无法判断动态调用，_mssql是动态调用的，就是用才调用，不会一开始就调用。</p>
+</blockquote>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://idsze.cn/2020/09/pyinstaller-compilation-includes-the-problem-of-pymssql-package-error/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://idsze.cn/2020/07/sqlserver-stored-procedure/" itemprop="url">
         Sqlserver中一次简单的存储过程
         </a>
@@ -160,7 +233,7 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">378 字 ~1分钟</span>
+<span class="leancloud-visitors-count">381 字 ~1分钟</span>
 </span>
       </div>
     </header>
@@ -553,67 +626,6 @@
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" itemprop="url">
-        更改nodejs的全局包的默认安装位置
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-01-09">
-    2020-01-09
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://idsze.cn/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7" itemprop="url" rel="index">
-        <span itemprop="name">小技巧</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">264 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>默认情况下，位置应该在<code>C:/users/xx/AppData/Roaming/node</code>下，现在更改到<code>D盘</code>。<br>
-查看位置：<code>npm config ls</code><br>
-更改位置：<code>npm config set prefix &quot;D:\node_global_modules&quot;</code></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://idsze.cn/2020/01/change-default-installation-location-of-nodejs-global-modules/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -700,7 +712,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -717,7 +729,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -773,7 +785,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

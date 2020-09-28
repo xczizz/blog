@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on xczizz hugo site</title>
+    <link>https://idsze.cn/tags/python/</link>
+    <description>Recent content in python on xczizz hugo site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 28 Sep 2020 16:15:15 +0800</lastBuildDate><atom:link href="https://idsze.cn/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pyinstaller打包32位exe使用mssql出错</title>
+      <link>https://idsze.cn/2020/09/pyinstaller-compilation-includes-the-problem-of-pymssql-package-error/</link>
+      <pubDate>Mon, 28 Sep 2020 16:15:15 +0800</pubDate>
+      
+      <guid>https://idsze.cn/2020/09/pyinstaller-compilation-includes-the-problem-of-pymssql-package-error/</guid>
+      <description>&lt;p&gt;使用 pyinstaller 打包 32 位软件，结果总是一闪而过，而之前同样的程序打包了 64 位exe，一点问题都没有。&lt;/p&gt;
+&lt;p&gt;(直接在cmd中运行exe)错误信息如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;(py32) D:\PythonWorkspace\report_forms&amp;gt;.\dist\main.exe
+Traceback (most recent call last):
+  File &amp;#34;main.py&amp;#34;, line 1, in &amp;lt;module&amp;gt;
+    import pymssql
+  File &amp;#34;src\pymssql.pyx&amp;#34;, line 1, in init pymssql
+  File &amp;#34;src\_mssql.pyx&amp;#34;, line 57, in init _mssql
+ModuleNotFoundError: No module named &amp;#39;decimal&amp;#39;
+[5136] Failed to execute script main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到报错的是没有找到 &lt;code&gt;decimal&lt;/code&gt;模块，也是参考网上解决办法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Just as a suggestion, put an import decimal at the top of your program. It looks ike _mssql might be doing dynamic imports in __load method which will &amp;ldquo;confuse&amp;rdquo; py2exe because it can&amp;rsquo;t know about dynamic imports which happen at runtime.&lt;br&gt;
+打包程序无法判断动态调用，_mssql是动态调用的，就是用才调用，不会一开始就调用。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

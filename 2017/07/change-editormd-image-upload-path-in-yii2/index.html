@@ -177,36 +177,36 @@
 </span><span class="cm"> * @license     MIT
 </span><span class="cm"> */</span>
 
-<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">factory</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">exports</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="kd">var</span> <span class="nx">pluginName</span>   <span class="o">=</span> <span class="s2">&#34;image-dialog&#34;</span><span class="p">;</span>
 
-        <span class="nx">exports</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">imageDialog</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">exports</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">imageDialog</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="kd">var</span> <span class="nx">_this</span>       <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">cm</span>          <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cm</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">lang</span>        <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">lang</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">editor</span>      <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">editor</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">settings</span>    <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">settings</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">cursor</span>      <span class="o">=</span> <span class="nx">cm</span><span class="p">.</span><span class="nx">getCursor</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">selection</span>   <span class="o">=</span> <span class="nx">cm</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">cursor</span>      <span class="o">=</span> <span class="nx">cm</span><span class="p">.</span><span class="nx">getCursor</span><span class="p">();</span>
+            <span class="kd">var</span> <span class="nx">selection</span>   <span class="o">=</span> <span class="nx">cm</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span>
             <span class="kd">var</span> <span class="nx">imageLang</span>   <span class="o">=</span> <span class="nx">lang</span><span class="p">.</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">image</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">classPrefix</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">classPrefix</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">iframeName</span>  <span class="o">=</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-iframe&#34;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">dialogName</span>  <span class="o">=</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="nx">pluginName</span><span class="p">,</span> <span class="nx">dialog</span><span class="p">;</span>
 
-            <span class="nx">cm</span><span class="p">.</span><span class="nx">focus</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">cm</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
 
             <span class="kd">var</span> <span class="nx">loading</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">show</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">_loading</span> <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;dialog-mask&#34;</span><span class="p">)</span><span class="p">;</span>
-                <span class="nx">_loading</span><span class="p">[</span><span class="p">(</span><span class="nx">show</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;show&#34;</span> <span class="o">:</span> <span class="s2">&#34;hide&#34;</span><span class="p">]</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-            <span class="p">}</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">_loading</span> <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;dialog-mask&#34;</span><span class="p">);</span>
+                <span class="nx">_loading</span><span class="p">[(</span><span class="nx">show</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;show&#34;</span> <span class="o">:</span> <span class="s2">&#34;hide&#34;</span><span class="p">]();</span>
+            <span class="p">};</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="nx">editor</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">dialogName</span><span class="p">)</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">editor</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">dialogName</span><span class="p">).</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">guid</span>   <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">)</span><span class="p">.</span><span class="nx">getTime</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">guid</span>   <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">).</span><span class="nx">getTime</span><span class="p">();</span>
                 <span class="kd">var</span> <span class="nx">action</span> <span class="o">=</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">imageUploadURL</span> <span class="o">+</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUploadURL</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&#34;?&#34;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="s2">&#34;&amp;&#34;</span> <span class="o">:</span> <span class="s2">&#34;?&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;guid=&#34;</span> <span class="o">+</span> <span class="nx">guid</span><span class="p">;</span>
 
                 <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">crossDomainUpload</span><span class="p">)</span>
@@ -217,12 +217,12 @@
                 <span class="kd">var</span> <span class="nx">dialogContent</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&lt;form action=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">action</span> <span class="o">+</span><span class="s2">&#34;\&#34; target=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">iframeName</span> <span class="o">+</span> <span class="s2">&#34;\&#34; method=\&#34;post\&#34; enctype=\&#34;multipart/form-data\&#34; class=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;form\&#34;&gt;&#34;</span> <span class="o">:</span> <span class="s2">&#34;&lt;div class=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;form\&#34;&gt;&#34;</span> <span class="p">)</span> <span class="o">+</span>
                     <span class="p">(</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&lt;iframe name=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">iframeName</span> <span class="o">+</span> <span class="s2">&#34;\&#34; id=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">iframeName</span> <span class="o">+</span> <span class="s2">&#34;\&#34; guid=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">guid</span> <span class="o">+</span> <span class="s2">&#34;\&#34;&gt;&lt;/iframe&gt;&#34;</span> <span class="o">:</span> <span class="s2">&#34;&#34;</span> <span class="p">)</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;label&gt;&#34;</span> <span class="o">+</span> <span class="nx">imageLang</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span> <span class="s2">&#34;&lt;/label&gt;&#34;</span> <span class="o">+</span>
-                    <span class="s2">&#34;&lt;input type=\&#34;text\&#34; data-url /&gt;&#34;</span> <span class="o">+</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+                    <span class="s2">&#34;&lt;input type=\&#34;text\&#34; data-url /&gt;&#34;</span> <span class="o">+</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
                         <span class="k">return</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&lt;div class=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;file-input\&#34;&gt;&#34;</span> <span class="o">+</span>
                             <span class="s2">&#34;&lt;input type=\&#34;file\&#34; name=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-file\&#34; accept=\&#34;image/gif,image/jpeg,image/jpg,image/png\&#34; /&gt;&#34;</span> <span class="o">+</span>
                             <span class="s2">&#34;&lt;input type=\&#34;submit\&#34; value=\&#34;本地上传\&#34;&gt;&#34;</span> <span class="o">+</span>
                             <span class="s2">&#34;&lt;/div&gt;&#34;</span> <span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-                    <span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="p">})()</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;br/&gt;&#34;</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;label&gt;&#34;</span> <span class="o">+</span> <span class="nx">imageLang</span><span class="p">.</span><span class="nx">alt</span> <span class="o">+</span> <span class="s2">&#34;&lt;/label&gt;&#34;</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;input type=\&#34;text\&#34; value=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">selection</span> <span class="o">+</span> <span class="s2">&#34;\&#34; data-alt /&gt;&#34;</span> <span class="o">+</span>
@@ -230,11 +230,11 @@
                     <span class="s2">&#34;&lt;label&gt;&#34;</span> <span class="o">+</span> <span class="nx">imageLang</span><span class="p">.</span><span class="nx">link</span> <span class="o">+</span> <span class="s2">&#34;&lt;/label&gt;&#34;</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;input type=\&#34;text\&#34; value=\&#34;http://\&#34; data-link /&gt;&#34;</span> <span class="o">+</span>
                     <span class="s2">&#34;&lt;br/&gt;&#34;</span> <span class="o">+</span>
-                    <span class="p">(</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&lt;/form&gt;&#34;</span> <span class="o">:</span> <span class="s2">&#34;&lt;/div&gt;&#34;</span><span class="p">)</span><span class="p">;</span>
+                    <span class="p">(</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&lt;/form&gt;&#34;</span> <span class="o">:</span> <span class="s2">&#34;&lt;/div&gt;&#34;</span><span class="p">);</span>
 
                 <span class="c1">//var imageFooterHTML = &#34;&lt;button class=\&#34;&#34; + classPrefix + &#34;btn &#34; + classPrefix + &#34;image-manager-btn\&#34; style=\&#34;float:left;\&#34;&gt;&#34; + imageLang.managerButton + &#34;&lt;/button&gt;&#34;;
 </span><span class="c1"></span>
-                <span class="nx">dialog</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">createDialog</span><span class="p">(</span><span class="p">{</span>
+                <span class="nx">dialog</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">createDialog</span><span class="p">({</span>
                     <span class="nx">title</span>      <span class="o">:</span> <span class="nx">imageLang</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span>
                     <span class="nx">width</span>      <span class="o">:</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="o">?</span> <span class="mi">465</span> <span class="o">:</span> <span class="mi">380</span><span class="p">,</span>
                     <span class="nx">height</span>     <span class="o">:</span> <span class="mi">254</span><span class="p">,</span>
@@ -246,16 +246,16 @@
                     <span class="nx">maskStyle</span>  <span class="o">:</span> <span class="p">{</span>
                         <span class="nx">opacity</span>         <span class="o">:</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">dialogMaskOpacity</span><span class="p">,</span>
                         <span class="nx">backgroundColor</span> <span class="o">:</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">dialogMaskBgColor</span>
-                    <span class="p">}</span><span class="p">,</span>
+                    <span class="p">},</span>
                     <span class="nx">buttons</span> <span class="o">:</span> <span class="p">{</span>
-                        <span class="nx">enter</span> <span class="o">:</span> <span class="p">[</span><span class="nx">lang</span><span class="p">.</span><span class="nx">buttons</span><span class="p">.</span><span class="nx">enter</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="kd">var</span> <span class="nx">url</span>  <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-url]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                            <span class="kd">var</span> <span class="nx">alt</span>  <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-alt]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                            <span class="kd">var</span> <span class="nx">link</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-link]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                        <span class="nx">enter</span> <span class="o">:</span> <span class="p">[</span><span class="nx">lang</span><span class="p">.</span><span class="nx">buttons</span><span class="p">.</span><span class="nx">enter</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                            <span class="kd">var</span> <span class="nx">url</span>  <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-url]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+                            <span class="kd">var</span> <span class="nx">alt</span>  <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-alt]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+                            <span class="kd">var</span> <span class="nx">link</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-link]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
 
                             <span class="k">if</span> <span class="p">(</span><span class="nx">url</span> <span class="o">===</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
                             <span class="p">{</span>
-                                <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">imageURLEmpty</span><span class="p">)</span><span class="p">;</span>
+                                <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">imageURLEmpty</span><span class="p">);</span>
                                 <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
                             <span class="p">}</span>
 
@@ -263,122 +263,122 @@
 
                             <span class="k">if</span> <span class="p">(</span><span class="nx">link</span> <span class="o">===</span> <span class="s2">&#34;&#34;</span> <span class="o">||</span> <span class="nx">link</span> <span class="o">===</span> <span class="s2">&#34;http://&#34;</span><span class="p">)</span>
                             <span class="p">{</span>
-                                <span class="nx">cm</span><span class="p">.</span><span class="nx">replaceSelection</span><span class="p">(</span><span class="s2">&#34;![&#34;</span> <span class="o">+</span> <span class="nx">alt</span> <span class="o">+</span> <span class="s2">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">url</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)&#34;</span><span class="p">)</span><span class="p">;</span>
+                                <span class="nx">cm</span><span class="p">.</span><span class="nx">replaceSelection</span><span class="p">(</span><span class="s2">&#34;![&#34;</span> <span class="o">+</span> <span class="nx">alt</span> <span class="o">+</span> <span class="s2">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">url</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)&#34;</span><span class="p">);</span>
                             <span class="p">}</span>
                             <span class="k">else</span>
                             <span class="p">{</span>
-                                <span class="nx">cm</span><span class="p">.</span><span class="nx">replaceSelection</span><span class="p">(</span><span class="s2">&#34;[![&#34;</span> <span class="o">+</span> <span class="nx">alt</span> <span class="o">+</span> <span class="s2">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">url</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)](&#34;</span> <span class="o">+</span> <span class="nx">link</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)&#34;</span><span class="p">)</span><span class="p">;</span>
+                                <span class="nx">cm</span><span class="p">.</span><span class="nx">replaceSelection</span><span class="p">(</span><span class="s2">&#34;[![&#34;</span> <span class="o">+</span> <span class="nx">alt</span> <span class="o">+</span> <span class="s2">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">url</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)](&#34;</span> <span class="o">+</span> <span class="nx">link</span> <span class="o">+</span> <span class="nx">altAttr</span> <span class="o">+</span> <span class="s2">&#34;)&#34;</span><span class="p">);</span>
                             <span class="p">}</span>
 
                             <span class="k">if</span> <span class="p">(</span><span class="nx">alt</span> <span class="o">===</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="nx">cm</span><span class="p">.</span><span class="nx">setCursor</span><span class="p">(</span><span class="nx">cursor</span><span class="p">.</span><span class="nx">line</span><span class="p">,</span> <span class="nx">cursor</span><span class="p">.</span><span class="nx">ch</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="p">;</span>
+                                <span class="nx">cm</span><span class="p">.</span><span class="nx">setCursor</span><span class="p">(</span><span class="nx">cursor</span><span class="p">.</span><span class="nx">line</span><span class="p">,</span> <span class="nx">cursor</span><span class="p">.</span><span class="nx">ch</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
                             <span class="p">}</span>
 
-                            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="nx">lockScreen</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span><span class="p">.</span><span class="nx">hideMask</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">().</span><span class="nx">lockScreen</span><span class="p">(</span><span class="kc">false</span><span class="p">).</span><span class="nx">hideMask</span><span class="p">();</span>
 
                             <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-                        <span class="p">}</span><span class="p">]</span><span class="p">,</span>
+                        <span class="p">}],</span>
 
-                        <span class="nx">cancel</span> <span class="o">:</span> <span class="p">[</span><span class="nx">lang</span><span class="p">.</span><span class="nx">buttons</span><span class="p">.</span><span class="nx">cancel</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="nx">lockScreen</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span><span class="p">.</span><span class="nx">hideMask</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                        <span class="nx">cancel</span> <span class="o">:</span> <span class="p">[</span><span class="nx">lang</span><span class="p">.</span><span class="nx">buttons</span><span class="p">.</span><span class="nx">cancel</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">().</span><span class="nx">lockScreen</span><span class="p">(</span><span class="kc">false</span><span class="p">).</span><span class="nx">hideMask</span><span class="p">();</span>
 
                             <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-                        <span class="p">}</span><span class="p">]</span>
+                        <span class="p">}]</span>
                     <span class="p">}</span>
-                <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+                <span class="p">});</span>
 
-                <span class="nx">dialog</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-dialog-&#34;</span> <span class="o">+</span> <span class="nx">guid</span><span class="p">)</span><span class="p">;</span>
+                <span class="nx">dialog</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-dialog-&#34;</span> <span class="o">+</span> <span class="nx">guid</span><span class="p">);</span>
 
                 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">settings</span><span class="p">.</span><span class="nx">imageUpload</span><span class="p">)</span> <span class="p">{</span>
                     <span class="k">return</span> <span class="p">;</span>
                 <span class="p">}</span>
 
-                <span class="kd">var</span> <span class="nx">fileInput</span>  <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[name=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-file\&#34;]&#34;</span><span class="p">)</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">fileInput</span>  <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[name=\&#34;&#34;</span> <span class="o">+</span> <span class="nx">classPrefix</span> <span class="o">+</span> <span class="s2">&#34;image-file\&#34;]&#34;</span><span class="p">);</span>
 
                 <span class="c1">// 上传到https://sm.ms
-</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">sm_upload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span><span class="p">{</span>
+</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">sm_upload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">i</span><span class="p">){</span>
                     <span class="k">if</span> <span class="p">(</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                        <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                        <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;smfile&#39;</span><span class="p">,</span><span class="nx">file</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span><span class="p">;</span>
-                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;https://sm.ms/api/upload&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span><span class="p">;</span>
-                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+                        <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">();</span>
+                        <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;smfile&#39;</span><span class="p">,</span><span class="nx">file</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;https://sm.ms/api/upload&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                             <span class="k">if</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span> <span class="o">!==</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
-                                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span><span class="p">;</span>
-                                <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">code</span> <span class="o">===</span> <span class="s2">&#34;success&#34;</span><span class="p">)</span><span class="p">{</span>
-                                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-url]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span><span class="p">;</span>
-                                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-alt]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">filename</span><span class="p">)</span><span class="p">;</span>
-                                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="k">delete</span><span class="p">)</span><span class="p">;</span>
-                                    <span class="nx">sm_clear</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">code</span> <span class="o">===</span> <span class="s2">&#34;success&#34;</span><span class="p">){</span>
+                                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-url]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+                                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-alt]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">filename</span><span class="p">);</span>
+                                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="k">delete</span><span class="p">);</span>
+                                    <span class="nx">sm_clear</span><span class="p">();</span>
                                 <span class="p">}</span><span class="k">else</span><span class="p">{</span>
                                     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">msg</span><span class="p">)</span>
                                 <span class="p">}</span>
                                 <span class="nx">loading</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
                             <span class="p">}</span>
-                        <span class="p">}</span><span class="p">;</span>
-                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">formData</span><span class="p">)</span><span class="p">;</span>
+                        <span class="p">};</span>
+                        <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">formData</span><span class="p">);</span>
                     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                        <span class="nx">fileInput</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="p">;</span>
+                        <span class="nx">fileInput</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
                         <span class="nx">loading</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
                     <span class="p">}</span>
-                <span class="p">}</span><span class="p">;</span>
+                <span class="p">};</span>
 
                 <span class="c1">// 清除历史，防止被删
-</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">sm_clear</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
-                    <span class="kd">var</span> <span class="nx">get_xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;https://sm.ms/api/clear&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span><span class="p">;</span>
-                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">get_xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span><span class="p">{</span>
+</span><span class="c1"></span>                <span class="kd">var</span> <span class="nx">sm_clear</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+                    <span class="kd">var</span> <span class="nx">get_xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;https://sm.ms/api/clear&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">get_xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">){</span>
                             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">get_xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span>
                         <span class="p">}</span>
-                    <span class="p">}</span><span class="p">;</span>
-                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                <span class="p">}</span><span class="p">;</span>
-                <span class="kd">var</span> <span class="nx">submitHandler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="kd">var</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">fileInput</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">.</span><span class="nx">files</span><span class="p">;</span>
+                    <span class="p">};</span>
+                    <span class="nx">get_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+                <span class="p">};</span>
+                <span class="kd">var</span> <span class="nx">submitHandler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">fileInput</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">files</span><span class="p">;</span>
 
                     <span class="k">if</span> <span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
                         <span class="nx">sm_upload</span><span class="p">(</span><span class="nx">files</span><span class="p">,</span> <span class="nx">files</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
                     <span class="p">}</span>
                     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-                <span class="p">}</span><span class="p">;</span>
+                <span class="p">};</span>
 
-                <span class="nx">fileInput</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&#34;change&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="kd">var</span> <span class="nx">fileName</span>  <span class="o">=</span> <span class="nx">fileInput</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-                    <span class="kd">var</span> <span class="nx">isImage</span>   <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&#34;(\\.(&#34;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">imageFormats</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;|&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;))$&#34;</span><span class="p">)</span><span class="p">;</span> <span class="c1">// /(\.(webp|jpg|jpeg|gif|bmp|png))$/
+                <span class="nx">fileInput</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&#34;change&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">fileName</span>  <span class="o">=</span> <span class="nx">fileInput</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+                    <span class="kd">var</span> <span class="nx">isImage</span>   <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&#34;(\\.(&#34;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">imageFormats</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;|&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;))$&#34;</span><span class="p">);</span> <span class="c1">// /(\.(webp|jpg|jpeg|gif|bmp|png))$/
 </span><span class="c1"></span>
                     <span class="k">if</span> <span class="p">(</span><span class="nx">fileName</span> <span class="o">===</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
                     <span class="p">{</span>
-                        <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">uploadFileEmpty</span><span class="p">)</span><span class="p">;</span>
+                        <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">uploadFileEmpty</span><span class="p">);</span>
 
                         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
                     <span class="p">}</span>
 
-                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isImage</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isImage</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">fileName</span><span class="p">))</span>
                     <span class="p">{</span>
-                        <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">formatNotAllowed</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">imageFormats</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;, &#34;</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
+                        <span class="nx">alert</span><span class="p">(</span><span class="nx">imageLang</span><span class="p">.</span><span class="nx">formatNotAllowed</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">imageFormats</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;, &#34;</span><span class="p">));</span>
 
                         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
                     <span class="p">}</span>
 
-                    <span class="nx">loading</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="p">;</span>
+                    <span class="nx">loading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
-                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;submit\&#34;]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">submitHandler</span><span class="p">)</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">)</span><span class="p">;</span>
-                <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+                    <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;submit\&#34;]&#34;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">submitHandler</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">);</span>
+                <span class="p">});</span>
             <span class="p">}</span>
 
-            <span class="nx">dialog</span> <span class="o">=</span> <span class="nx">editor</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">dialogName</span><span class="p">)</span><span class="p">;</span>
-            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;text\&#34;]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span><span class="p">;</span>
-            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;file\&#34;]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span><span class="p">;</span>
-            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-link]&#34;</span><span class="p">)</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;http://&#34;</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">dialog</span> <span class="o">=</span> <span class="nx">editor</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;.&#34;</span> <span class="o">+</span> <span class="nx">dialogName</span><span class="p">);</span>
+            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;text\&#34;]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[type=\&#34;file\&#34;]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+            <span class="nx">dialog</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&#34;[data-link]&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&#34;http://&#34;</span><span class="p">);</span>
 
-            <span class="k">this</span><span class="p">.</span><span class="nx">dialogShowMask</span><span class="p">(</span><span class="nx">dialog</span><span class="p">)</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">dialogLockScreen</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-            <span class="nx">dialog</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">dialogShowMask</span><span class="p">(</span><span class="nx">dialog</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">dialogLockScreen</span><span class="p">();</span>
+            <span class="nx">dialog</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
 
-        <span class="p">}</span><span class="p">;</span>
+        <span class="p">};</span>
 
-    <span class="p">}</span><span class="p">;</span>
+    <span class="p">};</span>
 
     <span class="c1">// CommonJS/Node.js
 </span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">require</span> <span class="o">===</span> <span class="s2">&#34;function&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">exports</span> <span class="o">===</span> <span class="s2">&#34;object&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">module</span> <span class="o">===</span> <span class="s2">&#34;object&#34;</span><span class="p">)</span>
@@ -389,23 +389,23 @@
 </span><span class="c1"></span>    <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for Require.js
 </span><span class="c1"></span>
-            <span class="nx">define</span><span class="p">(</span><span class="p">[</span><span class="s2">&#34;editormd&#34;</span><span class="p">]</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">editormd</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">factory</span><span class="p">(</span><span class="nx">editormd</span><span class="p">)</span><span class="p">;</span>
-            <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">define</span><span class="p">([</span><span class="s2">&#34;editormd&#34;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">editormd</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">factory</span><span class="p">(</span><span class="nx">editormd</span><span class="p">);</span>
+            <span class="p">});</span>
 
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// for Sea.js
 </span><span class="c1"></span>            <span class="nx">define</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">editormd</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./../../editormd&#34;</span><span class="p">)</span><span class="p">;</span>
-                <span class="nx">factory</span><span class="p">(</span><span class="nx">editormd</span><span class="p">)</span><span class="p">;</span>
-            <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">editormd</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./../../editormd&#34;</span><span class="p">);</span>
+                <span class="nx">factory</span><span class="p">(</span><span class="nx">editormd</span><span class="p">);</span>
+            <span class="p">});</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="k">else</span>
     <span class="p">{</span>
-        <span class="nx">factory</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">editormd</span><span class="p">)</span><span class="p">;</span>
+        <span class="nx">factory</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">editormd</span><span class="p">);</span>
     <span class="p">}</span>
 
-<span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="p">})();</span>
 </code></pre></div>
     </div>
     <footer class="post-footer">
@@ -481,7 +481,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -498,7 +498,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -553,7 +553,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

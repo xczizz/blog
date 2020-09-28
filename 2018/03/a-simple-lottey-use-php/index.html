@@ -164,7 +164,7 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h3 id="可重复的抽奖">可重复的抽奖</h3>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$prize_arr</span> <span class="o">=</span> <span class="p">[</span>
 	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;500金币&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">],</span>
 	<span class="p">[</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;免禁buff48小时体验&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">],</span>
@@ -193,7 +193,7 @@
 	<span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p><strong>30次测试一下</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span>
 <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nv">$result</span> <span class="o">=</span> <span class="nx">getRand</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">);</span>
@@ -206,7 +206,7 @@
 <img src="http://upload-images.jianshu.io/upload_images/2001662-0191e7981dfdeec7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="两次测试"></p>
 <h3 id="不可重复抽完就少一个">不可重复，抽完就少一个</h3>
 <p><strong>代码上就加一个引用，然后抽一次权重个数减少一个</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">function</span> <span class="nf">getRand</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$prize_arr</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// 地址引用
 </span><span class="c1"></span>	<span class="nv">$result</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$prize_arr</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 默认数组最后用一个
 </span><span class="c1"></span>	<span class="nv">$pro_sum</span> <span class="o">=</span> <span class="nx">array_sum</span><span class="p">(</span><span class="nx">array_map</span><span class="p">(</span><span class="s1">&#39;array_pop&#39;</span><span class="p">,</span> <span class="nv">$prize_arr</span><span class="p">));</span> <span class="c1">// 拿到总数
@@ -303,7 +303,7 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://idsze.cn/post/">
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -320,7 +320,7 @@
     <div class="site-state-item site-state-tags">
         <a href="https://idsze.cn/tags/">
          
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -384,7 +384,7 @@
   <span class="author" itemprop="copyrightHolder">xczizz hugo site</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.63.2</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.75.1</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

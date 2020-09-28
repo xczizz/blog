@@ -6,18 +6,14 @@
     <description>Recent content in 小知识 on xczizz hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 02 Aug 2017 18:27:09 +0800</lastBuildDate>
-    
-	<atom:link href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Aug 2017 18:27:09 +0800</lastBuildDate><atom:link href="https://idsze.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Php中几个常用的排序算法</title>
       <link>https://idsze.cn/2017/08/sorting-and-searching-algorithms-in-php/</link>
       <pubDate>Wed, 02 Aug 2017 18:27:09 +0800</pubDate>
       
       <guid>https://idsze.cn/2017/08/sorting-and-searching-algorithms-in-php/</guid>
-      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;// 冒泡，从第一个开始往后比，再从第二个开始比较到倒数第二个
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 循环
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;bubbleSort&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$numbers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
